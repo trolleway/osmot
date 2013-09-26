@@ -1,7 +1,8 @@
 osmot
 =====
 
-Script to make public transit maps from Openstreetmap data
+Script to make public transit maps from Openstreetmap data. 
+osmot means "openstreetmap" and "obshestvennyi transport" (public transport)
 
 Usage:
 
