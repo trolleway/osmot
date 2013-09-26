@@ -1,11 +1,12 @@
 #!/usr/bin/python2.4
 #
-# 
+# Small script to show PostgreSQL and Pyscopg together
 #
 
 #sudo mount -t vboxsf -o uid=user,rw GIS /home/user/GIS
 
-
+#osm2pgsql -s -C 700 -c -d h09 -U user  moscow.osm
+#osm2pgsql -s -C 700 -c -d h09 -U user --hstore-all vidnoe.osm
 #osm2pgsql -s -l -C 700 -c -d h09 -U user  vidnoe.osm
 
 
@@ -76,7 +77,7 @@ try:
 SELECT 
 * 
 FROM planet_osm_rels
-WHERE tags::VARCHAR LIKE '%route,trolleybus%'
+WHERE tags::VARCHAR LIKE '%route,trolleybus%' OR tags::VARCHAR LIKE '%route,tram%' OR tags::VARCHAR LIKE '%route,bus%'  OR tags::VARCHAR LIKE '%route,share_taxi%'
 
 	''')
 except:
@@ -581,4 +582,3 @@ WHERE planet_osm_line.osm_id>0
 
 cur.execute(sql)
 conn.commit()
-
