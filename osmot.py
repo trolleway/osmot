@@ -1,12 +1,10 @@
 #!/usr/bin/python2.4
 #
-# Small script to show PostgreSQL and Pyscopg together
+# 
 #
 
 #sudo mount -t vboxsf -o uid=user,rw GIS /home/user/GIS
 
-#osm2pgsql -s -C 700 -c -d h09 -U user  moscow.osm
-#osm2pgsql -s -C 700 -c -d h09 -U user --hstore-all vidnoe.osm
 #osm2pgsql -s -l -C 700 -c -d h09 -U user  vidnoe.osm
 
 
@@ -100,40 +98,7 @@ for row in rows:
 	WayFrist=WaysInCurrentRel[len(WaysInCurrentRel)-1]
 	WaySecond=WaysInCurrentRel[len(WaysInCurrentRel)-2]
 	
-	
-	
-	
-	'''
-				// если конец первой = концу второй, то вперёд
-				// если конец первой = началу второй, то вперёд
-				//--------------
-				// если начало первой = концу второй то назад     
-				// если начало первой = началу второй то назад
-				
-			
-				$f1 = $this->id_frist_point_of_way($ways_list,$way1);
-				$f2 = $this->id_frist_point_of_way($ways_list,$way2);
-				$l1 = $this->id_last_point_of_way($ways_list,$way1);
-				$l2 = $this->id_last_point_of_way($ways_list,$way2);
-				
-				if (is_null($way2)) return FORWARD;  // this is a last segment in route
-				if (($l1 == $l2) OR ($l1 == $f2))
-				{
-					
-				#	echo "$f1 $f2 $l1 $l2  FORWARD\n";
-					return FORWARD;
-				}
-				else 
-				{
-				#	echo "$f1 $f2 $l1 $l2 BACK\n";
-					return BACK;
-				}	
-				'''
-	
-
-	
 	sql='''SELECT ST_StartPoint(way), ST_EndPoint(way) from planet_osm_line WHERE osm_id='''+WayFrist
-	
 	try:
 		cur.execute(sql)
 	except:
@@ -145,7 +110,6 @@ for row in rows:
 		f2=row2[1]
 		
 	sql='''SELECT ST_StartPoint(way), ST_EndPoint(way) from planet_osm_line WHERE osm_id='''+WaySecond
-	
 	try:
 		cur.execute(sql)
 	except:
@@ -461,118 +425,34 @@ conn.commit()
 	
 	
 	
-	
-	
+
+
+
+
 
 
 
 sql='''
-DROP TABLE IF EXISTS lines_refs_test 
+DROP TABLE IF EXISTS routes_with_refs 
 '''
 cur.execute(sql)
 conn.commit()
 
 sql='''
-CREATE TABLE lines_refs_test AS
-(SELECT * FROM planet_osm_line
-WHERE osm_id>0)
-'''
-cur.execute(sql)
-conn.commit()
-
-sql='''
-ALTER TABLE lines_refs_test ADD COLUMN route_ref text;
-'''
-cur.execute(sql)
-conn.commit()
-
-sql='''
-UPDATE lines_refs_test  
-SET route_ref = route_line_labels.route_ref
-FROM route_line_labels 
-WHERE route_line_labels.osm_id = lines_refs_test.osm_id
-'''
-cur.execute(sql)
-conn.commit()
-
-
-sql='''
-DROP TABLE IF EXISTS lines_refs_test_2 
-'''
-cur.execute(sql)
-conn.commit()
-
-sql='''
-CREATE TABLE lines_refs_test_2 AS
+CREATE TABLE routes_with_refs AS
 (SELECT 
 planet_osm_line.osm_id,
-ST_MakeLine(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)) AS geom,
-
-
-	CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90+180 
-	ELSE degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90
-	END
-	AS angl,
-
-degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angl_qgis,
-ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)) AS angl_azimut,
-360-((atan2(ST_Y(ST_Line_Interpolate_Point(way,0.501))- ST_Y(ST_Line_Interpolate_Point(way,0.5)),ST_X(ST_Line_Interpolate_Point(way,0.501))- ST_X(ST_Line_Interpolate_Point(way,0.5)))+ (2*Pi()))* 180/Pi()) AS angl2,
+degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
 ST_X(ST_Line_Interpolate_Point(way,0.5)) AS x,
 ST_Y(ST_Line_Interpolate_Point(way,0.5)) AS y,
+way,
 
-	CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN route_line_labels.route_ref_reverse 
-	ELSE route_line_labels.route_ref 
-	END
-	AS routes_ref_normal,
-
-'blablalba' AS routes_ref_dumb
-FROM 
-planet_osm_line JOIN route_line_labels
-ON (planet_osm_line.osm_id = route_line_labels.osm_id)
-WHERE planet_osm_line.osm_id>0
-)
-'''
-
-'''
-	CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN route_line_labels.route_ref_reverse 
-	ELSE route_line_labels.route_ref 
-	END
-	AS routes_ref_normal,
-	'''
-cur.execute(sql)
-conn.commit()
+CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN route_line_labels.route_ref_reverse 
+ELSE route_line_labels.route_ref 
+END
+AS routes_ref
 
 
-
-sql='''
-DROP TABLE IF EXISTS lines_refs_test_3 
-'''
-cur.execute(sql)
-conn.commit()
-
-sql='''
-CREATE TABLE lines_refs_test_3 AS
-(SELECT 
-planet_osm_line.osm_id,
-
-	
-	CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN ST_Reverse(way)
-	ELSE way
-	END
-	AS geom,
-
-degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angl_qgis,
-ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)) AS angl_azimut,
-360-((atan2(ST_Y(ST_Line_Interpolate_Point(way,0.501))- ST_Y(ST_Line_Interpolate_Point(way,0.5)),ST_X(ST_Line_Interpolate_Point(way,0.501))- ST_X(ST_Line_Interpolate_Point(way,0.5)))+ (2*Pi()))* 180/Pi()) AS angl2,
-ST_X(ST_Line_Interpolate_Point(way,0.5)) AS x,
-ST_Y(ST_Line_Interpolate_Point(way,0.5)) AS y,
-
-	CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN route_line_labels.route_ref_reverse 
-	ELSE route_line_labels.route_ref 
-	END
-	AS routes_ref_normal,
-
-'blablalba' AS routes_ref_dumb
 FROM 
 planet_osm_line JOIN route_line_labels
 ON (planet_osm_line.osm_id = route_line_labels.osm_id)
