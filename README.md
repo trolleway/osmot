@@ -1,35 +1,27 @@
 osmot
 =====
 
-
-
-
 Script to make public transit maps from Openstreetmap data. 
-osmot means "openstreetmap" and "obshestvennyi transport" (public transport)
+See raster samples at http://www.flickr.com/photos/trolleway/tags/osmot/
 
+osmot means "openstreetmap" and "obshestvennyi transport" (public transport)
 You need an PostGIS, osm2pgsql, and something render like QGIS or Mapnik.
 
 Usage:
 
-* Подготовьте osm-файл.
-* Отфильтруйте дамп в osmfilter, так что бы в нём остались лишь троллейбусные релейшены 
-* *    ./osmfilter RU-MOS.osm --keep= --keep-relations="route=trolleybus" --out-osm >RU-MOS_filtered.osm
-* Альтернативный способ с использованием JOSM 
-* * Установите плагин Mirrored Download 
-* * Установите в настройках сервер Rambler
-* * Скачайте всё в интересующем городе по запросу [route=trolleybus]
-* * Включите панель Relations, выделите все отношения с типом "Маршрут"
-* * Скажите "Скачать всех участников",
-* * Сохраните файл как .osm
+* Prepare osm-file:
+* * Filter dump with osmfilter like  ./osmfilter RU-MOS.osm --keep= --keep-relations="route=trolleybus" --out-osm >RU-MOS_filtered.osm
+
 * Go to you working directory
 * osm2pgsql -s -l -C 700 -c -d dbname -U username  RU-MOS_filtered.osm
 * python osmot.py
 
 Script will created two additionaly tables in PostGIS database. The "terminals", and "planet_osm_routes". 
         TODO: replace to views
-planet_osm_routes - is just a copy of planet_osm_ways, with additional field with routes refs and arrows. The way geometry in some records are backwarded (я забыл, зачем это надо было). 
+planet_osm_routes - is just a copy of planet_osm_ways, with additional field with routes refs and arrows. 
 
 
+=====
 Скрипт для создания карт маршрутов общественного транспорта по данным Openstreetmap.
 
 You need an PostGIS, osm2pgsql, and something render line QGIS or Mapnik.
