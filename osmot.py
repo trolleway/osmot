@@ -16,7 +16,7 @@ import psycopg2
 import string
 
 try:
-    conn = psycopg2.connect("dbname='h09' user='user' host='localhost' password='user'")
+    conn = psycopg2.connect("dbname='osmot' user='user' host='localhost' password='user'")
 except:
     print "I am unable to connect to the database"
 	
@@ -26,23 +26,19 @@ print 'create terminals table'
 
 cur = conn.cursor()
 
-cur.execute('''TRUNCATE terminals 	''')	
+cur.execute('''DROP TABLE IF EXISTS terminals''')	
 conn.commit()
 	
-'''
-cur.execute(
+sql='''
 CREATE TABLE IF NOT exists terminals (
      geom    GEOMETRY,
      name   varchar(250),
      routes   varchar(250),
 	 sometype	varchar(250)
 )
-	
-	)	
-	
-conn.commit()
 '''
-	
+cur.execute(sql)
+conn.commit()		
 	
 print '_______________________________________________'
 cur = conn.cursor()
