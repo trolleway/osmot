@@ -16,7 +16,7 @@ import psycopg2
 import string
 
 try:
-    conn = psycopg2.connect("dbname='osmot' user='user' host='localhost' password='user'")
+    conn = psycopg2.connect("dbname='h09' user='user' host='localhost' password='user'")
 except:
     print "I am unable to connect to the database"
 	
@@ -404,22 +404,32 @@ DROP TABLE IF EXISTS terminals_export
 cur.execute(sql)
 conn.commit()		
 sql='''
-CREATE TABLE terminals_export AS 
+CREATE  table terminals_export AS 
 (
 SELECT 
 DISTINCT geom,
-name, 
-string_agg(routes,'.'), 
-concat(name,'  ',string_agg(routes,'.') ) AS long_text
+name,
+string_agg(routes,',' ORDER BY routes) AS routes, 
+concat(
+	trim(both '"' from
+		REPLACE(name, '\\\', '')
+	)
+	,'  ',
+	'[',
+	string_agg(routes,',' ORDER BY routes),
+	']')
+AS long_text
 from terminals
 GROUP BY geom, name
 
 )
 ;'''
+
+
 cur.execute(sql)
 conn.commit()
 	
-	
+print "Terminals created"		
 	
 
 
