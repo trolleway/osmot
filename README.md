@@ -1,5 +1,4 @@
 
-
 =====
 Скрипт для создания карт маршрутов общественного транспорта по данным Openstreetmap.
 
@@ -9,14 +8,18 @@
 Использование:
 
 * Создайте новую базу данных PostGIS.
-* createdb osmot
-* psql /d osmot
-* CREATE EXTENSION postgis;
-* \q
-* 
+```
+createdb osmot
+psql /d osmot
+CREATE EXTENSION postgis;
+\q
+```
+
 * Подготовьте osm-файл.
 * Отфильтруйте дамп в osmfilter, так что бы в нём остались лишь троллейбусные релейшены. Для текущей версии скрипта обязательно, что бы маршруты не выходили за границу дампа 
-* *    ./osmfilter RU-MOS.osm --keep= --keep-relations="route=trolleybus" --out-osm >RU-MOS_filtered.osm
+```
+    ./osmfilter RU-MOS.osm --keep= --keep-relations="route=trolleybus" --out-osm >RU-MOS_filtered.osm
+```
 * Альтернативный способ с использованием JOSM 
 * * Установите плагин Mirrored Download 
 * * Установите в настройках сервер Rambler
