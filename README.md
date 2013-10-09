@@ -1,6 +1,6 @@
-
 =====
 Скрипт для создания карт маршрутов общественного транспорта по данным Openstreetmap.
+Примеры карт: http://www.flickr.com/photos/trolleway/tags/osmot/
 
 Вам потребуется PostGIS, osm2pgsql, и какой-нибудь рендер наподобие QGIS или Mapnik.
 Скрипт тестировался в сборке ubuntu - osgeolive, в ней он работает из коробки.
