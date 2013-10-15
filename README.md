@@ -11,7 +11,7 @@
 * Создайте новую базу данных PostGIS.
 ```
 createdb osmot
-psql /d osmot
+psql -d osmot
 CREATE EXTENSION postgis;
 \q
 ```
