@@ -2,8 +2,6 @@ Map {
 
 }
 
-
-
 #routeswithrefs {
   line-width:2;
   line-color:#f00;
@@ -21,33 +19,29 @@ Map {
   text-ratio: 100;
   text-label-position-tolerance: 5;
   text-halo-radius: 1;
-  
-
-  
-
 }
-
 
 #terminalsexport {
   
     marker-placement: point;
-  	marker-fill: white;
-  	marker-line-width:2;
+    marker-fill: white;
+    marker-line-width:2;
     text-name:[long_text];
     text-face-name: "DejaVu Sans Bold";
   
-  	text-fill: darkred;
+    text-fill: darkred;
     text-allow-overlap:false;
     text-placement-type: simple; 
 
-  	text-ratio: 100;
+    text-ratio: 100;
     text-placements: "E,W,NE,SE,NW,SW,16,14,12";
     text-dy: 3;
-  	text-dx: 3;
+    text-dx: 6;
   
     text-halo-radius: 1;
-
   }
+
+
 
 #planetosmpointwherer {
   marker-width:6;
@@ -58,7 +52,7 @@ Map {
   text-name:[name];
   text-face-name: "DejaVu Sans Oblique";
   text-placement-type: simple; 
-  text-allow-overlap:true;
+  text-allow-overlap:false;
   text-dy: -3;
   text-dx: 3;
   text-halo-radius: 1;
@@ -66,6 +60,4 @@ Map {
   text-wrap-width:15;
   
   text-placements: "E,W,NE,SE,NW,SW,16,14,12";
-
-  
 }
