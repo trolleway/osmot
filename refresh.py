@@ -1,6 +1,7 @@
 import os
 import psycopg2
 
+# not neccecary file. Refresh database and run osmot.py at one script call, useful for instant improve map at JOSM 
 
 def cleardb():
 	dbname='osmot'
