@@ -125,13 +125,20 @@ def main():
     rows = cur.fetchall()
     for row in rows:
         members_list = row[4][::2]
+	roles_list = row[4][1::2]
+
         current_route_id = row[0]
         deb('Parce relation' + str(current_route_id))
-
-        WaysInCurrentRel = [i for i in members_list if not i.find('w')]
-
-        # l[1::2] for even elements
-
+	
+	WaysInCurrentRel=[]
+	
+	#Put in WaysInCurrentRel id's of ways with empty roles
+	for i in range(0,len(members_list)):
+		member_code=members_list[i]
+		member_role=roles_list[i]
+		if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward') )):
+			WaysInCurrentRel.append(member_code)
+		
         for (idx, item) in enumerate(WaysInCurrentRel):
             if item.find('n'):
                 item = item[1:]
