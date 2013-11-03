@@ -237,10 +237,10 @@ def main():
 
         # deb('calculate refs for line '+str(way_id)+' '+way_street_name)
 
-        print '' + string.ljust(str(way_id), 16) + ' ' \
-            + string.ljust(str(way_street_name.strip()), 50) + ' ' \
+        print '' + string.rjust(str(way_id), 10) + ' ' \
+            + string.rjust(str(way_street_name.strip()), 60) + ' ' \
             + string.rjust(str(current_street_count) + '/'
-                           + str(ways_count_total), 6)
+                           + str(ways_count_total), 7)
 
         # For each route, read each way
 
