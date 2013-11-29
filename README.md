@@ -33,5 +33,6 @@ CREATE EXTENSION postgis;
 *  python osmot.py -hs localhost -d osmot -u user -p user
 
 Скрипт создаст две дополнительные таблицы в базе: "terminals", и "planet_osm_routes". 
-        
 planet_osm_routes - это копия таблицы planet_osm_ways, в которой добавлено поле с подписями маршрутов. Если его выводить на экран подписью линий (TextSymbolizer), то оно будет правильно указывать направление односторонних маршрутов. 
+
+Теперь у вас есть база данных PostGIS. Далее вы можете приступать к рендерингу картинок в программе картографического рендеринга, таких как QGIS, TileMill, Mapnik, Geoserver. Я использую QGIS и TileMill. Посмотрите примеры карт: http://www.flickr.com/photos/trolleway/tags/osmot/
