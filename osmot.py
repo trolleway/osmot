@@ -1,13 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-#
-#
-#
-
-# sudo mount -t vboxsf -o uid=user,rw GIS /home/user/GIS
-
-# osm2pgsql -s -l -C 700 -c -d h09 -U user  vidnoe.osm
 
 import psycopg2
 import string
@@ -39,10 +32,10 @@ def argparser_prepare():
 
     parser.epilog = \
         '''Samples:
-                 %(prog)s /home/someuser/moscow.csv
-                 %(prog)s -t 3 /home/someuser/all_uics/
-                 %(prog)s -t 5 -r RU-SPE /home/someuser/saint-pet.csv
-                 ''' \
+%(prog)s /home/someuser/moscow.csv
+%(prog)s -t 3 /home/someuser/all_uics/
+%(prog)s -t 5 -r RU-SPE /home/someuser/saint-pet.csv
+''' \
         % {'prog': parser.prog}
     return parser
 
@@ -72,13 +65,13 @@ def main():
     conn.commit()
     sql = \
         '''
-	CREATE TABLE IF NOT exists terminals (
-		 geom    GEOMETRY,
-		 name   varchar(250),
-		 routes   varchar(250),
-		 sometype	varchar(250)
-	)
-	'''
+        CREATE TABLE IF NOT exists terminals (
+                 geom GEOMETRY,
+                 name varchar(250),
+                 routes varchar(250),
+                 sometype        varchar(250)
+        )
+        '''
     cur.execute(sql)
     conn.commit()
 
@@ -86,22 +79,22 @@ def main():
     cur = conn.cursor()
 
     sql = '''
-	 DROP  TABLE IF EXISTS route_line_labels CASCADE
-	;'''
+         DROP TABLE IF EXISTS route_line_labels CASCADE
+        ;'''
     cur.execute(sql)
     conn.commit()
     sql = \
         '''
-	CREATE TABLE route_line_labels
-	(
-	  id serial,
-	  osm_id bigint,
-	  route_ref text,
-	  route_ref_reverse text
-	  
-	)
-	;
-	'''
+        CREATE TABLE route_line_labels
+        (
+         id serial,
+         osm_id bigint,
+         route_ref text,
+         route_ref_reverse text
+        
+        )
+        ;
+        '''
     cur.execute(sql)
     conn.commit()
 
@@ -110,35 +103,35 @@ def main():
 
     try:
         cur.execute('''
-	SELECT 
-	* 
-	FROM planet_osm_rels
-	WHERE 
-	tags::VARCHAR LIKE '%route,trolleybus%' 
-	OR tags::VARCHAR LIKE '%route,tram%' 
-	OR tags::VARCHAR LIKE '%route,bus%'  
-	OR tags::VARCHAR LIKE '%route,share_taxi%'
-		''')
+        SELECT
+        *
+        FROM planet_osm_rels
+        WHERE
+        tags::VARCHAR LIKE '%route,trolleybus%'
+        OR tags::VARCHAR LIKE '%route,tram%'
+        OR tags::VARCHAR LIKE '%route,bus%'
+        OR tags::VARCHAR LIKE '%route,share_taxi%'
+                ''')
     except:
         return 0
 
     rows = cur.fetchall()
     for row in rows:
         members_list = row[4][::2]
-	roles_list = row[4][1::2]
+        roles_list = row[4][1::2]
 
         current_route_id = row[0]
         deb('Parce relation' + str(current_route_id))
-	
-	WaysInCurrentRel=[]
-	
-	#Put in WaysInCurrentRel id's of ways with empty roles
-	for i in range(0,len(members_list)):
-		member_code=members_list[i]
-		member_role=roles_list[i]
-		if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward') )):
-			WaysInCurrentRel.append(member_code)
-		
+        
+        WaysInCurrentRel=[]
+        
+        #Put in WaysInCurrentRel id's of ways with empty roles
+        for i in range(0,len(members_list)):
+                member_code=members_list[i]
+                member_role=roles_list[i]
+                if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward') )):
+                        WaysInCurrentRel.append(member_code)
+                
         for (idx, item) in enumerate(WaysInCurrentRel):
             if item.find('n'):
                 item = item[1:]
@@ -188,19 +181,19 @@ def main():
 
         sql = \
             '''
-	INSERT INTO terminals (geom,name, routes) VALUES 
-	(
-	(SELECT ''' \
+        INSERT INTO terminals (geom,name, routes) VALUES
+        (
+        (SELECT ''' \
             + function + '''(way) FROM planet_osm_line WHERE osm_id=''' \
             + WayFrist \
-            + ''' LIMIT 1), 
-	(SELECT substring(tags::varchar from 'from,(.*?)[,}]') FROM planet_osm_rels WHERE id=''' \
+            + ''' LIMIT 1),
+        (SELECT substring(tags::varchar from 'from,(.*?)[,}]') FROM planet_osm_rels WHERE id=''' \
             + str(current_route_id) \
             + ''' LIMIT 1),
-	(SELECT substring(tags::varchar from 'ref,(.*?)[,}]') FROM planet_osm_rels WHERE id=''' \
+        (SELECT substring(tags::varchar from 'ref,(.*?)[,}]') FROM planet_osm_rels WHERE id=''' \
             + str(current_route_id) + ''' )
-	)
-	;'''
+        )
+        ;'''
         cur.execute(sql)
         conn.commit()
 
@@ -210,22 +203,22 @@ def main():
     this_way_refs_direction = {}
 
     cur.execute('''
-	SELECT 
-	COUNT(*) AS cnt
-	FROM planet_osm_line
-	WHERE osm_id > 0
-		''')
+        SELECT
+        COUNT(*) AS cnt
+        FROM planet_osm_line
+        WHERE osm_id > 0
+                ''')
     rows = cur.fetchall()
     for row in rows:
         ways_count_total = row[0]
 
     cur.execute('''
-	SELECT 
-	osm_id, name 
-	FROM planet_osm_line
-	WHERE osm_id > 0
-	ORDER BY name DESC
-		''')
+        SELECT
+        osm_id, name
+        FROM planet_osm_line
+        WHERE osm_id > 0
+        ORDER BY name DESC
+                ''')
 
     rows = cur.fetchall()
 
@@ -246,15 +239,15 @@ def main():
 
         sql2 = \
             '''
-		SELECT 
-	id,
-	substring(tags::varchar from 'ref,(.*?)[,}]') AS ref,
-	substring(tags::varchar from 'name,(.*?)[,}]') AS name
-	FROM planet_osm_rels 
-	WHERE members::VARCHAR LIKE '%''' \
+                SELECT
+        id,
+        substring(tags::varchar from 'ref,(.*?)[,}]') AS ref,
+        substring(tags::varchar from 'name,(.*?)[,}]') AS name
+        FROM planet_osm_rels
+        WHERE members::VARCHAR LIKE '%''' \
             + str(way_id) + '''%'
-	ORDER BY ref;
-	'''
+        ORDER BY ref;
+        '''
 
         cur.execute(sql2)
         rows2 = cur.fetchall()
@@ -270,14 +263,14 @@ def main():
             current_routemaster_ref = row2[1]
             sql3 = \
                 '''
-	SELECT 
-	* 
-	FROM planet_osm_rels		
-	WHERE members::VARCHAR LIKE '%''' \
+        SELECT
+        *
+        FROM planet_osm_rels                
+        WHERE members::VARCHAR LIKE '%''' \
                 + str(way_id) + '''%'
-	AND id = ''' + str(row2[0]) \
+        AND id = ''' + str(row2[0]) \
                 + '''
-			'''
+                        '''
             cur.execute(sql3)
             rows3 = cur.fetchall()
             for row3 in rows3:
@@ -286,7 +279,7 @@ def main():
 
                 WaysInCurrentRel = []
                 WaysInCurrentRel = [i for i in members_list
-                                    if not i.find('w')]  # TODO w or n in query?
+                                    if not i.find('w')] # TODO w or n in query?
 
                 # l[1::2] for even elements
 
@@ -350,7 +343,7 @@ def main():
                             else:
                                 local_way_id_prev = local_way_id_current
                             deb('-- current=' + local_way_id_current
-                                + '    prev=' + local_way_id_prev)
+                                + ' prev=' + local_way_id_prev)
 
                             sql = \
                                 '''SELECT ST_StartPoint(way), ST_EndPoint(way) from planet_osm_line WHERE osm_id=''' \
@@ -386,15 +379,15 @@ def main():
 
         sql = \
             '''
-		SELECT 
+                SELECT
 
-	DISTINCT substring(tags::varchar from 'ref,(.*?)[,}]') AS ref
-	 
-	FROM planet_osm_rels 
-	WHERE members::VARCHAR LIKE '%w''' \
+        DISTINCT substring(tags::varchar from 'ref,(.*?)[,}]') AS ref
+        
+        FROM planet_osm_rels
+        WHERE members::VARCHAR LIKE '%w''' \
             + str(way_id) + '''%'
-	ORDER BY ref;
-	'''
+        ORDER BY ref;
+        '''
 
         cur.execute(sql)
         rows4 = cur.fetchall()
@@ -456,19 +449,19 @@ def main():
 
         sql = \
             '''
-	INSERT INTO route_line_labels 
-	(osm_id, route_ref, route_ref_reverse)
-	VALUES
-	(
-	''' \
+        INSERT INTO route_line_labels
+        (osm_id, route_ref, route_ref_reverse)
+        VALUES
+        (
+        ''' \
             + str(way_id) + ''',
-	\'''' + export_ref + '''\',
-	\'''' \
+        \'''' + export_ref + '''\',
+        \'''' \
             + export_ref_reverse + '''\'
 
-	)
+        )
 
-		'''
+                '''
 
         cur.execute(sql)
         conn.commit()
@@ -478,33 +471,37 @@ def main():
     conn.commit()
 
     print 'Create terminals table (TODO replace to view)'
-    sql = '''
-	DROP TABLE IF EXISTS terminals_export 
-	;'''
-    cur.execute(sql)
-    conn.commit()
-    sql = \
-        '''
-	CREATE  table terminals_export AS 
-	(
-	SELECT 
-	DISTINCT geom,
-	name,
-	string_agg(routes,',' ORDER BY routes) AS routes, 
-	concat(
-		trim(both '"' from
-			REPLACE(name, '\\\', '')
-		)
-		,'  ',
-		'[',
-		string_agg(routes,',' ORDER BY routes),
-		']')
-	AS long_text
-	from terminals
-	GROUP BY geom, name
 
-	)
-	;'''
+    sql='''
+        DROP TABLE IF EXISTS terminals_export
+        ;
+
+        CREATE table terminals_export AS
+        (
+        SELECT
+        DISTINCT ST_GeomFromWKB(geom) AS geom,
+        name,
+        string_agg(routes,',' ORDER BY routes) AS routes,
+        concat(
+                trim(both '"' from
+                        REPLACE(name, '\\\', '')
+                )
+                ,' ',
+                '[',
+                string_agg(routes,',' ORDER BY routes),
+                ']')
+        AS long_text
+        from terminals
+        GROUP BY geom, name
+
+        )
+        ;
+
+ALTER TABLE terminals_export 
+  ALTER COLUMN geom TYPE geometry(POINT, 4326) 
+    USING ST_SetSRID(geom,4326);
+
+'''
 
     cur.execute(sql)
     conn.commit()
@@ -512,31 +509,31 @@ def main():
     print 'Terminals created'
 
     sql = '''
-	DROP TABLE IF EXISTS routes_with_refs 
-	'''
+        DROP TABLE IF EXISTS routes_with_refs
+        '''
     cur.execute(sql)
     conn.commit()
 
     sql = \
         '''
-	CREATE TABLE routes_with_refs AS
-	(SELECT 
-	planet_osm_line.osm_id,
-	degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
-	ST_X(ST_Line_Interpolate_Point(way,0.5)) AS x,
-	ST_Y(ST_Line_Interpolate_Point(way,0.5)) AS y,
-	way,
-	CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN route_line_labels.route_ref_reverse 
-	ELSE route_line_labels.route_ref 
-	END
-	AS routes_ref
+        CREATE TABLE routes_with_refs AS
+        (SELECT
+        planet_osm_line.osm_id,
+        degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
+        ST_X(ST_Line_Interpolate_Point(way,0.5)) AS x,
+        ST_Y(ST_Line_Interpolate_Point(way,0.5)) AS y,
+        way,
+        CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN route_line_labels.route_ref_reverse
+        ELSE route_line_labels.route_ref
+        END
+        AS routes_ref
 
-	FROM 
-	planet_osm_line JOIN route_line_labels
-	ON (planet_osm_line.osm_id = route_line_labels.osm_id)
-	WHERE planet_osm_line.osm_id>0
-	)
-	'''
+        FROM
+        planet_osm_line JOIN route_line_labels
+        ON (planet_osm_line.osm_id = route_line_labels.osm_id)
+        WHERE planet_osm_line.osm_id>0
+        )
+        '''
 
     cur.execute(sql)
     conn.commit()
@@ -545,4 +542,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-			
+# sudo mount -t vboxsf -o uid=user,rw GIS /home/user/GIS
