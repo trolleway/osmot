@@ -424,14 +424,14 @@ def main():
                 & this_way_refs_direction.get((ref, 'b'), 0) == 0:
 
                 set_direction = 'forward'
-                direction_symbol = '>'
-                direction_symbol_reverse = '<'
+                direction_symbol = '→'
+                direction_symbol_reverse = '←'
             elif this_way_refs_direction.get((ref, 'f'), 0) == 0:
 
                 if this_way_refs_direction.get((ref, 'b'), 0) == 1:
                     set_direction = 'backward'
-                    direction_symbol = '<'
-                    direction_symbol_reverse = '>'
+                    direction_symbol = '←'
+                    direction_symbol_reverse = '→'
                 elif this_way_refs_direction.get((ref, 'f'), 0) == 0 \
                     & this_way_refs_direction.get((ref, 'b'), 0) == 0:
 
