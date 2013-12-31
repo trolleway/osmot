@@ -31,10 +31,9 @@ def argparser_prepare():
                         help='Postgresql password')
 
     parser.epilog = \
-        '''Samples:
-%(prog)s /home/someuser/moscow.csv
-%(prog)s -t 3 /home/someuser/all_uics/
-%(prog)s -t 5 -r RU-SPE /home/someuser/saint-pet.csv
+        '''Sample:
+%(prog)s -hs localhost -d osmot -u user -p user
+create route geometry lines and labels in postgis database "osmot", witch has been already populated with osm2pgsql  
 ''' \
         % {'prog': parser.prog}
     return parser
