@@ -109,6 +109,8 @@ def main():
         tags::VARCHAR LIKE '%route,trolleybus%'
         OR tags::VARCHAR LIKE '%route,tram%'
         OR tags::VARCHAR LIKE '%route,bus%'
+        OR tags::VARCHAR LIKE '%route,train%'
+        OR tags::VARCHAR LIKE '%route,subway%'
         OR tags::VARCHAR LIKE '%route,share_taxi%'
                 ''')
     except:
