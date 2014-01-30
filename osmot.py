@@ -31,9 +31,10 @@ def argparser_prepare():
                         help='Postgresql password')
 
     parser.epilog = \
-        '''Sample:
-%(prog)s -hs localhost -d osmot -u user -p user
-create route geometry lines and labels in postgis database "osmot", witch has been already populated with osm2pgsql  
+        '''Samples:
+%(prog)s /home/someuser/moscow.csv
+%(prog)s -t 3 /home/someuser/all_uics/
+%(prog)s -t 5 -r RU-SPE /home/someuser/saint-pet.csv
 ''' \
         % {'prog': parser.prog}
     return parser
@@ -65,7 +66,7 @@ def main():
     sql = \
         '''
         CREATE TABLE IF NOT exists terminals (
-                 geom GEOMETRY,
+                 wkb_geometry GEOMETRY,
                  name varchar(250),
                  routes varchar(250),
                  sometype        varchar(250)
@@ -109,8 +110,6 @@ def main():
         tags::VARCHAR LIKE '%route,trolleybus%'
         OR tags::VARCHAR LIKE '%route,tram%'
         OR tags::VARCHAR LIKE '%route,bus%'
-        OR tags::VARCHAR LIKE '%route,train%'
-        OR tags::VARCHAR LIKE '%route,subway%'
         OR tags::VARCHAR LIKE '%route,share_taxi%'
                 ''')
     except:
@@ -182,7 +181,7 @@ def main():
 
         sql = \
             '''
-        INSERT INTO terminals (geom,name, routes) VALUES
+        INSERT INTO terminals (wkb_geometry,name, routes) VALUES
         (
         (SELECT ''' \
             + function + '''(way) FROM planet_osm_line WHERE osm_id=''' \
@@ -425,14 +424,14 @@ def main():
                 & this_way_refs_direction.get((ref, 'b'), 0) == 0:
 
                 set_direction = 'forward'
-                direction_symbol = '→'
-                direction_symbol_reverse = '←'
+                direction_symbol = '>'
+                direction_symbol_reverse = '<'
             elif this_way_refs_direction.get((ref, 'f'), 0) == 0:
 
                 if this_way_refs_direction.get((ref, 'b'), 0) == 1:
                     set_direction = 'backward'
-                    direction_symbol = '←'
-                    direction_symbol_reverse = '→'
+                    direction_symbol = '<'
+                    direction_symbol_reverse = '>'
                 elif this_way_refs_direction.get((ref, 'f'), 0) == 0 \
                     & this_way_refs_direction.get((ref, 'b'), 0) == 0:
 
@@ -480,7 +479,7 @@ def main():
         CREATE table terminals_export AS
         (
         SELECT
-        DISTINCT ST_GeomFromWKB(geom) AS geom,
+        DISTINCT ST_GeomFromWKB(wkb_geometry) AS wkb_geometry,
         name,
         string_agg(routes,',' ORDER BY routes) AS routes,
         concat(
@@ -493,14 +492,14 @@ def main():
                 ']')
         AS long_text
         from terminals
-        GROUP BY geom, name
+        GROUP BY wkb_geometry, name
 
         )
         ;
 
 ALTER TABLE terminals_export 
-  ALTER COLUMN geom TYPE geometry(POINT, 4326) 
-    USING ST_SetSRID(geom,4326);
+  ALTER COLUMN wkb_geometry TYPE geometry(POINT, 4326) 
+    USING ST_SetSRID(wkb_geometry,4326);
 
 '''
 
@@ -523,7 +522,7 @@ ALTER TABLE terminals_export
         degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
         ST_X(ST_Line_Interpolate_Point(way,0.5)) AS x,
         ST_Y(ST_Line_Interpolate_Point(way,0.5)) AS y,
-        way,
+        way AS wkb_geometry,
         CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN route_line_labels.route_ref_reverse
         ELSE route_line_labels.route_ref
         END
@@ -542,5 +541,3 @@ ALTER TABLE terminals_export
 
 if __name__ == '__main__':
     main()
-
-# sudo mount -t vboxsf -o uid=user,rw GIS /home/user/GIS
