@@ -1,0 +1,2052 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' upload='true' generator='JOSM'>
+  <bounds minlat='54.9018822' minlon='38.3862305' maxlat='55.2290231' maxlon='39.2211914' origin='http://overpass.osm.rambler.ru/cgi/xapi?' />
+  <node id='617631275' timestamp='2013-10-15T19:44:42Z' uid='108005' user='var-alex' visible='true' version='12' changeset='18375432' lat='55.0812205' lon='38.8127712' />
+  <node id='618355205' timestamp='2013-10-17T16:48:09Z' uid='108005' user='var-alex' visible='true' version='20' changeset='18406702' lat='55.056297' lon='38.7492009' />
+  <node id='778121961' timestamp='2013-10-15T19:44:43Z' uid='108005' user='var-alex' visible='true' version='12' changeset='18375432' lat='55.0919956' lon='38.7677951' />
+  <node id='778121976' timestamp='2013-10-15T19:44:43Z' uid='108005' user='var-alex' visible='true' version='17' changeset='18375432' lat='55.0936919' lon='38.7691504' />
+  <node id='778121986' timestamp='2013-09-12T11:13:11Z' uid='108005' user='var-alex' visible='true' version='11' changeset='17797525' lat='55.0882954' lon='38.765897' />
+  <node id='778121994' timestamp='2013-10-15T19:44:43Z' uid='108005' user='var-alex' visible='true' version='15' changeset='18375432' lat='55.0905678' lon='38.7670591' />
+  <node id='778121997' timestamp='2014-01-30T09:37:41Z' uid='108005' user='var-alex' visible='true' version='12' changeset='20280069' lat='55.0985612' lon='38.7753398' />
+  <node id='778122019' timestamp='2013-07-11T07:01:07Z' uid='108005' user='var-alex' visible='true' version='11' changeset='16909065' lat='55.0876641' lon='38.7655886' />
+  <node id='778122022' timestamp='2013-10-15T19:44:43Z' uid='108005' user='var-alex' visible='true' version='11' changeset='18375432' lat='55.0990721' lon='38.7761444' />
+  <node id='778122028' timestamp='2011-09-10T20:51:57Z' uid='347929' user='347929' visible='true' version='10' changeset='9265573' lat='55.0997646' lon='38.7802157' />
+  <node id='778122031' timestamp='2013-10-15T19:44:43Z' uid='108005' user='var-alex' visible='true' version='14' changeset='18375432' lat='55.0933709' lon='38.7705077' />
+  <node id='778122041' timestamp='2013-10-15T19:44:43Z' uid='108005' user='var-alex' visible='true' version='13' changeset='18375432' lat='55.0949734' lon='38.7724647' />
+  <node id='778122043' timestamp='2011-09-10T20:51:59Z' uid='347929' user='347929' visible='true' version='10' changeset='9265573' lat='55.1000225' lon='38.7801605' />
+  <node id='778122057' timestamp='2011-09-10T20:52:00Z' uid='347929' user='347929' visible='true' version='10' changeset='9265573' lat='55.1000556' lon='38.779822' />
+  <node id='778122078' timestamp='2013-10-15T19:44:43Z' uid='108005' user='var-alex' visible='true' version='11' changeset='18375432' lat='55.0993825' lon='38.7778962' />
+  <node id='778122084' timestamp='2013-10-15T19:44:31Z' uid='108005' user='var-alex' visible='true' version='15' changeset='18375432' lat='55.0932465' lon='38.7684155'>
+    <tag k='name' v='пл. Советская' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='778122093' timestamp='2011-09-10T20:52:03Z' uid='347929' user='347929' visible='true' version='10' changeset='9265573' lat='55.099888' lon='38.7791068' />
+  <node id='778122101' timestamp='2014-01-28T05:17:42Z' uid='108005' user='var-alex' visible='true' version='13' changeset='20241163' lat='55.0918532' lon='38.7677252'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='778122112' timestamp='2014-01-30T09:37:38Z' uid='108005' user='var-alex' visible='true' version='18' changeset='20280069' lat='55.0996081' lon='38.7798377'>
+    <tag k='name' v='Станция Коломна' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='778122118' timestamp='2013-10-15T19:44:43Z' uid='108005' user='var-alex' visible='true' version='14' changeset='18375432' lat='55.0936357' lon='38.7688264' />
+  <node id='778122130' timestamp='2013-10-15T19:44:44Z' uid='108005' user='var-alex' visible='true' version='20' changeset='18375432' lat='55.0936905' lon='38.7692924' />
+  <node id='778159713' timestamp='2013-09-06T18:14:58Z' uid='108005' user='var-alex' visible='true' version='11' changeset='17707462' lat='55.1028911' lon='38.7489771' />
+  <node id='778159738' timestamp='2013-09-06T18:14:59Z' uid='108005' user='var-alex' visible='true' version='7' changeset='17707462' lat='55.0975865' lon='38.7589319' />
+  <node id='778159758' timestamp='2013-11-12T05:25:37Z' uid='108005' user='var-alex' visible='true' version='9' changeset='18848771' lat='55.0978236' lon='38.7584815' />
+  <node id='778159766' timestamp='2013-09-06T18:14:59Z' uid='108005' user='var-alex' visible='true' version='8' changeset='17707462' lat='55.0991033' lon='38.7561107' />
+  <node id='778159813' timestamp='2013-09-06T18:14:59Z' uid='108005' user='var-alex' visible='true' version='14' changeset='17707462' lat='55.0979264' lon='38.7582838' />
+  <node id='778159825' timestamp='2013-09-06T18:14:59Z' uid='108005' user='var-alex' visible='true' version='11' changeset='17707462' lat='55.0999804' lon='38.7544499' />
+  <node id='778159847' timestamp='2013-09-06T18:14:59Z' uid='108005' user='var-alex' visible='true' version='9' changeset='17707462' lat='55.0993106' lon='38.7557518' />
+  <node id='892552101' timestamp='2013-10-15T19:44:44Z' uid='108005' user='var-alex' visible='true' version='12' changeset='18375432' lat='55.090088' lon='38.7820272'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='892552105' timestamp='2013-10-15T19:44:44Z' uid='108005' user='var-alex' visible='true' version='11' changeset='18375432' lat='55.08625' lon='38.795246'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='892552107' timestamp='2014-01-30T09:37:38Z' uid='108005' user='var-alex' visible='true' version='22' changeset='20280069' lat='55.0838503' lon='38.7637425'>
+    <tag k='name' v='ул. Дзержинского' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='892552109' timestamp='2013-10-15T19:44:44Z' uid='108005' user='var-alex' visible='true' version='12' changeset='18375432' lat='55.0888196' lon='38.7863756'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='892552114' timestamp='2013-10-15T19:44:44Z' uid='108005' user='var-alex' visible='true' version='19' changeset='18375432' lat='55.0840323' lon='38.8030586'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='892552122' timestamp='2013-10-15T19:44:30Z' uid='108005' user='var-alex' visible='true' version='23' changeset='18375432' lat='55.0919295' lon='38.7755732'>
+    <tag k='bus' v='yes' />
+    <tag k='highway' v='platform' />
+    <tag k='name' v='Поликлиника' />
+    <tag k='public_transport' v='platform' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='892552124' timestamp='2013-10-15T19:44:44Z' uid='108005' user='var-alex' visible='true' version='12' changeset='18375432' lat='55.0825124' lon='38.7631573'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='892552129' timestamp='2013-10-15T19:44:44Z' uid='108005' user='var-alex' visible='true' version='16' changeset='18375432' lat='55.0936698' lon='38.7689658' />
+  <node id='1428048864' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='8' changeset='18375432' lat='55.0934347' lon='38.768501' />
+  <node id='1428048865' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='8' changeset='18375432' lat='55.0935139' lon='38.7685888' />
+  <node id='1428048867' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='8' changeset='18375432' lat='55.0935801' lon='38.7686951' />
+  <node id='1428048881' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='7' changeset='18375432' lat='55.0954374' lon='38.7715604' />
+  <node id='1428048939' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18375432' lat='55.0991517' lon='38.776295' />
+  <node id='1428048942' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18375432' lat='55.0992' lon='38.7764268' />
+  <node id='1428048945' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='6' changeset='18375432' lat='55.0992432' lon='38.7766394' />
+  <node id='1428048947' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18375432' lat='55.099287' lon='38.7770756' />
+  <node id='1428048961' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18375432' lat='55.0993701' lon='38.7777987' />
+  <node id='1428048963' timestamp='2011-09-10T20:47:19Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0995185' lon='38.7790229' />
+  <node id='1428048964' timestamp='2011-09-10T20:47:19Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0995912' lon='38.7783268' />
+  <node id='1428048966' timestamp='2011-09-10T20:47:19Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0996442' lon='38.7800028' />
+  <node id='1428048967' timestamp='2011-09-10T20:47:19Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0996748' lon='38.7785025' />
+  <node id='1428048968' timestamp='2011-09-10T20:47:20Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.099701' lon='38.7801569' />
+  <node id='1428048969' timestamp='2011-09-10T20:47:20Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0997505' lon='38.7786674' />
+  <node id='1428048970' timestamp='2011-09-10T20:47:20Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0998016' lon='38.778789' />
+  <node id='1428048971' timestamp='2011-09-10T20:47:20Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0998433' lon='38.7789107' />
+  <node id='1428048972' timestamp='2011-09-10T20:47:20Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0998464' lon='38.7802569' />
+  <node id='1428048973' timestamp='2011-09-10T20:47:21Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0999067' lon='38.7802596' />
+  <node id='1428048974' timestamp='2011-09-10T20:47:21Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.0999702' lon='38.7802271' />
+  <node id='1428048975' timestamp='2011-09-10T20:47:21Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.1000073' lon='38.7796081' />
+  <node id='1428048977' timestamp='2011-09-10T20:47:22Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.1000506' lon='38.7800812' />
+  <node id='1428048978' timestamp='2011-09-10T20:47:22Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.100066' lon='38.7800055' />
+  <node id='1428048980' timestamp='2011-09-10T20:47:22Z' uid='347929' user='347929' visible='true' version='4' changeset='9265687' lat='55.1000691' lon='38.7799055' />
+  <node id='1428067026' timestamp='2012-06-29T20:24:58Z' uid='617130' user='Elkim' visible='true' version='5' changeset='12060368' lat='55.0800566' lon='38.8166218'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='1468365321' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18375432' lat='55.0797385' lon='38.8168995' />
+  <node id='1468365332' timestamp='2012-06-29T20:24:59Z' uid='617130' user='Elkim' visible='true' version='3' changeset='12060368' lat='55.0799755' lon='38.8167813' />
+  <node id='1468365341' timestamp='2012-06-29T20:24:59Z' uid='617130' user='Elkim' visible='true' version='3' changeset='12060368' lat='55.0815917' lon='38.8114877'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='1468365415' timestamp='2012-06-29T20:24:59Z' uid='617130' user='Elkim' visible='true' version='3' changeset='12060368' lat='55.0801496' lon='38.8164962' />
+  <node id='1501626075' timestamp='2013-10-15T19:44:29Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0837673' lon='38.8040086'>
+    <tag k='name' v='Голутвин' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1501626090' timestamp='2013-07-23T23:13:37Z' uid='336354' user='esaulenka' visible='true' version='4' changeset='17068987' lat='55.0782579' lon='38.8167447' />
+  <node id='1501626116' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18375432' lat='55.0784773' lon='38.8167939' />
+  <node id='1658797372' timestamp='2013-10-17T16:47:51Z' uid='108005' user='var-alex' visible='true' version='6' changeset='18406702' lat='55.0774164' lon='38.7618012' />
+  <node id='1658797373' timestamp='2013-09-12T15:06:07Z' uid='108005' user='var-alex' visible='true' version='4' changeset='17801339' lat='55.070329' lon='38.7599036' />
+  <node id='1658797374' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='3' changeset='16909065' lat='55.0736018' lon='38.7602323' />
+  <node id='1658797376' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0733536' lon='38.7602149' />
+  <node id='1658797378' timestamp='2013-09-12T15:06:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17801339' lat='55.0698436' lon='38.7594088' />
+  <node id='1658797380' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18406702' lat='55.0693384' lon='38.7585965' />
+  <node id='1658797383' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0677963' lon='38.7541625' />
+  <node id='1658797385' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18406702' lat='55.0663795' lon='38.7512365' />
+  <node id='1658797387' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='16909065' lat='55.0640035' lon='38.7463212' />
+  <node id='1658797390' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='8' changeset='18406702' lat='55.0614005' lon='38.7410397' />
+  <node id='1658797394' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.070973' lon='38.7602826' />
+  <node id='1658797405' timestamp='2013-07-23T04:49:37Z' uid='108005' user='var-alex' visible='true' version='4' changeset='17057078' lat='55.0566056' lon='38.7475956' />
+  <node id='1658797413' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='16909065' lat='55.0564101' lon='38.7495498' />
+  <node id='1658797416' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0578432' lon='38.752511' />
+  <node id='1658797420' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0605075' lon='38.7578784' />
+  <node id='1658797422' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0602865' lon='38.7575372' />
+  <node id='1658797425' timestamp='2013-10-17T16:47:52Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18406702' lat='55.065356' lon='38.756412' />
+  <node id='1658797466' timestamp='2013-10-17T16:47:50Z' uid='108005' user='var-alex' visible='true' version='6' changeset='18406702' lat='55.0667502' lon='38.7545063'>
+    <tag k='bench' v='yes' />
+    <tag k='name' v='Поликлиника №2' />
+    <tag k='public_transport' v='platform' />
+    <tag k='shelter' v='yes' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='1658797473' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='7' changeset='16909065' lat='55.0593815' lon='38.7277106' />
+  <node id='1658797481' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='8' changeset='16909065' lat='55.060072' lon='38.733817' />
+  <node id='1658797486' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='7' changeset='16909065' lat='55.0605727' lon='38.7360922' />
+  <node id='1658797489' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='7' changeset='16909065' lat='55.0602249' lon='38.7350765' />
+  <node id='1658797491' timestamp='2013-07-11T07:00:54Z' uid='108005' user='var-alex' visible='true' version='7' changeset='16909065' lat='55.0611375' lon='38.7399901' />
+  <node id='1662740867' timestamp='2012-06-30T07:20:57Z' uid='236129' user='Z440' visible='true' version='3' changeset='12063129' lat='55.0750414' lon='38.8022213' />
+  <node id='1662740869' timestamp='2012-06-30T07:20:59Z' uid='236129' user='Z440' visible='true' version='3' changeset='12063129' lat='55.0750534' lon='38.8024996' />
+  <node id='1662740872' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0750472' lon='38.8032277' />
+  <node id='1662740873' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0750065' lon='38.8041822' />
+  <node id='1662740875' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0749742' lon='38.8049331' />
+  <node id='1662740877' timestamp='2012-07-01T02:26:57Z' uid='236129' user='Z440' visible='true' version='3' changeset='12071611' lat='55.0748942' lon='38.8067013' />
+  <node id='1662740879' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0748474' lon='38.8082576' />
+  <node id='1662740881' timestamp='2012-07-01T02:26:58Z' uid='236129' user='Z440' visible='true' version='3' changeset='12071611' lat='55.0748099' lon='38.8090741' />
+  <node id='1662740890' timestamp='2012-07-01T02:26:58Z' uid='236129' user='Z440' visible='true' version='3' changeset='12071611' lat='55.0747692' lon='38.8102254' />
+  <node id='1662740893' timestamp='2012-06-30T02:43:04Z' uid='236129' user='Z440' visible='true' version='3' changeset='12062295' lat='55.073608' lon='38.7939605' />
+  <node id='1662740900' timestamp='2012-06-30T02:43:06Z' uid='236129' user='Z440' visible='true' version='3' changeset='12062295' lat='55.0748401' lon='38.8004321' />
+  <node id='1662740902' timestamp='2012-06-30T07:21:05Z' uid='236129' user='Z440' visible='true' version='4' changeset='12063129' lat='55.0749774' lon='38.801618' />
+  <node id='1662740904' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0763507' lon='38.8150579' />
+  <node id='1662740906' timestamp='2013-07-23T23:13:38Z' uid='336354' user='esaulenka' visible='true' version='3' changeset='17068987' lat='55.0770988' lon='38.8158127' />
+  <node id='1662740909' timestamp='2013-10-15T17:54:20Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18373513' lat='55.0744728' lon='38.7842917' />
+  <node id='1662740911' timestamp='2012-06-13T18:50:45Z' uid='397326' user='trolleway' visible='true' version='2' changeset='11887691' lat='55.0741166' lon='38.7855979' />
+  <node id='1662740912' timestamp='2012-06-13T18:50:45Z' uid='397326' user='trolleway' visible='true' version='3' changeset='11887691' lat='55.0737144' lon='38.7869645' />
+  <node id='1662740941' timestamp='2012-07-01T02:26:58Z' uid='236129' user='Z440' visible='true' version='3' changeset='12071611' lat='55.0748874' lon='38.8109273' />
+  <node id='1662740943' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0754337' lon='38.8127137' />
+  <node id='1662740945' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0758163' lon='38.8138119' />
+  <node id='1662740952' timestamp='2013-12-10T18:16:36Z' uid='108005' user='var-alex' visible='true' version='4' changeset='19381803' lat='55.0760568' lon='38.7787734' />
+  <node id='1666315778' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.0953662' lon='38.7630624' />
+  <node id='1676073628' timestamp='2013-07-11T07:00:55Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0721464' lon='38.7603061' />
+  <node id='1681858266' timestamp='2013-10-15T19:44:31Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18375432' lat='55.0902327' lon='38.7668839'>
+    <tag k='name' v='Трамвайное управление' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1681865174' timestamp='2013-10-17T16:47:51Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0801397' lon='38.762398'>
+    <tag k='name' v='ул. Зеленая' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1681865176' timestamp='2013-10-15T19:44:31Z' uid='108005' user='var-alex' visible='true' version='7' changeset='18375432' lat='55.0805128' lon='38.763345'>
+    <tag k='name' v='ул. Зеленая' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1686053262' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0945975' lon='38.7727908' />
+  <node id='1686053263' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0948766' lon='38.772641' />
+  <node id='1686210902' timestamp='2013-10-17T16:47:51Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0746778' lon='38.7606508'>
+    <tag k='name' v='Путепровод' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1686211163' timestamp='2013-07-11T07:00:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='16909065' lat='55.0582197' lon='38.7533063'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1686227973' timestamp='2013-07-11T07:00:52Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0639276' lon='38.7461638'>
+    <tag k='name' v='Кинотеатр Русь' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1686230718' timestamp='2013-10-17T16:47:53Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0771811' lon='38.7617151'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1712481208' timestamp='2012-06-29T20:25:00Z' uid='617130' user='Elkim' visible='true' version='2' changeset='12060368' lat='55.0800887' lon='38.8166374'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='1747788820' timestamp='2013-10-15T19:44:31Z' uid='108005' user='var-alex' visible='true' version='7' changeset='18375432' lat='55.0748871' lon='38.8007305'>
+    <tag k='name' v='Станкостроителей' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1756917795' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18406702' lat='55.0673576' lon='38.753289' />
+  <node id='1786417500' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0734141' lon='38.7844244' />
+  <node id='1786417503' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0734217' lon='38.7845483' />
+  <node id='1786417505' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0734277' lon='38.7843021' />
+  <node id='1786417507' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0734613' lon='38.7841922' />
+  <node id='1786417509' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.073512' lon='38.7841045' />
+  <node id='1786417511' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0735752' lon='38.7840468' />
+  <node id='1786417513' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0736181' lon='38.7860057' />
+  <node id='1786417517' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.073639' lon='38.7874263' />
+  <node id='1786417521' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0736454' lon='38.7840242' />
+  <node id='1786417523' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.073651' lon='38.786111' />
+  <node id='1786417524' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0736556' lon='38.7871849' />
+  <node id='1786417526' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0736705' lon='38.7874295' />
+  <node id='1786417528' timestamp='2012-06-30T02:43:13Z' uid='236129' user='Z440' visible='true' version='2' changeset='12062295' lat='55.0736481' lon='38.7942462' />
+  <node id='1786417529' timestamp='2012-06-30T02:43:15Z' uid='236129' user='Z440' visible='true' version='2' changeset='12062295' lat='55.0736464' lon='38.7939589' />
+  <node id='1786417530' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0736862' lon='38.7872002' />
+  <node id='1786417532' timestamp='2012-06-13T18:50:39Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.073701' lon='38.7861933' />
+  <node id='1786417533' timestamp='2012-06-30T02:43:16Z' uid='236129' user='Z440' visible='true' version='2' changeset='12062295' lat='55.0736788' lon='38.7942234' />
+  <node id='1786417543' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0737163' lon='38.7840387' />
+  <node id='1786417547' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0737362' lon='38.7868903' />
+  <node id='1786417549' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0737429' lon='38.7869877' />
+  <node id='1786417555' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0737631' lon='38.7862447' />
+  <node id='1786417559' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0738312' lon='38.7862601' />
+  <node id='1786417567' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0738987' lon='38.7862379' />
+  <node id='1786417568' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.073959' lon='38.7861803' />
+  <node id='1786417570' timestamp='2013-07-11T07:00:55Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0739966' lon='38.7860853' />
+  <node id='1786417571' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0741423' lon='38.7844287' />
+  <node id='1786417572' timestamp='2013-07-11T07:00:55Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.074135' lon='38.7856149' />
+  <node id='1786417580' timestamp='2012-06-13T18:50:40Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0742314' lon='38.7844579' />
+  <node id='1786417583' timestamp='2013-07-11T07:00:55Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0742912' lon='38.7850594' />
+  <node id='1786417585' timestamp='2012-06-13T18:50:41Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0743219' lon='38.7844452' />
+  <node id='1786417586' timestamp='2012-06-13T18:50:41Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11887691' lat='55.0744072' lon='38.7843914' />
+  <node id='1786417587' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0744999' lon='38.7843172' />
+  <node id='1786417588' timestamp='2012-07-01T02:31:12Z' uid='236129' user='Z440' visible='true' version='2' changeset='12071611' lat='55.0747987' lon='38.8105785' />
+  <node id='1786417589' timestamp='2012-07-01T02:31:12Z' uid='236129' user='Z440' visible='true' version='2' changeset='12071611' lat='55.074803' lon='38.8102124' />
+  <node id='1786417590' timestamp='2012-07-01T02:31:13Z' uid='236129' user='Z440' visible='true' version='2' changeset='12071611' lat='55.0748341' lon='38.8105299' />
+  <node id='1786417591' timestamp='2012-07-01T02:31:13Z' uid='236129' user='Z440' visible='true' version='2' changeset='12071611' lat='55.0748436' lon='38.8090747' />
+  <node id='1786417592' timestamp='2012-07-01T02:31:14Z' uid='236129' user='Z440' visible='true' version='2' changeset='12071611' lat='55.0748837' lon='38.8082618' />
+  <node id='1786417593' timestamp='2012-07-01T02:31:14Z' uid='236129' user='Z440' visible='true' version='2' changeset='12071611' lat='55.0749044' lon='38.8108677' />
+  <node id='1786417594' timestamp='2012-06-30T02:43:18Z' uid='236129' user='Z440' visible='true' version='2' changeset='12062295' lat='55.0748706' lon='38.8004132' />
+  <node id='1786417595' timestamp='2012-07-01T09:30:23Z' uid='236129' user='Z440' visible='true' version='3' changeset='12073576' lat='55.0749305' lon='38.8067268' />
+  <node id='1786417597' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0750013' lon='38.8049417' />
+  <node id='1786417598' timestamp='2012-06-30T07:22:34Z' uid='236129' user='Z440' visible='true' version='3' changeset='12063129' lat='55.0750061' lon='38.8016113' />
+  <node id='1786417599' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0750283' lon='38.8041833' />
+  <node id='1786417600' timestamp='2012-06-30T07:22:37Z' uid='236129' user='Z440' visible='true' version='2' changeset='12063129' lat='55.075069' lon='38.8022159' />
+  <node id='1786417601' timestamp='2012-06-30T07:22:38Z' uid='236129' user='Z440' visible='true' version='2' changeset='12063129' lat='55.0750781' lon='38.8024857' />
+  <node id='1786417602' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0750709' lon='38.8032306' />
+  <node id='1786417603' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0754725' lon='38.8126873' />
+  <node id='1786417604' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0758383' lon='38.8137943' />
+  <node id='1786417605' timestamp='2013-12-10T18:16:36Z' uid='108005' user='var-alex' visible='true' version='4' changeset='19381803' lat='55.0760797' lon='38.7787937' />
+  <node id='1786417606' timestamp='2013-07-23T23:13:38Z' uid='336354' user='esaulenka' visible='true' version='2' changeset='17068987' lat='55.0763687' lon='38.815027' />
+  <node id='1786417607' timestamp='2013-07-23T23:13:38Z' uid='336354' user='esaulenka' visible='true' version='2' changeset='17068987' lat='55.0771177' lon='38.8157715' />
+  <node id='1786417610' timestamp='2013-07-23T23:13:38Z' uid='336354' user='esaulenka' visible='true' version='3' changeset='17068987' lat='55.0782602' lon='38.8166958' />
+  <node id='1786417611' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0784814' lon='38.8167526' />
+  <node id='1786417613' timestamp='2013-10-15T19:44:33Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0797399' lon='38.8168447' />
+  <node id='1786417618' timestamp='2013-10-15T19:44:31Z' uid='108005' user='var-alex' visible='true' version='6' changeset='18375432' lat='55.0805111' lon='38.7634421'>
+    <tag k='name' v='ул. Зеленая' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1794032005' timestamp='2013-07-11T07:00:52Z' uid='108005' user='var-alex' visible='true' version='3' changeset='16909065' lat='55.0637095' lon='38.7458563'>
+    <tag k='name' v='Кинотеатр Русь' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1794032009' timestamp='2013-10-17T16:47:50Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0667578' lon='38.7544117'>
+    <tag k='name' v='Поликлиника №2' />
+    <tag k='public_transport' v='platform' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='1794032010' timestamp='2013-10-17T16:47:50Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0746064' lon='38.7606687'>
+    <tag k='name' v='Путепровод' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1794032011' timestamp='2013-10-15T19:44:31Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.090119' lon='38.7668641'>
+    <tag k='name' v='Трамвайное управление' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1794032012' timestamp='2013-10-15T19:44:31Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0932169' lon='38.7684671'>
+    <tag k='name' v='пл. Советская' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1794032013' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0557228' lon='38.7485157' />
+  <node id='1794032014' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0557269' lon='38.7486629' />
+  <node id='1794032015' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0557343' lon='38.7483857' />
+  <node id='1794032016' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.055757' lon='38.7487937' />
+  <node id='1794032019' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0557722' lon='38.7482741' />
+  <node id='1794032022' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0558017' lon='38.7489016' />
+  <node id='1794032024' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0558264' lon='38.7482026' />
+  <node id='1794032026' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='3' changeset='16909065' lat='55.0558734' lon='38.7489927' />
+  <node id='1794032028' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0558928' lon='38.7481356' />
+  <node id='1794032029' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0559527' lon='38.749034' />
+  <node id='1794032030' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0559359' lon='38.7481171' />
+  <node id='1794032031' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0560129' lon='38.7480979' />
+  <node id='1794032032' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0560563' lon='38.7490152' />
+  <node id='1794032038' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0562174' lon='38.7480558' />
+  <node id='1794032039' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0562591' lon='38.7485548' />
+  <node id='1794032043' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0563042' lon='38.7483161' />
+  <node id='1794032046' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='3' changeset='16909065' lat='55.056433' lon='38.7495003' />
+  <node id='1794032047' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0563572' lon='38.7479722' />
+  <node id='1794032048' timestamp='2013-10-17T16:47:54Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0563806' lon='38.7480355' />
+  <node id='1794032050' timestamp='2013-07-23T04:49:37Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17057078' lat='55.0565141' lon='38.7478204' />
+  <node id='1794032051' timestamp='2013-07-23T04:49:37Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17057078' lat='55.0565407' lon='38.7476806' />
+  <node id='1794032054' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0578741' lon='38.7524774' />
+  <node id='1794032055' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.05851' lon='38.7538289'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1794032056' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0593506' lon='38.7277188' />
+  <node id='1794032057' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0593543' lon='38.7275753' />
+  <node id='1794032058' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0593812' lon='38.7274393' />
+  <node id='1794032059' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0593847' lon='38.7275828' />
+  <node id='1794032060' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0594086' lon='38.727462' />
+  <node id='1794032061' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0594291' lon='38.7273224' />
+  <node id='1794032062' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0594512' lon='38.7273581' />
+  <node id='1794032063' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0594957' lon='38.7272319' />
+  <node id='1794032064' timestamp='2013-07-11T07:00:56Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.059509' lon='38.7272796' />
+  <node id='1794032065' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600014' lon='38.7323439' />
+  <node id='1794032066' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600215' lon='38.7325441' />
+  <node id='1794032067' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600217' lon='38.7327494' />
+  <node id='1794032068' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600252' lon='38.7333765' />
+  <node id='1794032069' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600313' lon='38.7336011' />
+  <node id='1794032070' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600314' lon='38.7323298' />
+  <node id='1794032071' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600416' lon='38.7338273' />
+  <node id='1794032072' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600521' lon='38.7325365' />
+  <node id='1794032073' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600523' lon='38.7327463' />
+  <node id='1794032074' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600558' lon='38.7333721' />
+  <node id='1794032075' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0600618' lon='38.7335948' />
+  <node id='1794032076' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0601664' lon='38.7349305' />
+  <node id='1794032077' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0601966' lon='38.7351007' />
+  <node id='1794032078' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0601962' lon='38.7349142' />
+  <node id='1794032079' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0602389' lon='38.7352367' />
+  <node id='1794032080' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0602651' lon='38.7352057' />
+  <node id='1794032081' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0603123' lon='38.7575004' />
+  <node id='1794032083' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0603825' lon='38.7577321' />
+  <node id='1794032084' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0604051' lon='38.7576967' />
+  <node id='1794032085' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0604472' lon='38.7357905' />
+  <node id='1794032088' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0604733' lon='38.735759' />
+  <node id='1794032089' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0605173' lon='38.7578194' />
+  <node id='1794032090' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0605036' lon='38.7359635' />
+  <node id='1794032091' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0605307' lon='38.7359355' />
+  <node id='1794032092' timestamp='2013-07-11T07:00:57Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0605437' lon='38.7361135' />
+  <node id='1794032093' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0606439' lon='38.757936' />
+  <node id='1794032094' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0606468' lon='38.757877' />
+  <node id='1794032097' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0607762' lon='38.7578682' />
+  <node id='1794032098' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.060784' lon='38.7579247' />
+  <node id='1794032100' timestamp='2013-10-17T16:47:50Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0611886' lon='38.7577363'>
+    <tag k='name' v='Музыкальная школа' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='1794032101' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0610974' lon='38.7409569' />
+  <node id='1794032102' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0611069' lon='38.7410074' />
+  <node id='1794032103' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0611078' lon='38.7400065' />
+  <node id='1794032104' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='5' changeset='18406702' lat='55.0612376' lon='38.7408978' />
+  <node id='1794032106' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='6' changeset='18406702' lat='55.0611806' lon='38.7404827' />
+  <node id='1794032107' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='6' changeset='18406702' lat='55.0612092' lon='38.740447' />
+  <node id='1794032108' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='6' changeset='18406702' lat='55.0612474' lon='38.7407974' />
+  <node id='1794032110' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='6' changeset='18406702' lat='55.0612711' lon='38.740771' />
+  <node id='1794032112' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='7' changeset='18406702' lat='55.0613774' lon='38.7410784' />
+  <node id='1794032113' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0626394' lon='38.7259208' />
+  <node id='1794032114' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.062664' lon='38.7258567' />
+  <node id='1794032115' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0627057' lon='38.7259271' />
+  <node id='1794032116' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0627683' lon='38.7259661' />
+  <node id='1794032117' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0631091' lon='38.7264919' />
+  <node id='1794032118' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0631935' lon='38.7265333' />
+  <node id='1794032120' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0631913' lon='38.7256087' />
+  <node id='1794032121' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0632811' lon='38.7265245' />
+  <node id='1794032122' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0632934' lon='38.7256234' />
+  <node id='1794032123' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0633623' lon='38.7264665' />
+  <node id='1794032124' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0633729' lon='38.725688' />
+  <node id='1794032125' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0634282' lon='38.7263656' />
+  <node id='1794032126' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.063436' lon='38.7257943' />
+  <node id='1794032127' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0634718' lon='38.7262327' />
+  <node id='1794032128' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0634759' lon='38.7259307' />
+  <node id='1794032129' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='5' changeset='16909065' lat='55.0634883' lon='38.7260823' />
+  <node id='1794032130' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='3' changeset='16909065' lat='55.0639587' lon='38.7463373' />
+  <node id='1794032132' timestamp='2013-09-18T07:08:05Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17898623' lat='55.0655646' lon='38.7561538' />
+  <node id='1794032133' timestamp='2013-09-18T07:08:05Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17898623' lat='55.0655665' lon='38.7562197' />
+  <node id='1794032134' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0657442' lon='38.7559093' />
+  <node id='1794032137' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0663402' lon='38.751271' />
+  <node id='1794032138' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0673062' lon='38.7536463' />
+  <node id='1794032139' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0673468' lon='38.7536889' />
+  <node id='1794032140' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.067375' lon='38.7536203' />
+  <node id='1794032141' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0674445' lon='38.7536923' />
+  <node id='1794032142' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='3' changeset='16909065' lat='55.0672952' lon='38.7532729' />
+  <node id='1794032147' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0675278' lon='38.7537398' />
+  <node id='1794032148' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0675471' lon='38.7536787' />
+  <node id='1794032150' timestamp='2013-10-17T16:47:55Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0677773' lon='38.7542063' />
+  <node id='1794032151' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0681596' lon='38.7552156' />
+  <node id='1794032152' timestamp='2013-07-11T07:00:58Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0681702' lon='38.7551822' />
+  <node id='1794032154' timestamp='2013-10-17T16:47:56Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0693212' lon='38.7586381' />
+  <node id='1794032155' timestamp='2013-09-12T15:06:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17801339' lat='55.0698309' lon='38.7594419' />
+  <node id='1794032156' timestamp='2013-09-12T15:06:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17801339' lat='55.0699653' lon='38.7596101' />
+  <node id='1794032157' timestamp='2013-09-12T15:06:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17801339' lat='55.0699837' lon='38.7595629' />
+  <node id='1794032159' timestamp='2013-09-12T15:06:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17801339' lat='55.0703117' lon='38.75993' />
+  <node id='1794032160' timestamp='2013-09-12T15:06:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17801339' lat='55.0706089' lon='38.760143' />
+  <node id='1794032162' timestamp='2013-07-11T07:00:59Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.070604' lon='38.7601024' />
+  <node id='1794032164' timestamp='2013-10-17T16:47:56Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0709686' lon='38.7603159' />
+  <node id='1794032174' timestamp='2013-07-11T07:00:59Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0721482' lon='38.7603462' />
+  <node id='1794032183' timestamp='2013-10-17T16:47:56Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0733676' lon='38.7602628' />
+  <node id='1794032184' timestamp='2013-07-11T07:00:59Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0736006' lon='38.7602799' />
+  <node id='1794032199' timestamp='2013-10-17T16:47:56Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0749307' lon='38.7608118' />
+  <node id='1794032200' timestamp='2013-10-17T16:47:56Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.076854' lon='38.7616404'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1794032202' timestamp='2013-10-17T16:47:56Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0773966' lon='38.7618674' />
+  <node id='1794032204' timestamp='2013-07-11T07:00:59Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0807178' lon='38.7626036' />
+  <node id='1794032206' timestamp='2013-07-11T07:00:59Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0808162' lon='38.7626291' />
+  <node id='1794032208' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0824962' lon='38.7632125' />
+  <node id='1794032209' timestamp='2013-07-11T07:00:59Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0876511' lon='38.765646' />
+  <node id='1794032210' timestamp='2013-07-11T07:00:59Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0885257' lon='38.7660682' />
+  <node id='1794032212' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0905596' lon='38.7671011' />
+  <node id='1794032213' timestamp='2014-01-28T05:17:39Z' uid='108005' user='var-alex' visible='true' version='4' changeset='20241163' lat='55.0918379' lon='38.7677713'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='1794032214' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0919857' lon='38.7678428' />
+  <node id='1794032217' timestamp='2014-01-30T09:37:38Z' uid='108005' user='var-alex' visible='true' version='6' changeset='20280069' lat='55.0836373' lon='38.7636988'>
+    <tag k='name' v='ул. Дзержинского' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='1794032218' timestamp='2013-10-17T16:47:51Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0801414' lon='38.7624512'>
+    <tag k='name' v='ул. Зеленая' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1794036099' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0803535' lon='38.7625056' />
+  <node id='1794036102' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0803851' lon='38.7624577' />
+  <node id='1794036104' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0804354' lon='38.7625606' />
+  <node id='1794036106' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.080501' lon='38.7625645' />
+  <node id='1794036108' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0805217' lon='38.762676' />
+  <node id='1794036109' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.080599' lon='38.7630404' />
+  <node id='1794036111' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0805597' lon='38.7627434' />
+  <node id='1794036113' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0805885' lon='38.762857' />
+  <node id='1794036115' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0805508' lon='38.7626463' />
+  <node id='1794036117' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0806203' lon='38.7630562' />
+  <node id='1794036119' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0805894' lon='38.7627112' />
+  <node id='1794036121' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0806111' lon='38.7627961' />
+  <node id='1794036123' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0807232' lon='38.7627053' />
+  <node id='1794036125' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0807693' lon='38.7626532' />
+  <node id='1794036128' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0808238' lon='38.7626175' />
+  <node id='1794036132' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0808373' lon='38.7626586' />
+  <node id='1794036134' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0808994' lon='38.7626173' />
+  <node id='1794036136' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.080879' lon='38.7626502' />
+  <node id='1795283859' timestamp='2013-10-15T19:44:30Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0921186' lon='38.7747439'>
+    <tag k='bench' v='yes' />
+    <tag k='highway' v='platform' />
+    <tag k='name' v='Поликлиника' />
+    <tag k='public_transport' v='platform' />
+    <tag k='shelter' v='yes' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='1795283865' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0798566' lon='38.8168221' />
+  <node id='1795283866' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0798602' lon='38.8168774' />
+  <node id='1795283872' timestamp='2012-06-29T20:25:01Z' uid='617130' user='Elkim' visible='true' version='2' changeset='12060368' lat='55.079962' lon='38.816731' />
+  <node id='1795283878' timestamp='2012-06-29T20:25:01Z' uid='617130' user='Elkim' visible='true' version='2' changeset='12060368' lat='55.0800773' lon='38.8166631' />
+  <node id='1795283880' timestamp='2012-06-29T20:25:01Z' uid='617130' user='Elkim' visible='true' version='2' changeset='12060368' lat='55.0801225' lon='38.8164677' />
+  <node id='1795283883' timestamp='2012-06-29T20:25:01Z' uid='617130' user='Elkim' visible='true' version='2' changeset='12060368' lat='55.0802388' lon='38.8161893' />
+  <node id='1795283884' timestamp='2013-10-15T19:44:30Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0802471' lon='38.8160359'>
+    <tag k='name' v='Политехнический институт' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1795283885' timestamp='2013-10-15T19:44:30Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0802753' lon='38.8160599'>
+    <tag k='name' v='Политехнический институт' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1795283888' timestamp='2012-06-29T20:25:02Z' uid='617130' user='Elkim' visible='true' version='2' changeset='12060368' lat='55.0804253' lon='38.8154198' />
+  <node id='1795283889' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0811924' lon='38.8127467' />
+  <node id='1795283891' timestamp='2012-06-29T20:25:02Z' uid='617130' user='Elkim' visible='true' version='2' changeset='12060368' lat='55.0815636' lon='38.8114633'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='1795283892' timestamp='2013-10-15T19:44:34Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0837401' lon='38.8040107' />
+  <node id='1795283897' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0862256' lon='38.7952246'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='1795283899' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0900556' lon='38.7819967'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='1795283900' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0924744' lon='38.7680729' />
+  <node id='1795283901' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0924737' lon='38.7680196' />
+  <node id='1795283902' timestamp='2012-06-20T06:39:47Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11955155' lat='55.0926688' lon='38.767928' />
+  <node id='1795283903' timestamp='2012-06-20T06:39:47Z' uid='397326' user='trolleway' visible='true' version='1' changeset='11955155' lat='55.0927158' lon='38.7679499' />
+  <node id='1795283904' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.0927263' lon='38.7678632' />
+  <node id='1795283906' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.0928072' lon='38.7678075' />
+  <node id='1795283912' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.0928016' lon='38.767749' />
+  <node id='1795283913' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.092852' lon='38.7677147' />
+  <node id='1795283919' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0929339' lon='38.7683291' />
+  <node id='1795283920' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0929404' lon='38.7682721' />
+  <node id='1795283921' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0931761' lon='38.7713204' />
+  <node id='1795283922' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0932112' lon='38.7714809' />
+  <node id='1795283923' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0931486' lon='38.771154' />
+  <node id='1795283924' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0932129' lon='38.771301' />
+  <node id='1795283925' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0932595' lon='38.7716065' />
+  <node id='1795283926' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0932443' lon='38.7714424' />
+  <node id='1795283928' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0931914' lon='38.7711471' />
+  <node id='1795283929' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0932906' lon='38.771565' />
+  <node id='1795283930' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0933205' lon='38.7717075' />
+  <node id='1795283931' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0933512' lon='38.7716679' />
+  <node id='1795283933' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0933396' lon='38.770486' />
+  <node id='1795283934' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0934185' lon='38.7685522' />
+  <node id='1795283935' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0934933' lon='38.7686351' />
+  <node id='1795283936' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0935531' lon='38.7687331' />
+  <node id='1795283937' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0936041' lon='38.7688498' />
+  <node id='1795283940' timestamp='2013-10-15T19:44:35Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0936365' lon='38.7689803' />
+  <node id='1795283941' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0936565' lon='38.7692811' />
+  <node id='1795283942' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0936577' lon='38.7691554' />
+  <node id='1795283943' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0946247' lon='38.7727366' />
+  <node id='1795283944' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0948165' lon='38.7726862' />
+  <node id='1795283945' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0948191' lon='38.7727309' />
+  <node id='1795283946' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0948742' lon='38.7726014' />
+  <node id='1795283947' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0949661' lon='38.7724256' />
+  <node id='1795283948' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.0953386' lon='38.763022' />
+  <node id='1795283949' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0954275' lon='38.771516' />
+  <node id='1795283952' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0956071' lon='38.7711672' />
+  <node id='1795283953' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.095612' lon='38.7712206' />
+  <node id='1795283954' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0956738' lon='38.7710745' />
+  <node id='1795283955' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0956754' lon='38.7711303' />
+  <node id='1795283957' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432' lat='55.0957649' lon='38.7710175' />
+  <node id='1795283958' timestamp='2014-01-30T09:37:39Z' uid='108005' user='var-alex' visible='true' version='4' changeset='20280069' lat='55.0959795' lon='38.7711952' />
+  <node id='1795283959' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0960094' lon='38.7711736' />
+  <node id='1795283969' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0985981' lon='38.7752952' />
+  <node id='1795283970' timestamp='2014-01-30T09:37:38Z' uid='108005' user='var-alex' visible='true' version='3' changeset='20280069' lat='55.0987445' lon='38.7755255'>
+    <tag k='name' v='ул. Левшина' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='1795283971' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.0990762' lon='38.7560695' />
+  <node id='1795283972' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0991076' lon='38.7760978' />
+  <node id='1795283973' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0991901' lon='38.7762538' />
+  <node id='1795283974' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0992418' lon='38.776395' />
+  <node id='1795283975' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0992871' lon='38.7766178' />
+  <node id='1795283976' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.0992832' lon='38.7557111' />
+  <node id='1795283977' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0993313' lon='38.7770579' />
+  <node id='1795283979' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0994143' lon='38.7777798' />
+  <node id='1795283981' timestamp='2013-10-15T19:44:36Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0994266' lon='38.7778768' />
+  <node id='1795283987' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.0999563' lon='38.7544155' />
+  <node id='1795283996' timestamp='2013-09-11T09:50:01Z' uid='108005' user='var-alex' visible='true' version='4' changeset='17779785' lat='55.1012264' lon='38.7520352' />
+  <node id='1795284001' timestamp='2013-09-06T18:14:56Z' uid='108005' user='var-alex' visible='true' version='4' changeset='17707462' lat='55.1023775' lon='38.7498917'>
+    <tag k='name' v='Конькобежный центр' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1795284002' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17707462' lat='55.1024482' lon='38.7497618' />
+  <node id='1795284006' timestamp='2013-09-06T18:14:56Z' uid='108005' user='var-alex' visible='true' version='4' changeset='17707462' lat='55.102599' lon='38.7494052'>
+    <tag k='name' v='Конькобежный центр' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1795284008' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17707462' lat='55.1028298' lon='38.749051' />
+  <node id='1795284011' timestamp='2013-09-06T18:14:57Z' uid='108005' user='var-alex' visible='true' version='3' changeset='17707462' lat='55.1031651' lon='38.7482851' />
+  <node id='1799766575' timestamp='2013-07-11T07:01:00Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0715828' lon='38.76036' />
+  <node id='1799766576' timestamp='2013-07-11T07:01:00Z' uid='108005' user='var-alex' visible='true' version='2' changeset='16909065' lat='55.0715775' lon='38.7603925' />
+  <node id='1806494944' timestamp='2012-06-29T20:24:42Z' uid='617130' user='Elkim' visible='true' version='1' changeset='12060368' lat='55.0800889' lon='38.8165461' />
+  <node id='1806494952' timestamp='2012-06-29T20:24:42Z' uid='617130' user='Elkim' visible='true' version='1' changeset='12060368' lat='55.0801218' lon='38.8165607' />
+  <node id='1806495053' timestamp='2012-06-29T20:24:44Z' uid='617130' user='Elkim' visible='true' version='1' changeset='12060368' lat='55.0804534' lon='38.8154405' />
+  <node id='1806495300' timestamp='2012-06-29T20:24:49Z' uid='617130' user='Elkim' visible='true' version='1' changeset='12060368' lat='55.0817583' lon='38.8107879'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1806495304' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0817386' lon='38.8109834'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1806778963' timestamp='2012-06-30T02:42:45Z' uid='236129' user='Z440' visible='true' version='1' changeset='12062295' lat='55.0736157' lon='38.7922701'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1806778964' timestamp='2012-06-30T02:42:47Z' uid='236129' user='Z440' visible='true' version='1' changeset='12062295' lat='55.0736525' lon='38.7922553'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1806778966' timestamp='2012-06-30T02:42:52Z' uid='236129' user='Z440' visible='true' version='1' changeset='12062295' lat='55.074389' lon='38.7981638' />
+  <node id='1806778970' timestamp='2012-06-30T02:42:53Z' uid='236129' user='Z440' visible='true' version='1' changeset='12062295' lat='55.0744116' lon='38.7981341' />
+  <node id='1806891312' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0749353' lon='38.8058239' />
+  <node id='1806891313' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0749697' lon='38.805838' />
+  <node id='1807540468' timestamp='2014-01-28T05:17:39Z' uid='108005' user='var-alex' visible='true' version='3' changeset='20241163' lat='55.0932282' lon='38.7715314' />
+  <node id='1807540469' timestamp='2014-01-28T05:17:39Z' uid='108005' user='var-alex' visible='true' version='3' changeset='20241163' lat='55.0932493' lon='38.7714578' />
+  <node id='1807540475' timestamp='2014-01-30T09:37:39Z' uid='108005' user='var-alex' visible='true' version='3' changeset='20280069' lat='55.0933966' lon='38.77178' />
+  <node id='1807540476' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0934122' lon='38.7717303' />
+  <node id='1807540793' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0940241' lon='38.7723261' />
+  <node id='1807540867' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0940509' lon='38.7722767' />
+  <node id='1807540937' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0940428' lon='38.7723417' />
+  <node id='1807540956' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0940694' lon='38.7722918' />
+  <node id='1807540996' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.094064' lon='38.7723597' />
+  <node id='1807541004' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.09409' lon='38.7723091' />
+  <node id='1807541977' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0946517' lon='38.7728146' />
+  <node id='1807541996' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0946712' lon='38.7727615' />
+  <node id='1807542225' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0947221' lon='38.7727572' />
+  <node id='1807542237' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0947127' lon='38.7728094' />
+  <node id='1807542622' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0947727' lon='38.7727255' />
+  <node id='1807542773' timestamp='2013-10-15T19:44:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0947864' lon='38.7727729' />
+  <node id='1807544933' timestamp='2013-10-15T19:44:38Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0953819' lon='38.7716059' />
+  <node id='1807544968' timestamp='2013-10-15T19:44:38Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0953918' lon='38.7716493' />
+  <node id='1807545355' timestamp='2013-10-15T19:44:38Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0958188' lon='38.7710684' />
+  <node id='1807545385' timestamp='2013-10-15T19:44:38Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0958327' lon='38.7710089' />
+  <node id='1807545671' timestamp='2014-01-30T09:37:39Z' uid='108005' user='var-alex' visible='true' version='3' changeset='20280069' lat='55.0958925' lon='38.7710894' />
+  <node id='1807545706' timestamp='2013-10-15T19:44:38Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0959108' lon='38.7710461' />
+  <node id='1808561069' timestamp='2012-07-01T09:29:43Z' uid='236129' user='Z440' visible='true' version='1' changeset='12073576' lat='55.0749018' lon='38.8074889' />
+  <node id='1808561070' timestamp='2012-07-01T09:29:43Z' uid='236129' user='Z440' visible='true' version='1' changeset='12073576' lat='55.0749465' lon='38.8013354' />
+  <node id='1808561072' timestamp='2012-07-01T09:29:45Z' uid='236129' user='Z440' visible='true' version='1' changeset='12073576' lat='55.0749753' lon='38.8013401' />
+  <node id='1808561076' timestamp='2012-07-01T09:29:46Z' uid='236129' user='Z440' visible='true' version='1' changeset='12073576' lat='55.0749935' lon='38.8017702' />
+  <node id='1808561089' timestamp='2012-07-01T09:29:46Z' uid='236129' user='Z440' visible='true' version='1' changeset='12073576' lat='55.0750246' lon='38.8017893' />
+  <node id='1808799788' timestamp='2013-10-15T19:44:39Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0936335' lon='38.7694408' />
+  <node id='1808799798' timestamp='2013-10-15T19:44:39Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0936667' lon='38.7694552' />
+  <node id='1808799880' timestamp='2013-10-15T19:44:39Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0957542' lon='38.7710786' />
+  <node id='1808799882' timestamp='2013-10-15T19:44:39Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0957971' lon='38.7710134' />
+  <node id='1827806820' timestamp='2013-10-15T19:44:32Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.087845' lon='38.765672'>
+    <tag k='name' v='ул. Ленина' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='1827806822' timestamp='2013-10-15T19:44:31Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0873887' lon='38.7655201'>
+    <tag k='name' v='ул. Ленина' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='2294943515' timestamp='2013-10-15T19:44:40Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0806738' lon='38.7627861' />
+  <node id='2294943516' timestamp='2013-10-15T19:44:40Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0807228' lon='38.7627531' />
+  <node id='2294943517' timestamp='2013-10-15T19:44:40Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0807657' lon='38.7627152' />
+  <node id='2302299723' timestamp='2013-10-17T16:47:50Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0609148' lon='38.7578785'>
+    <tag k='name' v='Музыкальная школа' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2354687868' timestamp='2013-10-17T16:48:02Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18406702' lat='55.0613445' lon='38.7409709' />
+  <node id='2380879685' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0560024' lon='38.749046' />
+  <node id='2380879688' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.056262' lon='38.7488714' />
+  <node id='2380879689' timestamp='2013-07-11T07:00:39Z' uid='108005' user='var-alex' visible='true' version='1' changeset='16909065' lat='55.0562367' lon='38.7491758' />
+  <node id='2380879690' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0562728' lon='38.7490619' />
+  <node id='2380879692' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0563281' lon='38.7481927' />
+  <node id='2380879693' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0563363' lon='38.7492979' />
+  <node id='2380879704' timestamp='2013-07-11T07:00:40Z' uid='108005' user='var-alex' visible='true' version='1' changeset='16909065' lat='55.0600246' lon='38.7332682'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2380879705' timestamp='2013-07-11T07:00:40Z' uid='108005' user='var-alex' visible='true' version='1' changeset='16909065' lat='55.0600552' lon='38.7332568'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2380879736' timestamp='2013-07-23T04:49:39Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17057078' lat='55.0611848' lon='38.7409064' />
+  <node id='2380879745' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0612095' lon='38.7406597' />
+  <node id='2380879747' timestamp='2013-07-23T04:49:39Z' uid='108005' user='var-alex' visible='true' version='2' changeset='17057078' lat='55.0612242' lon='38.740952' />
+  <node id='2380879750' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0612289' lon='38.740608' />
+  <node id='2380879754' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0612822' lon='38.7409829' />
+  <node id='2380879758' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.061308' lon='38.7409341' />
+  <node id='2380879785' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0635847' lon='38.757016'>
+    <tag k='public_transport' v='platform' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2380879786' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0638875' lon='38.7568633'>
+    <tag k='public_transport' v='platform' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2380879792' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0652703' lon='38.7563977' />
+  <node id='2380879793' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0652774' lon='38.7564499' />
+  <node id='2380879794' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0654671' lon='38.7562834' />
+  <node id='2380879795' timestamp='2013-10-17T16:48:07Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18406702' lat='55.0654899' lon='38.7563269' />
+  <node id='2380879803' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0672525' lon='38.753684' />
+  <node id='2380879804' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0672773' lon='38.7537177' />
+  <node id='2380879813' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.071259' lon='38.7603887' />
+  <node id='2380879814' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0712623' lon='38.7603517' />
+  <node id='2380879815' timestamp='2013-07-11T07:00:42Z' uid='108005' user='var-alex' visible='true' version='1' changeset='16909065' lat='55.0718652' lon='38.7603769' />
+  <node id='2380879816' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0724225' lon='38.7602597' />
+  <node id='2380879817' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0724229' lon='38.760296' />
+  <node id='2380879818' timestamp='2013-07-11T07:00:42Z' uid='108005' user='var-alex' visible='true' version='1' changeset='16909065' lat='55.0727497' lon='38.7602065' />
+  <node id='2380879819' timestamp='2013-07-11T07:00:42Z' uid='108005' user='var-alex' visible='true' version='1' changeset='16909065' lat='55.072756' lon='38.760256' />
+  <node id='2380879820' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0741362' lon='38.7604197' />
+  <node id='2380879821' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.074149' lon='38.7604615' />
+  <node id='2387121219' timestamp='2013-07-17T07:15:27Z' uid='108005' user='var-alex' visible='true' version='1' changeset='16983206' lat='55.0903096' lon='38.7811157' />
+  <node id='2387121221' timestamp='2013-07-17T07:15:27Z' uid='108005' user='var-alex' visible='true' version='1' changeset='16983206' lat='55.0903415' lon='38.7811436' />
+  <node id='2392386772' timestamp='2013-10-15T19:44:30Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0891389' lon='38.7852935'>
+    <tag k='bench' v='no' />
+    <tag k='bus' v='yes' />
+    <tag k='highway' v='platform' />
+    <tag k='name' v='Дворец Культуры' />
+    <tag k='public_transport' v='platform' />
+    <tag k='shelter' v='no' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2392386778' timestamp='2013-10-15T19:44:30Z' uid='108005' user='var-alex' visible='true' version='3' changeset='18375432' lat='55.0893165' lon='38.7844822'>
+    <tag k='bench' v='yes' />
+    <tag k='name' v='Дворец Культуры' />
+    <tag k='public_transport' v='platform' />
+    <tag k='shelter' v='yes' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2394565732' timestamp='2013-07-23T23:13:13Z' uid='336354' user='esaulenka' visible='true' version='1' changeset='17068987' lat='55.0759834' lon='38.8142764' />
+  <node id='2394565733' timestamp='2013-07-23T23:13:13Z' uid='336354' user='esaulenka' visible='true' version='1' changeset='17068987' lat='55.0760057' lon='38.8142574' />
+  <node id='2394565735' timestamp='2013-07-23T23:13:13Z' uid='336354' user='esaulenka' visible='true' version='1' changeset='17068987' lat='55.0761381' lon='38.8146791' />
+  <node id='2394565736' timestamp='2013-07-23T23:13:13Z' uid='336354' user='esaulenka' visible='true' version='1' changeset='17068987' lat='55.0761589' lon='38.8146654' />
+  <node id='2394565737' timestamp='2013-07-23T23:13:13Z' uid='336354' user='esaulenka' visible='true' version='1' changeset='17068987' lat='55.0765913' lon='38.8153654' />
+  <node id='2394565738' timestamp='2013-07-23T23:13:13Z' uid='336354' user='esaulenka' visible='true' version='1' changeset='17068987' lat='55.0765975' lon='38.8153235' />
+  <node id='2394565739' timestamp='2013-07-23T23:13:13Z' uid='336354' user='esaulenka' visible='true' version='1' changeset='17068987' lat='55.0768644' lon='38.8156181' />
+  <node id='2394565740' timestamp='2013-07-23T23:13:13Z' uid='336354' user='esaulenka' visible='true' version='1' changeset='17068987' lat='55.0768752' lon='38.8155776' />
+  <node id='2448324540' timestamp='2013-09-06T18:14:49Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0926074' lon='38.768029' />
+  <node id='2448324541' timestamp='2013-09-06T18:14:49Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.092608' lon='38.7679577' />
+  <node id='2448324547' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0926663' lon='38.7680007' />
+  <node id='2448324553' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0927909' lon='38.7678691' />
+  <node id='2448324554' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0927909' lon='38.7679856' />
+  <node id='2448324556' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0928071' lon='38.7680852' />
+  <node id='2448324559' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0928291' lon='38.76786' />
+  <node id='2448324563' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0928446' lon='38.7680422' />
+  <node id='2448324565' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0928516' lon='38.7676558' />
+  <node id='2448324567' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0928563' lon='38.7681893' />
+  <node id='2448324569' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0928676' lon='38.7676859' />
+  <node id='2448324573' timestamp='2013-09-06T18:14:50Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17707462' lat='55.0928828' lon='38.7681452' />
+  <node id='2448324762' timestamp='2013-11-12T05:25:37Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18848771' lat='55.0978081' lon='38.7584565' />
+  <node id='2455336729' timestamp='2013-10-15T19:44:42Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18375432' lat='55.0878507' lon='38.7657408' />
+  <node id='2455725220' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0689855' lon='38.7577674' />
+  <node id='2455725221' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0690037' lon='38.757742' />
+  <node id='2455725223' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0691647' lon='38.7581743' />
+  <node id='2455725225' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0695557' lon='38.7590608' />
+  <node id='2455725226' timestamp='2013-10-17T16:48:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0695716' lon='38.7590103' />
+  <node id='2459254003' timestamp='2013-09-15T12:35:10Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17849147' lat='55.0738965' lon='38.7955596' />
+  <node id='2459254004' timestamp='2013-09-15T12:35:10Z' uid='108005' user='var-alex' visible='true' version='1' changeset='17849147' lat='55.0739244' lon='38.7955339' />
+  <node id='2462497567' timestamp='2013-10-17T16:48:09Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0610924' lon='38.7577686' />
+  <node id='2462497568' timestamp='2013-10-17T16:48:09Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702' lat='55.0610993' lon='38.7578201' />
+  <node id='2497665363' timestamp='2013-10-15T17:54:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18373513' lat='55.0749727' lon='38.7824905' />
+  <node id='2497665364' timestamp='2013-10-15T17:54:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18373513' lat='55.0750188' lon='38.7824652' />
+  <node id='2497665584' timestamp='2013-10-15T17:54:08Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18373513' lat='55.0761307' lon='38.7785303' />
+  <node id='2497665591' timestamp='2013-10-15T17:54:08Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18373513' lat='55.0761532' lon='38.7785516' />
+  <node id='2497770182' timestamp='2013-10-15T19:44:02Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0750471' lon='38.8020054'>
+    <tag k='name' v='Станкостроителей' />
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='2497770189' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0749151' lon='38.8007208' />
+  <node id='2497770190' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0749195' lon='38.8010391' />
+  <node id='2497770191' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0749317' lon='38.8011727'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770192' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0749478' lon='38.8010314' />
+  <node id='2497770193' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0749602' lon='38.801171'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770202' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0777068' lon='38.8163042' />
+  <node id='2497770203' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0777239' lon='38.8162581' />
+  <node id='2497770204' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.078366' lon='38.8167442' />
+  <node id='2497770205' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0783669' lon='38.8167896' />
+  <node id='2497770206' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0806161' lon='38.7629045' />
+  <node id='2497770207' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0807971' lon='38.7626838' />
+  <node id='2497770218' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0832377' lon='38.7635074' />
+  <node id='2497770220' timestamp='2013-10-15T19:44:03Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0832497' lon='38.7634429' />
+  <node id='2497770235' timestamp='2013-10-15T19:44:04Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0840111' lon='38.8030358'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770245' timestamp='2014-01-30T07:51:30Z' uid='108005' user='var-alex' visible='true' version='2' changeset='20278711' lat='55.0847407' lon='38.7641758' />
+  <node id='2497770248' timestamp='2013-10-15T19:44:04Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0856312' lon='38.7646594' />
+  <node id='2497770250' timestamp='2013-10-15T19:44:04Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0856461' lon='38.7645922' />
+  <node id='2497770252' timestamp='2013-10-15T19:44:04Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0863339' lon='38.7650108' />
+  <node id='2497770254' timestamp='2013-10-15T19:44:04Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0863479' lon='38.7649445' />
+  <node id='2497770256' timestamp='2013-10-15T19:44:04Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.087526' lon='38.7906658' />
+  <node id='2497770257' timestamp='2013-10-15T19:44:04Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0875576' lon='38.7906985' />
+  <node id='2497770264' timestamp='2013-10-15T19:44:04Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0887897' lon='38.7863529'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770276' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0889552' lon='38.7662828' />
+  <node id='2497770277' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0889633' lon='38.7662373' />
+  <node id='2497770281' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0890968' lon='38.7852651' />
+  <node id='2497770282' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0891904' lon='38.7849314'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770283' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0892257' lon='38.7849592'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770286' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0895149' lon='38.783815'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770287' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0895528' lon='38.7838469'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770288' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0896976' lon='38.7666536' />
+  <node id='2497770304' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0904955' lon='38.7670666'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770305' timestamp='2013-10-15T19:44:05Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0905035' lon='38.7670255'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2497770323' timestamp='2013-10-15T19:44:06Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0916428' lon='38.7676686' />
+  <node id='2497770324' timestamp='2013-10-15T19:44:06Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0916587' lon='38.7676229' />
+  <node id='2497770327' timestamp='2013-10-15T19:44:06Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0918981' lon='38.7755457' />
+  <node id='2497770330' timestamp='2013-10-15T19:44:06Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.092145' lon='38.7747689' />
+  <node id='2497770356' timestamp='2013-10-15T19:44:07Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.0930144' lon='38.7683684' />
+  <node id='2497770357' timestamp='2013-10-15T19:44:07Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18375432' lat='55.093022' lon='38.7683103' />
+  <node id='2499694502' timestamp='2013-10-17T16:47:30Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0583654' lon='38.7536045' />
+  <node id='2499694503' timestamp='2013-10-17T16:47:30Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0583883' lon='38.7535702' />
+  <node id='2499694513' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0592569' lon='38.7436749' />
+  <node id='2499694514' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0592786' lon='38.7437219' />
+  <node id='2499694529' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0606891' lon='38.7415464' />
+  <node id='2499694531' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0607098' lon='38.7415887' />
+  <node id='2499694534' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0607136' lon='38.7578812' />
+  <node id='2499694535' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0607145' lon='38.7579362' />
+  <node id='2499694545' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0609052' lon='38.7578256' />
+  <node id='2499694551' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0611397' lon='38.7409182' />
+  <node id='2499694552' timestamp='2013-10-17T16:47:31Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0611631' lon='38.7409655' />
+  <node id='2499694555' timestamp='2013-10-17T16:47:32Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0612442' lon='38.7406893' />
+  <node id='2499694562' timestamp='2013-10-17T16:47:32Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0612943' lon='38.7409334' />
+  <node id='2499694566' timestamp='2013-10-17T16:47:32Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0613145' lon='38.7408868' />
+  <node id='2499694586' timestamp='2013-10-17T16:47:32Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0627492' lon='38.7438889' />
+  <node id='2499694587' timestamp='2013-10-17T16:47:32Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0627794' lon='38.7438357' />
+  <node id='2499694603' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.065014' lon='38.7564872' />
+  <node id='2499694604' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0650193' lon='38.7565489' />
+  <node id='2499694612' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0653588' lon='38.7563555' />
+  <node id='2499694618' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0657612' lon='38.7559579' />
+  <node id='2499694620' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0660542' lon='38.7506578' />
+  <node id='2499694621' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0660755' lon='38.7506088' />
+  <node id='2499694624' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0664385' lon='38.7548799'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2499694626' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0664586' lon='38.7549283'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2499694639' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0674569' lon='38.7536229' />
+  <node id='2499694642' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0685586' lon='38.7564967' />
+  <node id='2499694644' timestamp='2013-10-17T16:47:33Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0685784' lon='38.7564676' />
+  <node id='2499694645' timestamp='2013-10-17T16:47:34Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0691787' lon='38.7582868'>
+    <tag k='railway' v='tram_stop' />
+  </node>
+  <node id='2499694648' timestamp='2013-10-17T16:47:34Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.071865' lon='38.7603423' />
+  <node id='2499694654' timestamp='2013-10-17T16:47:34Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0743568' lon='38.7605503' />
+  <node id='2499694656' timestamp='2013-10-17T16:47:34Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18406702' lat='55.0749362' lon='38.7607532' />
+  <node id='2513205927' timestamp='2013-10-29T19:39:17Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18607110' lat='55.0771004' lon='38.7751703' />
+  <node id='2513205928' timestamp='2013-10-29T19:39:17Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18607110' lat='55.0771228' lon='38.7751899' />
+  <node id='2513205953' timestamp='2013-10-29T19:39:18Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18607110' lat='55.0794076' lon='38.7671749' />
+  <node id='2513205954' timestamp='2013-10-29T19:39:18Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18607110' lat='55.0794287' lon='38.767195' />
+  <node id='2528423811' timestamp='2013-11-11T19:56:51Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18843046' lat='55.0874824' lon='38.7655651' />
+  <node id='2528423816' timestamp='2013-11-11T19:56:51Z' uid='108005' user='var-alex' visible='true' version='1' changeset='18843046' lat='55.0874963' lon='38.7655065' />
+  <node id='2641143104' timestamp='2014-01-28T18:06:22Z' uid='108005' user='var-alex' visible='true' version='1' changeset='20251232' lat='55.0924145' lon='38.7737126'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2641143106' timestamp='2014-01-28T18:06:22Z' uid='108005' user='var-alex' visible='true' version='1' changeset='20251232' lat='55.0924435' lon='38.7737357'>
+    <tag k='railway' v='level_crossing' />
+  </node>
+  <node id='2643483056' timestamp='2014-01-30T09:37:23Z' uid='108005' user='var-alex' visible='true' version='1' changeset='20280069' lat='55.0955186' lon='38.771339'>
+    <tag k='name' v='Мемориальный парк' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2643483057' timestamp='2014-01-30T09:37:23Z' uid='108005' user='var-alex' visible='true' version='1' changeset='20280069' lat='55.0955368' lon='38.7713669'>
+    <tag k='name' v='Мемориальный парк' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2643483059' timestamp='2014-01-30T09:37:23Z' uid='108005' user='var-alex' visible='true' version='1' changeset='20280069' lat='55.0935981' lon='38.7719554'>
+    <tag k='name' v='Музей Боевой Славы' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2643483061' timestamp='2014-01-30T09:37:23Z' uid='108005' user='var-alex' visible='true' version='1' changeset='20280069' lat='55.0936091' lon='38.7718987'>
+    <tag k='name' v='Музей Боевой Славы' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <node id='2643483272' timestamp='2014-01-30T09:37:27Z' uid='108005' user='var-alex' visible='true' version='1' changeset='20280069' lat='55.0984282' lon='38.7751274'>
+    <tag k='name' v='ул. Левшина' />
+    <tag k='public_transport' v='stop_position' />
+    <tag k='tram' v='yes' />
+  </node>
+  <way id='62273937' timestamp='2014-01-30T09:37:36Z' uid='108005' user='var-alex' visible='true' version='20' changeset='20280069'>
+    <nd ref='1795283923' />
+    <nd ref='1795283921' />
+    <nd ref='1795283922' />
+    <nd ref='1807540468' />
+    <nd ref='1795283925' />
+    <nd ref='1795283930' />
+    <nd ref='1807540475' />
+    <nd ref='2643483059' />
+    <nd ref='1807540793' />
+    <nd ref='1807540937' />
+    <nd ref='1807540996' />
+    <nd ref='1686053262' />
+    <nd ref='1807541977' />
+    <nd ref='1807542237' />
+    <nd ref='1807542773' />
+    <nd ref='1795283945' />
+    <nd ref='1686053263' />
+    <nd ref='778122041' />
+    <nd ref='1807544968' />
+    <nd ref='1428048881' />
+    <nd ref='2643483057' />
+    <nd ref='1795283953' />
+    <nd ref='1795283955' />
+    <nd ref='1808799880' />
+    <nd ref='1807545355' />
+    <nd ref='1807545671' />
+    <nd ref='1795283958' />
+    <nd ref='2643483272' />
+    <nd ref='778121997' />
+    <nd ref='778122022' />
+    <nd ref='1428048939' />
+    <nd ref='1428048942' />
+    <nd ref='1428048945' />
+    <nd ref='1428048947' />
+    <nd ref='1428048961' />
+    <nd ref='778122078' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='62273949' timestamp='2013-12-19T20:55:23Z' uid='397326' user='trolleway' visible='true' version='14' changeset='19537386'>
+    <nd ref='1795283913' />
+    <nd ref='2448324569' />
+    <nd ref='1666315778' />
+    <nd ref='778159738' />
+    <nd ref='778159758' />
+    <nd ref='778159813' />
+    <nd ref='778159766' />
+    <nd ref='778159847' />
+    <nd ref='778159825' />
+    <nd ref='1795284001' />
+    <nd ref='1795284002' />
+    <nd ref='1795284008' />
+    <nd ref='778159713' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='62273960' timestamp='2013-12-19T20:55:30Z' uid='397326' user='trolleway' visible='true' version='44' changeset='19537386'>
+    <nd ref='2380879816' />
+    <nd ref='1676073628' />
+    <nd ref='2499694648' />
+    <nd ref='1799766575' />
+    <nd ref='2380879814' />
+    <tag k='bridge' v='yes' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='layer' v='1' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='153160238' timestamp='2013-12-19T20:55:28Z' uid='397326' user='trolleway' visible='true' version='8' changeset='19537386'>
+    <nd ref='1658797390' />
+    <nd ref='2499694566' />
+    <nd ref='1794032110' />
+    <nd ref='2499694555' />
+    <nd ref='2380879750' />
+    <nd ref='1794032107' />
+    <nd ref='1658797491' />
+    <nd ref='1658797486' />
+    <nd ref='1794032091' />
+    <nd ref='1794032088' />
+    <nd ref='1794032080' />
+    <nd ref='1658797489' />
+    <nd ref='1794032078' />
+    <nd ref='1658797481' />
+    <nd ref='1794032075' />
+    <nd ref='1794032074' />
+    <nd ref='2380879705' />
+    <nd ref='1794032073' />
+    <nd ref='1794032072' />
+    <nd ref='1794032070' />
+    <nd ref='1658797473' />
+    <nd ref='1794032059' />
+    <nd ref='1794032060' />
+    <nd ref='1794032062' />
+    <nd ref='1794032064' />
+    <nd ref='1794032113' />
+    <nd ref='1794032115' />
+    <nd ref='1794032116' />
+    <nd ref='1794032117' />
+    <nd ref='1794032118' />
+    <nd ref='1794032121' />
+    <nd ref='1794032123' />
+    <nd ref='1794032125' />
+    <nd ref='1794032127' />
+    <nd ref='1794032129' />
+    <nd ref='1794032128' />
+    <nd ref='1794032126' />
+    <nd ref='1794032124' />
+    <nd ref='1794032122' />
+    <nd ref='1794032120' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='155190095' timestamp='2013-12-19T20:55:24Z' uid='397326' user='trolleway' visible='true' version='9' changeset='19537386'>
+    <nd ref='2380879814' />
+    <nd ref='1658797394' />
+    <nd ref='1794032162' />
+    <nd ref='1658797373' />
+    <nd ref='1794032157' />
+    <nd ref='1658797378' />
+    <nd ref='2455725226' />
+    <nd ref='1658797380' />
+    <nd ref='2455725223' />
+    <nd ref='2455725221' />
+    <nd ref='2499694644' />
+    <nd ref='1794032152' />
+    <nd ref='1658797383' />
+    <nd ref='1794032148' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='layer' v='1' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='164029934' timestamp='2013-12-19T20:55:31Z' uid='397326' user='trolleway' visible='true' version='6' changeset='19537386'>
+    <nd ref='1794032148' />
+    <nd ref='1756917795' />
+    <nd ref='1658797385' />
+    <nd ref='2499694621' />
+    <nd ref='1658797387' />
+    <nd ref='1686227973' />
+    <nd ref='2499694587' />
+    <nd ref='1658797390' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='167236464' timestamp='2013-12-19T20:55:28Z' uid='397326' user='trolleway' visible='true' version='5' changeset='19537386'>
+    <nd ref='1662740909' />
+    <nd ref='1662740911' />
+    <nd ref='1786417547' />
+    <nd ref='1662740912' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='167236465' timestamp='2013-12-19T20:55:25Z' uid='397326' user='trolleway' visible='true' version='6' changeset='19537386'>
+    <nd ref='1786417549' />
+    <nd ref='1786417570' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='167236466' timestamp='2013-12-19T20:55:22Z' uid='397326' user='trolleway' visible='true' version='6' changeset='19537386'>
+    <nd ref='1795283928' />
+    <nd ref='778122031' />
+    <nd ref='1808799798' />
+    <nd ref='778122130' />
+    <nd ref='778121976' />
+    <nd ref='892552129' />
+    <nd ref='778122118' />
+    <nd ref='1428048867' />
+    <nd ref='1428048865' />
+    <nd ref='1428048864' />
+    <nd ref='778122084' />
+    <nd ref='2497770357' />
+    <nd ref='1795283920' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='167236468' timestamp='2013-12-19T20:55:29Z' uid='397326' user='trolleway' visible='true' version='8' changeset='19537386'>
+    <nd ref='1786417613' />
+    <nd ref='1786417611' />
+    <nd ref='2497770204' />
+    <nd ref='1786417610' />
+    <nd ref='2497770203' />
+    <nd ref='1786417607' />
+    <nd ref='2394565740' />
+    <nd ref='2394565738' />
+    <nd ref='1786417606' />
+    <nd ref='2394565736' />
+    <nd ref='2394565733' />
+    <nd ref='1786417604' />
+    <nd ref='1786417603' />
+    <nd ref='1786417593' />
+    <nd ref='1786417590' />
+    <nd ref='1786417589' />
+    <nd ref='1786417591' />
+    <nd ref='1786417592' />
+    <nd ref='1808561069' />
+    <nd ref='1786417595' />
+    <nd ref='1806891313' />
+    <nd ref='1786417597' />
+    <nd ref='1786417599' />
+    <nd ref='1786417602' />
+    <nd ref='1786417601' />
+    <nd ref='1786417600' />
+    <nd ref='2497770182' />
+    <nd ref='1808561089' />
+    <nd ref='1786417598' />
+    <nd ref='1808561072' />
+    <nd ref='2497770193' />
+    <nd ref='2497770192' />
+    <nd ref='2497770189' />
+    <nd ref='1786417594' />
+    <nd ref='1806778970' />
+    <nd ref='2459254004' />
+    <nd ref='1786417533' />
+    <nd ref='1786417529' />
+    <nd ref='1806778964' />
+    <nd ref='1786417526' />
+    <nd ref='1786417530' />
+    <nd ref='1786417549' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='167236470' timestamp='2013-12-19T20:55:21Z' uid='397326' user='trolleway' visible='true' version='4' changeset='19537386'>
+    <nd ref='1786417571' />
+    <nd ref='1786417543' />
+    <nd ref='1786417521' />
+    <nd ref='1786417511' />
+    <nd ref='1786417509' />
+    <nd ref='1786417507' />
+    <nd ref='1786417505' />
+    <nd ref='1786417500' />
+    <nd ref='1786417503' />
+    <nd ref='1786417513' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='167236471' timestamp='2013-12-19T20:55:29Z' uid='397326' user='trolleway' visible='true' version='2' changeset='19537386'>
+    <nd ref='1662740909' />
+    <nd ref='1786417586' />
+    <nd ref='1786417585' />
+    <nd ref='1786417580' />
+    <nd ref='1786417571' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='167236472' timestamp='2013-12-19T20:55:31Z' uid='397326' user='trolleway' visible='true' version='2' changeset='19537386'>
+    <nd ref='1786417513' />
+    <nd ref='1786417523' />
+    <nd ref='1786417532' />
+    <nd ref='1786417555' />
+    <nd ref='1786417559' />
+    <nd ref='1786417567' />
+    <nd ref='1786417568' />
+    <nd ref='1786417570' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095109' timestamp='2013-12-19T20:55:30Z' uid='397326' user='trolleway' visible='true' version='6' changeset='19537386'>
+    <nd ref='1658797466' />
+    <nd ref='2380879804' />
+    <nd ref='1794032139' />
+    <nd ref='1794032141' />
+    <nd ref='1794032147' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095110' timestamp='2013-12-19T20:55:29Z' uid='397326' user='trolleway' visible='true' version='6' changeset='19537386'>
+    <nd ref='2380879813' />
+    <nd ref='1799766576' />
+    <nd ref='2380879815' />
+    <nd ref='1794032174' />
+    <nd ref='2380879817' />
+    <tag k='bridge' v='yes' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='layer' v='1' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095114' timestamp='2013-12-19T20:55:21Z' uid='397326' user='trolleway' visible='true' version='6' changeset='19537386'>
+    <nd ref='1658797390' />
+    <nd ref='2354687868' />
+    <nd ref='2380879758' />
+    <nd ref='1794032104' />
+    <nd ref='2380879736' />
+    <nd ref='2499694551' />
+    <nd ref='1794032101' />
+    <nd ref='2499694529' />
+    <nd ref='2499694513' />
+    <nd ref='1658797405' />
+    <nd ref='1794032051' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095116' timestamp='2013-12-19T20:55:31Z' uid='397326' user='trolleway' visible='true' version='7' changeset='19537386'>
+    <nd ref='1794032148' />
+    <nd ref='2499694639' />
+    <nd ref='1794032140' />
+    <nd ref='1794032138' />
+    <nd ref='2380879803' />
+    <nd ref='1794032009' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095117' timestamp='2013-12-19T20:55:29Z' uid='397326' user='trolleway' visible='true' version='6' changeset='19537386'>
+    <nd ref='1794032039' />
+    <nd ref='1794032043' />
+    <nd ref='2380879692' />
+    <nd ref='1794032048' />
+    <nd ref='1794032050' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095118' timestamp='2013-12-19T20:55:32Z' uid='397326' user='trolleway' visible='true' version='4' changeset='19537386'>
+    <nd ref='1794032112' />
+    <nd ref='2499694586' />
+    <nd ref='1794032005' />
+    <nd ref='1794032130' />
+    <nd ref='2499694620' />
+    <nd ref='1794032137' />
+    <nd ref='1794032142' />
+    <nd ref='1794032147' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095122' timestamp='2013-12-19T20:55:23Z' uid='397326' user='trolleway' visible='true' version='4' changeset='19537386'>
+    <nd ref='1794032147' />
+    <nd ref='1794032150' />
+    <nd ref='1794032151' />
+    <nd ref='2499694642' />
+    <nd ref='2455725220' />
+    <nd ref='2499694645' />
+    <nd ref='1794032154' />
+    <nd ref='2455725225' />
+    <nd ref='1794032155' />
+    <nd ref='1794032156' />
+    <nd ref='1794032159' />
+    <nd ref='1794032160' />
+    <nd ref='1794032164' />
+    <nd ref='2380879813' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='layer' v='1' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095555' timestamp='2013-12-19T20:55:25Z' uid='397326' user='trolleway' visible='true' version='8' changeset='19537386'>
+    <nd ref='1794036136' />
+    <nd ref='1794032208' />
+    <nd ref='2497770218' />
+    <nd ref='1794032217' />
+    <nd ref='2497770248' />
+    <nd ref='2497770252' />
+    <nd ref='1827806822' />
+    <nd ref='2528423811' />
+    <nd ref='1794032209' />
+    <nd ref='2455336729' />
+    <nd ref='1794032210' />
+    <nd ref='2497770276' />
+    <nd ref='2497770288' />
+    <nd ref='1794032011' />
+    <nd ref='2497770304' />
+    <nd ref='1794032212' />
+    <nd ref='2497770323' />
+    <nd ref='1794032213' />
+    <nd ref='1794032214' />
+    <nd ref='1795283900' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095556' timestamp='2013-12-19T20:55:24Z' uid='397326' user='trolleway' visible='true' version='7' changeset='19537386'>
+    <nd ref='1795283901' />
+    <nd ref='778121961' />
+    <nd ref='778122101' />
+    <nd ref='2497770324' />
+    <nd ref='778121994' />
+    <nd ref='2497770305' />
+    <nd ref='1681858266' />
+    <nd ref='2497770277' />
+    <nd ref='778121986' />
+    <nd ref='1827806820' />
+    <nd ref='778122019' />
+    <nd ref='2528423816' />
+    <nd ref='2497770254' />
+    <nd ref='2497770250' />
+    <nd ref='2497770245' />
+    <nd ref='892552107' />
+    <nd ref='2497770220' />
+    <nd ref='892552124' />
+    <nd ref='1794036134' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095558' timestamp='2013-12-19T20:55:28Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1794036099' />
+    <nd ref='1794032204' />
+    <nd ref='1794032206' />
+    <nd ref='1794036136' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095559' timestamp='2013-12-19T20:55:25Z' uid='397326' user='trolleway' visible='true' version='4' changeset='19537386'>
+    <nd ref='1794036134' />
+    <nd ref='1794036102' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095560' timestamp='2013-12-19T20:55:31Z' uid='397326' user='trolleway' visible='true' version='5' changeset='19537386'>
+    <nd ref='1794036117' />
+    <nd ref='2294943516' />
+    <nd ref='2294943517' />
+    <nd ref='2497770207' />
+    <nd ref='1794036132' />
+    <nd ref='1794036136' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095561' timestamp='2013-12-19T20:55:31Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1794036117' />
+    <nd ref='2497770206' />
+    <nd ref='1794036121' />
+    <nd ref='1794036119' />
+    <nd ref='1794036115' />
+    <nd ref='1794036106' />
+    <nd ref='1794036102' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095562' timestamp='2013-12-19T20:55:31Z' uid='397326' user='trolleway' visible='true' version='5' changeset='19537386'>
+    <nd ref='1794036134' />
+    <nd ref='1794036128' />
+    <nd ref='1794036125' />
+    <nd ref='1794036123' />
+    <nd ref='2294943515' />
+    <nd ref='1794036109' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168095563' timestamp='2013-12-19T20:55:31Z' uid='397326' user='trolleway' visible='true' version='2' changeset='19537386'>
+    <nd ref='1794036099' />
+    <nd ref='1794036104' />
+    <nd ref='1794036108' />
+    <nd ref='1794036111' />
+    <nd ref='1794036113' />
+    <nd ref='1794036109' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239309' timestamp='2013-12-19T20:55:21Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1795284011' />
+    <nd ref='1795284006' />
+    <nd ref='1795283996' />
+    <nd ref='1795283987' />
+    <nd ref='1795283976' />
+    <nd ref='1795283971' />
+    <nd ref='2448324762' />
+    <nd ref='1795283948' />
+    <nd ref='2448324565' />
+    <nd ref='1795283912' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239312' timestamp='2014-01-28T18:06:24Z' uid='108005' user='var-alex' visible='true' version='7' changeset='20251232'>
+    <nd ref='1468365321' />
+    <nd ref='1795283866' />
+    <nd ref='1468365332' />
+    <nd ref='1795283878' />
+    <nd ref='1712481208' />
+    <nd ref='1806494952' />
+    <nd ref='1468365415' />
+    <nd ref='1795283883' />
+    <nd ref='1795283885' />
+    <nd ref='1806495053' />
+    <nd ref='617631275' />
+    <nd ref='1468365341' />
+    <nd ref='1806495304' />
+    <nd ref='1501626075' />
+    <nd ref='892552114' />
+    <nd ref='892552105' />
+    <nd ref='2497770257' />
+    <nd ref='892552109' />
+    <nd ref='2392386772' />
+    <nd ref='2497770283' />
+    <nd ref='2497770287' />
+    <nd ref='892552101' />
+    <nd ref='2387121221' />
+    <nd ref='892552122' />
+    <nd ref='2497770330' />
+    <nd ref='2641143106' />
+    <nd ref='1795283928' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239313' timestamp='2014-01-28T18:06:23Z' uid='108005' user='var-alex' visible='true' version='9' changeset='20251232'>
+    <nd ref='1795283923' />
+    <nd ref='2641143104' />
+    <nd ref='1795283859' />
+    <nd ref='2497770327' />
+    <nd ref='2387121219' />
+    <nd ref='1795283899' />
+    <nd ref='2497770286' />
+    <nd ref='2392386778' />
+    <nd ref='2497770282' />
+    <nd ref='2497770281' />
+    <nd ref='2497770264' />
+    <nd ref='2497770256' />
+    <nd ref='1795283897' />
+    <nd ref='2497770235' />
+    <nd ref='1795283892' />
+    <nd ref='1806495300' />
+    <nd ref='1795283891' />
+    <nd ref='1795283889' />
+    <nd ref='1795283888' />
+    <nd ref='1795283884' />
+    <nd ref='1795283880' />
+    <nd ref='1806494944' />
+    <nd ref='1428067026' />
+    <nd ref='1795283872' />
+    <nd ref='1795283865' />
+    <nd ref='1786417613' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239316' timestamp='2013-12-19T20:55:23Z' uid='397326' user='trolleway' visible='true' version='4' changeset='19537386'>
+    <nd ref='1795283919' />
+    <nd ref='2497770356' />
+    <nd ref='1794032012' />
+    <nd ref='1795283934' />
+    <nd ref='1795283935' />
+    <nd ref='1795283936' />
+    <nd ref='1795283937' />
+    <nd ref='1795283940' />
+    <nd ref='1795283942' />
+    <nd ref='1795283941' />
+    <nd ref='1808799788' />
+    <nd ref='1795283933' />
+    <nd ref='1795283923' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239317' timestamp='2014-01-30T10:23:11Z' uid='108005' user='var-alex' visible='true' version='4' changeset='20280801'>
+    <nd ref='778122112' />
+    <nd ref='1428048966' />
+    <nd ref='1428048968' />
+    <nd ref='778122028' />
+    <nd ref='1428048972' />
+    <nd ref='1428048973' />
+    <nd ref='1428048974' />
+    <nd ref='778122043' />
+    <nd ref='1428048977' />
+    <nd ref='1428048978' />
+    <nd ref='1428048980' />
+    <nd ref='778122057' />
+    <nd ref='1428048975' />
+    <nd ref='778122093' />
+    <nd ref='1428048971' />
+    <nd ref='1428048970' />
+    <nd ref='1428048969' />
+    <nd ref='1428048967' />
+    <nd ref='1428048964' />
+    <nd ref='1795283981' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239318' timestamp='2014-01-30T09:37:36Z' uid='108005' user='var-alex' visible='true' version='5' changeset='20280069'>
+    <nd ref='1795283981' />
+    <nd ref='1795283979' />
+    <nd ref='1795283977' />
+    <nd ref='1795283975' />
+    <nd ref='1795283974' />
+    <nd ref='1795283973' />
+    <nd ref='1795283972' />
+    <nd ref='1795283970' />
+    <nd ref='1795283969' />
+    <nd ref='1795283959' />
+    <nd ref='1807545706' />
+    <nd ref='1807545385' />
+    <nd ref='1808799882' />
+    <nd ref='1795283957' />
+    <nd ref='1795283954' />
+    <nd ref='1795283952' />
+    <nd ref='2643483056' />
+    <nd ref='1795283949' />
+    <nd ref='1807544933' />
+    <nd ref='1795283947' />
+    <nd ref='1795283946' />
+    <nd ref='1795283944' />
+    <nd ref='1807542622' />
+    <nd ref='1807542225' />
+    <nd ref='1807541996' />
+    <nd ref='1795283943' />
+    <nd ref='1807541004' />
+    <nd ref='1807540956' />
+    <nd ref='1807540867' />
+    <nd ref='2643483061' />
+    <nd ref='1807540476' />
+    <nd ref='1795283931' />
+    <nd ref='1795283929' />
+    <nd ref='1807540469' />
+    <nd ref='1795283926' />
+    <nd ref='1795283924' />
+    <nd ref='1795283928' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239319' timestamp='2013-12-19T20:55:29Z' uid='397326' user='trolleway' visible='true' version='8' changeset='19537386'>
+    <nd ref='1662740912' />
+    <nd ref='1786417524' />
+    <nd ref='1786417517' />
+    <nd ref='1806778963' />
+    <nd ref='1662740893' />
+    <nd ref='1786417528' />
+    <nd ref='2459254003' />
+    <nd ref='1806778966' />
+    <nd ref='1662740900' />
+    <nd ref='1747788820' />
+    <nd ref='2497770190' />
+    <nd ref='2497770191' />
+    <nd ref='1808561070' />
+    <nd ref='1662740902' />
+    <nd ref='1808561076' />
+    <nd ref='1662740867' />
+    <nd ref='1662740869' />
+    <nd ref='1662740872' />
+    <nd ref='1662740873' />
+    <nd ref='1662740875' />
+    <nd ref='1806891312' />
+    <nd ref='1662740877' />
+    <nd ref='1662740879' />
+    <nd ref='1662740881' />
+    <nd ref='1662740890' />
+    <nd ref='1786417588' />
+    <nd ref='1662740941' />
+    <nd ref='1662740943' />
+    <nd ref='1662740945' />
+    <nd ref='2394565732' />
+    <nd ref='2394565735' />
+    <nd ref='1662740904' />
+    <nd ref='2394565737' />
+    <nd ref='2394565739' />
+    <nd ref='1662740906' />
+    <nd ref='2497770202' />
+    <nd ref='1501626090' />
+    <nd ref='2497770205' />
+    <nd ref='1501626116' />
+    <nd ref='1468365321' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239322' timestamp='2013-12-19T20:55:25Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1795283920' />
+    <nd ref='1795283901' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239324' timestamp='2013-12-19T20:55:25Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1795283900' />
+    <nd ref='1795283919' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239326' timestamp='2013-12-19T20:55:30Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1795283900' />
+    <nd ref='2448324540' />
+    <nd ref='2448324547' />
+    <nd ref='1795283903' />
+    <nd ref='1795283906' />
+    <nd ref='1795283913' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239327' timestamp='2013-12-19T20:55:29Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1795283912' />
+    <nd ref='1795283904' />
+    <nd ref='1795283902' />
+    <nd ref='2448324541' />
+    <nd ref='1795283901' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239328' timestamp='2013-12-19T20:55:30Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1795283912' />
+    <nd ref='2448324553' />
+    <nd ref='2448324554' />
+    <nd ref='2448324556' />
+    <nd ref='2448324567' />
+    <nd ref='1795283919' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='168239329' timestamp='2013-12-19T20:55:30Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1795283920' />
+    <nd ref='2448324573' />
+    <nd ref='2448324563' />
+    <nd ref='2448324559' />
+    <nd ref='1795283913' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='172065381' timestamp='2013-12-19T20:55:24Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1794032031' />
+    <nd ref='1794032030' />
+    <nd ref='1794032028' />
+    <nd ref='1794032024' />
+    <nd ref='1794032019' />
+    <nd ref='1794032015' />
+    <nd ref='1794032013' />
+    <nd ref='1794032014' />
+    <nd ref='1794032016' />
+    <nd ref='1794032022' />
+    <nd ref='1794032026' />
+    <nd ref='1794032029' />
+    <nd ref='2380879685' />
+    <nd ref='1794032032' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='172065661' timestamp='2013-12-19T20:55:27Z' uid='397326' user='trolleway' visible='true' version='2' changeset='19537386'>
+    <nd ref='778122078' />
+    <nd ref='1428048963' />
+    <nd ref='778122112' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='172065663' timestamp='2013-12-19T20:55:32Z' uid='397326' user='trolleway' visible='true' version='5' changeset='19537386'>
+    <nd ref='1794036109' />
+    <nd ref='1681865176' />
+    <nd ref='2513205953' />
+    <nd ref='2513205927' />
+    <nd ref='2497665584' />
+    <nd ref='1662740952' />
+    <nd ref='2497665363' />
+    <nd ref='1662740909' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='172065664' timestamp='2013-12-19T20:55:21Z' uid='397326' user='trolleway' visible='true' version='5' changeset='19537386'>
+    <nd ref='1786417570' />
+    <nd ref='1786417572' />
+    <nd ref='1786417583' />
+    <nd ref='1786417587' />
+    <nd ref='2497665364' />
+    <nd ref='1786417605' />
+    <nd ref='2497665591' />
+    <nd ref='2513205928' />
+    <nd ref='2513205954' />
+    <nd ref='1786417618' />
+    <nd ref='1794036117' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='172066402' timestamp='2013-12-19T20:55:26Z' uid='397326' user='trolleway' visible='true' version='4' changeset='19537386'>
+    <nd ref='1794032120' />
+    <nd ref='1794032114' />
+    <nd ref='1794032063' />
+    <nd ref='1794032061' />
+    <nd ref='1794032058' />
+    <nd ref='1794032057' />
+    <nd ref='1794032056' />
+    <nd ref='1794032065' />
+    <nd ref='1794032066' />
+    <nd ref='1794032067' />
+    <nd ref='2380879704' />
+    <nd ref='1794032068' />
+    <nd ref='1794032069' />
+    <nd ref='1794032071' />
+    <nd ref='1794032076' />
+    <nd ref='1794032077' />
+    <nd ref='1794032079' />
+    <nd ref='1794032085' />
+    <nd ref='1794032090' />
+    <nd ref='1794032092' />
+    <nd ref='1794032103' />
+    <nd ref='1794032106' />
+    <nd ref='2380879745' />
+    <nd ref='1794032108' />
+    <nd ref='2499694562' />
+    <nd ref='1794032112' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='229498485' timestamp='2013-12-19T20:55:28Z' uid='397326' user='trolleway' visible='true' version='2' changeset='19537386'>
+    <nd ref='1794032051' />
+    <nd ref='1794032047' />
+    <nd ref='1794032038' />
+    <nd ref='1794032031' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='229498487' timestamp='2013-12-19T20:55:32Z' uid='397326' user='trolleway' visible='true' version='3' changeset='19537386'>
+    <nd ref='1794032050' />
+    <nd ref='2499694514' />
+    <nd ref='2499694531' />
+    <nd ref='1794032102' />
+    <nd ref='2499694552' />
+    <nd ref='2380879747' />
+    <nd ref='2380879754' />
+    <nd ref='1794032112' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='242508164' timestamp='2013-12-19T20:55:22Z' uid='397326' user='trolleway' visible='true' version='2' changeset='19537386'>
+    <nd ref='1794036102' />
+    <nd ref='1681865174' />
+    <nd ref='1658797372' />
+    <nd ref='1686230718' />
+    <nd ref='2499694656' />
+    <nd ref='1686210902' />
+    <nd ref='2380879820' />
+    <nd ref='1658797374' />
+    <nd ref='1658797376' />
+    <nd ref='2380879818' />
+    <nd ref='2380879816' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='242508165' timestamp='2013-12-19T20:55:22Z' uid='397326' user='trolleway' visible='true' version='2' changeset='19537386'>
+    <nd ref='2380879817' />
+    <nd ref='2380879819' />
+    <nd ref='1794032183' />
+    <nd ref='1794032184' />
+    <nd ref='2380879821' />
+    <nd ref='2499694654' />
+    <nd ref='1794032010' />
+    <nd ref='1794032199' />
+    <nd ref='1794032200' />
+    <nd ref='1794032202' />
+    <nd ref='1794032218' />
+    <nd ref='1794036099' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='242508166' timestamp='2014-01-30T19:32:49Z' uid='397326' user='trolleway' visible='true' version='3' changeset='20288445'>
+    <nd ref='1794032032' />
+    <nd ref='2380879689' />
+    <nd ref='1658797413' />
+    <nd ref='1658797416' />
+    <nd ref='1686211163' />
+    <nd ref='2499694502' />
+    <nd ref='1658797422' />
+    <nd ref='1794032083' />
+    <nd ref='1658797420' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='242508167' timestamp='2014-01-30T19:32:49Z' uid='397326' user='trolleway' visible='true' version='3' changeset='20288445'>
+    <nd ref='1794032009' />
+    <nd ref='2499694624' />
+    <nd ref='1794032134' />
+    <nd ref='1794032132' />
+    <nd ref='2380879794' />
+    <nd ref='2499694612' />
+    <nd ref='2380879792' />
+    <nd ref='2499694603' />
+    <nd ref='2380879786' />
+    <nd ref='1794032100' />
+    <nd ref='2462497567' />
+    <nd ref='2499694545' />
+    <nd ref='1794032097' />
+    <nd ref='2499694534' />
+    <nd ref='1794032094' />
+    <nd ref='1794032089' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='259096643' timestamp='2014-01-30T19:32:48Z' uid='397326' user='trolleway' visible='true' version='1' changeset='20288445'>
+    <nd ref='1794032089' />
+    <nd ref='1794032084' />
+    <nd ref='1794032081' />
+    <nd ref='1794032055' />
+    <nd ref='2499694503' />
+    <nd ref='1794032054' />
+    <nd ref='1794032046' />
+    <nd ref='2380879693' />
+    <nd ref='618355205' />
+    <nd ref='2380879690' />
+    <nd ref='2380879688' />
+    <nd ref='1794032039' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <way id='259096644' timestamp='2014-01-30T19:32:48Z' uid='397326' user='trolleway' visible='true' version='1' changeset='20288445'>
+    <nd ref='1658797420' />
+    <nd ref='1794032093' />
+    <nd ref='2499694535' />
+    <nd ref='1794032098' />
+    <nd ref='2302299723' />
+    <nd ref='2462497568' />
+    <nd ref='2380879785' />
+    <nd ref='2499694604' />
+    <nd ref='2380879793' />
+    <nd ref='1658797425' />
+    <nd ref='2380879795' />
+    <nd ref='1794032133' />
+    <nd ref='2499694618' />
+    <nd ref='2499694626' />
+    <nd ref='1658797466' />
+    <tag k='electrified' v='contact_line' />
+    <tag k='oneway' v='yes' />
+    <tag k='railway' v='tram' />
+  </way>
+  <relation id='2294790' timestamp='2012-07-18T19:53:59Z' uid='397326' user='trolleway' visible='true' version='2' changeset='12295470'>
+    <member type='way' ref='168239309' role='' />
+    <member type='way' ref='168239328' role='' />
+    <member type='way' ref='168239316' role='' />
+    <member type='way' ref='168239313' role='' />
+    <member type='way' ref='167236468' role='' />
+    <member type='way' ref='167236465' role='' />
+    <member type='way' ref='172065664' role='' />
+    <member type='way' ref='168095560' role='' />
+    <member type='way' ref='168095555' role='' />
+    <member type='way' ref='168239326' role='' />
+    <member type='way' ref='62273949' role='' />
+    <tag k='from' v='Дворец Спорта' />
+    <tag k='name' v='Трамвай №1:' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='1' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Городское кольцо внутреннее' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294791' timestamp='2013-10-15T19:44:17Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432'>
+    <member type='way' ref='168239309' role='' />
+    <member type='way' ref='168239327' role='' />
+    <member type='way' ref='168095556' role='' />
+    <member type='way' ref='168095562' role='' />
+    <member type='way' ref='172065663' role='' />
+    <member type='way' ref='167236464' role='' />
+    <member type='way' ref='168239319' role='' />
+    <member type='way' ref='168239312' role='' />
+    <member type='way' ref='167236466' role='' />
+    <member type='way' ref='168239329' role='' />
+    <member type='way' ref='62273949' role='' />
+    <tag k='from' v='Дворец Спорта' />
+    <tag k='name' v='Трамвай №3:' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='3' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Городское кольцо внешнее' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294792' timestamp='2012-07-18T19:54:00Z' uid='397326' user='trolleway' visible='true' version='2' changeset='12295470'>
+    <member type='way' ref='168095555' role='' />
+    <member type='way' ref='168239324' role='' />
+    <member type='way' ref='168239316' role='' />
+    <member type='way' ref='168239313' role='' />
+    <member type='way' ref='167236468' role='' />
+    <member type='way' ref='167236465' role='' />
+    <member type='way' ref='172065664' role='' />
+    <member type='way' ref='168095560' role='' />
+    <tag k='from' v='Городское кольцо внутреннее' />
+    <tag k='name' v='Трамвай №6: городское кольцо внутренее' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='6' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Городское кольцо внутреннее' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294793' timestamp='2013-10-15T19:44:17Z' uid='108005' user='var-alex' visible='true' version='4' changeset='18375432'>
+    <member type='way' ref='168095556' role='' />
+    <member type='way' ref='168095562' role='' />
+    <member type='way' ref='172065663' role='' />
+    <member type='way' ref='167236464' role='' />
+    <member type='way' ref='168239319' role='' />
+    <member type='way' ref='168239312' role='' />
+    <member type='way' ref='167236466' role='' />
+    <member type='way' ref='168239322' role='' />
+    <tag k='from' v='Городское кольцо внешнее' />
+    <tag k='name' v='Трамвай №8: городское кольцо внешнее' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='8' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Городское кольцо внешнее' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294802' action='modify' timestamp='2014-01-30T19:32:48Z' uid='397326' user='trolleway' visible='true' version='6' changeset='20288445'>
+    <member type='way' ref='172065381' role='' />
+    <member type='way' ref='242508166' role='' />
+    <member type='way' ref='259096644' role='' />
+    <member type='way' ref='168095109' role='' />
+    <member type='way' ref='168095122' role='' />
+    <member type='way' ref='168095110' role='' />
+    <member type='way' ref='242508165' role='' />
+    <member type='way' ref='168095558' role='' />
+    <member type='way' ref='168095555' role='' />
+    <member type='way' ref='168239324' role='' />
+    <member type='way' ref='168239316' role='' />
+    <member type='way' ref='168239313' role='' />
+    <member type='way' ref='167236468' role='' />
+    <member type='way' ref='167236465' role='' />
+    <member type='way' ref='172065664' role='' />
+    <member type='way' ref='168095561' role='' />
+    <member type='way' ref='242508164' role='' />
+    <member type='way' ref='62273960' role='' />
+    <member type='way' ref='155190095' role='' />
+    <member type='way' ref='164029934' role='' />
+    <member type='way' ref='168095114' role='' />
+    <member type='way' ref='229498485' role='' />
+    <tag k='from' v='Внутреннее городское кольцо' />
+    <tag k='name' v='Трамвай №2:' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='2' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Колычёво, внешнее кольцо' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294803' timestamp='2014-01-30T19:32:49Z' uid='397326' user='trolleway' visible='true' version='5' changeset='20288445'>
+    <member type='way' ref='168095117' role='' />
+    <member type='way' ref='229498487' role='' />
+    <member type='way' ref='168095118' role='' />
+    <member type='way' ref='168095122' role='' />
+    <member type='way' ref='168095110' role='' />
+    <member type='way' ref='242508165' role='' />
+    <member type='way' ref='168095563' role='' />
+    <member type='way' ref='172065663' role='' />
+    <member type='way' ref='167236464' role='' />
+    <member type='way' ref='168239319' role='' />
+    <member type='way' ref='168239312' role='' />
+    <member type='way' ref='167236466' role='' />
+    <member type='way' ref='168239322' role='' />
+    <member type='way' ref='168095556' role='' />
+    <member type='way' ref='168095559' role='' />
+    <member type='way' ref='242508164' role='' />
+    <member type='way' ref='62273960' role='' />
+    <member type='way' ref='155190095' role='' />
+    <member type='way' ref='168095116' role='' />
+    <member type='way' ref='242508167' role='' />
+    <member type='way' ref='259096643' role='' />
+    <tag k='from' v='Внешнее городское кольцо' />
+    <tag k='name' v='Трамвай №4:' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='4' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Колычёво, внутреннее кольцо' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294806' timestamp='2014-01-30T10:23:08Z' uid='108005' user='var-alex' visible='true' version='4' changeset='20280801'>
+    <member type='way' ref='168239317' role='' />
+    <member type='way' ref='168239318' role='' />
+    <member type='way' ref='167236466' role='' />
+    <member type='way' ref='168239322' role='' />
+    <member type='way' ref='168095556' role='' />
+    <member type='way' ref='168095562' role='' />
+    <member type='way' ref='172065663' role='' />
+    <member type='way' ref='167236471' role='' />
+    <tag k='from' v='Станция Коломна' />
+    <tag k='name' v='Трамвай №5: станция Коломна - улица Осипенко' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='5' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='улица Осипенко' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294807' timestamp='2012-07-18T19:53:58Z' uid='397326' user='trolleway' visible='true' version='1' changeset='12295470'>
+    <member type='way' ref='167236470' role='' />
+    <member type='way' ref='167236472' role='' />
+    <member type='way' ref='172065664' role='' />
+    <member type='way' ref='168095560' role='' />
+    <member type='way' ref='168095555' role='' />
+    <member type='way' ref='168239324' role='' />
+    <member type='way' ref='168239316' role='' />
+    <member type='way' ref='62273937' role='' />
+    <member type='way' ref='172065661' role='' />
+    <tag k='from' v='улица Осипенко' />
+    <tag k='name' v='Трамвай №5: улица Осипенко - станция Коломна' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='5' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Станция Коломна' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294856' timestamp='2013-10-17T16:47:39Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702'>
+    <member type='way' ref='168239309' role='' />
+    <member type='way' ref='168239327' role='' />
+    <member type='way' ref='168095556' role='' />
+    <member type='way' ref='168095559' role='' />
+    <member type='way' ref='242508164' role='' />
+    <member type='way' ref='62273960' role='' />
+    <member type='way' ref='155190095' role='' />
+    <member type='way' ref='164029934' role='' />
+    <member type='way' ref='153160238' role='' />
+    <tag k='from' v='Конькобежный центр' />
+    <tag k='name' v='Трамвай №7: Конькобежный центр - Мясокомбинат' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='7' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Мясокомбинат' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294857' timestamp='2013-10-17T16:47:39Z' uid='108005' user='var-alex' visible='true' version='2' changeset='18406702'>
+    <member type='way' ref='172066402' role='' />
+    <member type='way' ref='168095118' role='' />
+    <member type='way' ref='168095122' role='' />
+    <member type='way' ref='168095110' role='' />
+    <member type='way' ref='242508165' role='' />
+    <member type='way' ref='168095558' role='' />
+    <member type='way' ref='168095555' role='' />
+    <member type='way' ref='168239326' role='' />
+    <member type='way' ref='62273949' role='' />
+    <tag k='from' v='Мясокомбинат' />
+    <tag k='name' v='Трамвай №7: Мясокомбинат - Конькобежный центр' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='7' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Конькобежный центр' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294859' timestamp='2012-07-18T20:02:30Z' uid='397326' user='trolleway' visible='true' version='1' changeset='12295470'>
+    <member type='way' ref='168239309' role='' />
+    <member type='way' ref='168239328' role='' />
+    <member type='way' ref='168239316' role='' />
+    <member type='way' ref='62273937' role='' />
+    <member type='way' ref='172065661' role='' />
+    <tag k='from' v='Конькобежный центр' />
+    <tag k='name' v='Трамвай №9: Конькобежный центр - Станция Коломна' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='9' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Станция Коломна' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294860' timestamp='2014-01-30T10:23:08Z' uid='108005' user='var-alex' visible='true' version='2' changeset='20280801'>
+    <member type='way' ref='168239317' role='' />
+    <member type='way' ref='168239318' role='' />
+    <member type='way' ref='167236466' role='' />
+    <member type='way' ref='168239329' role='' />
+    <member type='way' ref='62273949' role='' />
+    <tag k='from' v='Станция Коломна' />
+    <tag k='name' v='Трамвай №9: Станция Коломна - Конькобежный центр' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='9' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Конькобежный центр' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294910' timestamp='2014-01-30T10:23:08Z' uid='108005' user='var-alex' visible='true' version='5' changeset='20280801'>
+    <member type='way' ref='168239317' role='' />
+    <member type='way' ref='168239318' role='' />
+    <member type='way' ref='167236466' role='' />
+    <member type='way' ref='168239322' role='' />
+    <member type='way' ref='168095556' role='' />
+    <member type='way' ref='168095559' role='' />
+    <member type='way' ref='242508164' role='' />
+    <member type='way' ref='62273960' role='' />
+    <member type='way' ref='155190095' role='' />
+    <member type='way' ref='164029934' role='' />
+    <member type='way' ref='168095114' role='' />
+    <member type='way' ref='229498485' role='' />
+    <tag k='from' v='Станция Коломна' />
+    <tag k='name' v='Трамвай №10: станция Коломна - улица Спирина' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='10' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Колычёво, внешнее кольцо' />
+    <tag k='type' v='route' />
+  </relation>
+  <relation id='2294912' action='modify' timestamp='2014-01-30T19:32:48Z' uid='397326' user='trolleway' visible='true' version='4' changeset='20288445'>
+    <member type='way' ref='172065381' role='' />
+    <member type='way' ref='242508166' role='' />
+    <member type='way' ref='259096644' role='' />
+    <member type='way' ref='168095109' role='' />
+    <member type='way' ref='168095122' role='' />
+    <member type='way' ref='168095110' role='' />
+    <member type='way' ref='242508165' role='' />
+    <member type='way' ref='168095558' role='' />
+    <member type='way' ref='168095555' role='' />
+    <member type='way' ref='168239324' role='' />
+    <member type='way' ref='168239316' role='' />
+    <member type='way' ref='62273937' role='' />
+    <member type='way' ref='172065661' role='' />
+    <tag k='from' v='улица Спирина' />
+    <tag k='name' v='Трамвай №10: улица Спирина - станция Коломна' />
+    <tag k='network' v='Коломна' />
+    <tag k='ref' v='10' />
+    <tag k='route' v='tram' />
+    <tag k='to' v='Станция Коломна' />
+    <tag k='type' v='route' />
+  </relation>
+</osm>
