@@ -6,7 +6,9 @@ import os
 import psycopg2
 import time
 
-# not neccecary file. Refresh database and run osmot.py at one script call, useful for instant improve map at JOSM 
+# Создание картинки с картой маршрутов Московского трамвая
+# Необходим tilemill, который будет генерировать подложку, и накладываемую карту линий.
+
 
 def cleardb():
 	dbname='osmot'
@@ -68,6 +70,8 @@ def render():
 	height=str(int(width)*1.4142857)
 	#
 
+	#Стиль tram4 для tilemill лежит в /styles/mss
+	#
 	command='node /usr/share/tilemill/index.js export tram4 overlay.png --format=png --quiet --verbose=off --width='+width+' --height='+height+' --bbox="'+bbox+'"'
 	print command
 	os.system(command)
