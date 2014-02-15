@@ -129,7 +129,7 @@ def main():
         for i in range(0,len(members_list)):
                 member_code=members_list[i]
                 member_role=roles_list[i]
-                if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward') )):
+                if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward')  or (member_role=='highway') )):
                         WaysInCurrentRel.append(member_code)
                 
         for (idx, item) in enumerate(WaysInCurrentRel):
