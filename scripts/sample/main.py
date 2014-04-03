@@ -21,18 +21,18 @@ def cleardb():
 		return 0
 	cur = conn.cursor()
 	sql ='''
-	DROP TABLE IF EXISTS planet_osm_buildings;
-	DROP TABLE IF EXISTS planet_osm_line;
-	DROP TABLE IF EXISTS planet_osm_nodes;
-	DROP TABLE IF EXISTS planet_osm_point;
-	DROP TABLE IF EXISTS planet_osm_polygon;
-	DROP TABLE IF EXISTS planet_osm_rels;
-	DROP TABLE IF EXISTS planet_osm_roads;
-	DROP TABLE IF EXISTS planet_osm_ways;
-	DROP TABLE IF EXISTS route_line_labels;
-	DROP TABLE IF EXISTS routes_with_refs;
-	DROP TABLE IF EXISTS terminals;
-	DROP TABLE IF EXISTS terminals_export;	
+	DROP TABLE IF EXISTS planet_osm_buildings 	CASCADE;
+	DROP TABLE IF EXISTS planet_osm_line 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_nodes 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_point 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_polygon 	CASCADE;
+	DROP TABLE IF EXISTS planet_osm_rels 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_roads 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_ways 		CASCADE;
+	DROP TABLE IF EXISTS route_line_labels 		CASCADE;
+	DROP TABLE IF EXISTS routes_with_refs 		CASCADE;
+	DROP TABLE IF EXISTS terminals 			CASCADE;
+	DROP TABLE IF EXISTS terminals_export 		CASCADE;
 	'''
 
 	cur.execute(sql)
