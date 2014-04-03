@@ -516,17 +516,17 @@ ALTER TABLE terminals_export
 
     sql = \
         '''
-        CREATE TABLE routes_with_refs AS
+        CREATE OR REPLACE VIEW routes_with_refs AS 
         (SELECT
-        planet_osm_line.osm_id,
+        ROW_NUMBER() OVER() 				AS id,
         degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
-        ST_X(ST_Line_Interpolate_Point(way,0.5)) AS x,
-        ST_Y(ST_Line_Interpolate_Point(way,0.5)) AS y,
+        ST_X(ST_Line_Interpolate_Point(way,0.5)) 	AS x,
+        ST_Y(ST_Line_Interpolate_Point(way,0.5)) 	AS y,
         way AS wkb_geometry,
-        CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) THEN route_line_labels.route_ref_reverse
-        ELSE route_line_labels.route_ref
-        END
-        AS routes_ref
+        CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) 
+		THEN route_line_labels.route_ref_reverse
+        	ELSE route_line_labels.route_ref
+        END					        AS routes_ref
 
         FROM
         planet_osm_line JOIN route_line_labels
@@ -534,6 +534,7 @@ ALTER TABLE terminals_export
         WHERE planet_osm_line.osm_id>0
         )
         '''
+	#If view routes_with_refs failed while adding to QGIS with error "an invalid layer" - set while adding table to QGIS field "primary key" 
 
     cur.execute(sql)
     conn.commit()
