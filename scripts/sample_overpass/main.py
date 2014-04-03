@@ -97,8 +97,8 @@ def process():
 
 def render():
 
-	map_name='Москва, Бутово. Карта автобусных маршрутов ГУП Мосгортранс.'
-	bbox_butovo='37.49095,55.496757,37.607557,55.58391'
+	map_name='Иваново. Карта троллейбусных маршрутов ГУП Мосгортранс.'
+	bbox_butovo='40.876594,56.922916,41.120919,57.070322'
 	bbox_klapan='37.57309,55.566464,37.595197,55.574352'
 
 
@@ -107,12 +107,14 @@ def render():
 	bbox=bbox_butovo
 	width=str(2500)
 	height=str(int(width)*1.4142857)
-	#
+	
 
 	command='node /usr/share/tilemill/index.js export tram4 overlay.png --format=png --quiet --verbose=off --width='+width+' --height='+height+' --bbox="'+bbox+'"'
 	print command
 	os.system(command)
 	
+	quit()
+
 	command='node /usr/share/tilemill/index.js export "OSMBright" background.png --quiet --verbose=off --format=png --width='+width+' --height='+height+' --bbox="'+bbox+'"'
 	print command
 	os.system(command)
@@ -180,4 +182,4 @@ if __name__ == '__main__':
 #	update_background()
 	importdb()
 	process() 
-#	render()
+	render()
