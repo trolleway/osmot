@@ -446,7 +446,9 @@ def main():
             if set_direction == 'error':
 
                 exit()
-
+        
+        export_ref=export_ref.rstrip('. ')
+        export_ref_reverse=export_ref_reverse.rstrip('. ')
         sql = \
             '''
         INSERT INTO route_line_labels
