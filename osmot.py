@@ -90,7 +90,8 @@ def main():
          id serial,
          osm_id bigint,
          route_ref text,
-         route_ref_reverse text
+         route_ref_reverse text,
+	is_show smallint
         
         )
         ;
@@ -485,23 +486,28 @@ def main():
         name,
         string_agg(routes,',' ORDER BY routes) AS routes,
         concat(
-                trim(both '"' from
-                        REPLACE(name, '\\\', '')
-                )
-                ,' ',
+                trim(both '"' from REPLACE(name, '\\\', '')),
+		' ',
                 '[',
                 string_agg(routes,',' ORDER BY routes),
                 ']')
-        AS long_text
+        AS long_text,
+        ST_X(wkb_geometry) 	AS x,
+        ST_Y(wkb_geometry) 	AS y,
+	'' 			AS align_h,
+	'' 			AS align_v,
+	2			AS quanrant,
+	360			AS angle
+
         from terminals
         GROUP BY wkb_geometry, name
 
         )
         ;
 
-ALTER TABLE terminals_export 
-  ALTER COLUMN wkb_geometry TYPE geometry(POINT, 4326) 
-    USING ST_SetSRID(wkb_geometry,4326);
+	ALTER TABLE terminals_export 
+  	ALTER COLUMN wkb_geometry TYPE geometry(POINT, 4326) 
+    	USING ST_SetSRID(wkb_geometry,4326);
 
 '''
 
@@ -528,7 +534,8 @@ ALTER TABLE terminals_export
         CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) 
 		THEN route_line_labels.route_ref_reverse
         	ELSE route_line_labels.route_ref
-        END					        AS routes_ref
+        END					        AS routes_ref,
+	is_show
 
         FROM
         planet_osm_line JOIN route_line_labels
