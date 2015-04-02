@@ -30,7 +30,7 @@
           <prop k="customdash_unit" v="MM"/>
           <prop k="draw_inside_polygon" v="0"/>
           <prop k="joinstyle" v="round"/>
-          <prop k="line_color" v="255,0,0,255"/>
+          <prop k="line_color" v="44,51,160,255"/>
           <prop k="line_style" v="solid"/>
           <prop k="line_width" v="0.66"/>
           <prop k="line_width_unit" v="MM"/>
@@ -179,9 +179,9 @@
     <property key="labeling/shapeTransparency" value="0"/>
     <property key="labeling/shapeType" value="0"/>
     <property key="labeling/textColorA" value="255"/>
-    <property key="labeling/textColorB" value="28"/>
-    <property key="labeling/textColorG" value="26"/>
-    <property key="labeling/textColorR" value="227"/>
+    <property key="labeling/textColorB" value="160"/>
+    <property key="labeling/textColorG" value="51"/>
+    <property key="labeling/textColorR" value="44"/>
     <property key="labeling/textTransp" value="0"/>
     <property key="labeling/upsidedownLabels" value="0"/>
     <property key="labeling/wrapChar" value=""/>
