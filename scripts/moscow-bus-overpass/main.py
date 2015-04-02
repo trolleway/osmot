@@ -68,7 +68,7 @@ def cleardb(host,dbname,user,password):
 
 def importdb(host,dbname,user,password):
 	os.system('''
-	osm2pgsql --create --slim --database '''+dbname+''' --username '''+user+'''  data.osm
+	osm2pgsql --create --slim --latlong --database '''+dbname+''' --username '''+user+'''  data.osm
 	''')
 
 def process(host,dbname,user,password):
