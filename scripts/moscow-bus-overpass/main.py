@@ -10,7 +10,7 @@ import argparse
 
 def download_osm():
 	import urllib
-	urllib.urlretrieve ('''http://overpass.osm.rambler.ru/cgi/interpreter?data=relation["route"="trolleybus"](55.620,37.510,55.91,37.85 );(._;>;);out meta;''', "data.osm")
+	urllib.urlretrieve ('''http://overpass.osm.rambler.ru/cgi/interpreter?data=relation["route"="bus"](55.620,37.510,55.91,37.85 );(._;>;);out meta;''', "data.osm")
 
 def argparser_prepare():
 

@@ -138,8 +138,10 @@ def main():
                 item = item[1:]
                 WaysInCurrentRel[idx] = item
 
-        # Locate frist point of frist way in route
+        if len(WaysInCurrentRel)<1:
+                continue
 
+        # Locate frist point of frist way in route
         WayFrist = WaysInCurrentRel[len(WaysInCurrentRel) - 1]
         WaySecond = WaysInCurrentRel[len(WaysInCurrentRel) - 2]
 
