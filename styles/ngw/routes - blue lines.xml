@@ -1,0 +1,25 @@
+<map>
+  <layer>
+    <labelitem>routes_ref</labelitem>
+    <class>
+      <style>
+        <linecap>round</linecap>
+        <linejoin>round</linejoin>
+        <color red="0" green="0" blue="255"/>
+        <width>2</width>
+        <!-- Остались необработанные атрибуты: line_color, line_width, offset_unit, draw_inside_polygon, use_custom_dash, customdash_unit, customdash_map_unit_scale, customdash, offset_map_unit_scale, line_style, line_width_unit, width_map_unit_scale -->
+      </style>
+      <label>
+        <type>truetype</type>
+        <font>bold</font>
+        <size>8</size>
+        <color red="0" green="0" blue="255"/>
+        <outlinewidth>2</outlinewidth>
+        <outlinecolor red="255" green="255" blue="255"/>
+        <angle>follow</angle>
+        <maxoverlapangle>20.0</maxoverlapangle>
+        <maxscaledenom>10000</maxscaledenom>
+      </label>
+    </class>
+  </layer>
+</map>
