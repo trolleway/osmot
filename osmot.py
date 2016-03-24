@@ -509,9 +509,7 @@ def main():
         )
         ;
 
-        ALTER TABLE terminals_export 
-        ALTER COLUMN wkb_geometry TYPE geometry(POINT, 4326) 
-    	USING ST_SetSRID(wkb_geometry,4326);
+
 
 '''
 
