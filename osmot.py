@@ -65,7 +65,8 @@ def main():
     conn.commit()
     sql = \
         '''
-        CREATE TABLE IF NOT exists terminals (
+        DROP TABLE IF EXISTS terminals CASCADE;
+        CREATE TABLE  terminals (
                  wkb_geometry GEOMETRY,
                  name varchar(250),
                  routes varchar(250),
@@ -478,13 +479,13 @@ def main():
     print 'Create terminals table (TODO replace to view)'
 
     sql='''
-        DROP TABLE IF EXISTS terminals_export
-        ;
-
-        CREATE table terminals_export AS
+SELECT UpdateGeometrySRID('terminals','wkb_geometry',3857);
+DROP TABLE if exists terminals_export cascade;
+CREATE  table terminals_export AS
         (
         SELECT
         DISTINCT ST_GeomFromWKB(wkb_geometry) AS wkb_geometry,
+        ROW_NUMBER() OVER() 				AS terminal_id ,
         name,
         string_agg(routes,',' ORDER BY routes) AS routes,
         concat(
@@ -494,21 +495,20 @@ def main():
                 string_agg(routes,',' ORDER BY routes),
                 ']')
                             AS long_text,
-        ST_X(wkb_geometry) 	AS x,
-        ST_Y(wkb_geometry) 	AS y,
-        '' 			        AS align_h,
-        '' 			        AS align_v,
-        2			        AS quanrant,
-        360			        AS angle,
+        ST_X(wkb_geometry) 	AS label_pos_x,
+        ST_Y(wkb_geometry) 	AS label_pos_y,
+        '' 			        AS label_align_h,
+        '' 			        AS label_align_v,
+        2			        AS label_quanrant,
+        360			        AS label_angle,
         1                   AS show_label,
         ''                  AS always_show
-
         FROM terminals
         GROUP BY wkb_geometry, name
-
         )
         ;
-
+        ALTER TABLE terminals_export ADD PRIMARY KEY (terminal_id);
+        SELECT UpdateGeometrySRID('terminals_export','wkb_geometry',3857);
 
 
 '''
