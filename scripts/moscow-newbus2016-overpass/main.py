@@ -122,10 +122,11 @@ if __name__ == '__main__':
         args = parser.parse_args()
 
         is_download = args.download
-	if is_download == True:
-		print "downloading"
-        	download_osm()
+        if is_download == True:
+            print "downloading"
+            download_osm()
 
-	cleardb(host,dbname,user,password)
-	importdb(host,dbname,user,password)
-	process(host,dbname,user,password) 
+        print 'go'
+        cleardb(host,dbname,user,password)
+        importdb(host,dbname,user,password)
+        process(host,dbname,user,password) 
