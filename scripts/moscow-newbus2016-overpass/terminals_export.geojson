@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "name": "\"Микрорайон 4 \\\"Д\\\" Отрадного\"", "routes": "309", "long_text": "Микрорайон 4 \"Д\" Отрадного [309]", "label_pos_x": 4186215.280000, "label_pos_y": 7531378.410000, "label_align_h": "", "label_align_v": "", "label_quanrant": 2, "label_angle": 360, "show_label": 1, "always_show": "" }, "geometry": { "type": "Point", "coordinates": [ 4186215.28, 7531378.41 ] } },
+{ "type": "Feature", "properties": { "name": "\"станция Лосиноостровская\"", "routes": "309", "long_text": "станция Лосиноостровская [309]", "label_pos_x": 4194658.080000, "label_pos_y": 7531126.380000, "label_align_h": "", "label_align_v": "", "label_quanrant": 2, "label_angle": 360, "show_label": 1, "always_show": "" }, "geometry": { "type": "Point", "coordinates": [ 4194658.08, 7531126.38 ] } }
+]
+}

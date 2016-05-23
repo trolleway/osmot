@@ -1,5 +1,10 @@
 dbname='gis'
-user='artem'
+user='trolleway'
 host='localhost'
-password='artem'
+password='admin'
+
+ngw_url=http://trolleway.nextgis.com
+ngw_resource_id=35
+ngw_login = 'administrator'
+ngw_password = 'admin' 
 

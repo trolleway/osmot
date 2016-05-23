@@ -10,7 +10,7 @@ import argparse
 
 def download_osm():
 	import urllib
-	urllib.urlretrieve ('''http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:xml]
+	urllib.urlretrieve ('''http://overpass-api.de/api/interpreter?data=[out:xml]
 [timeout:120]
 ;
 (
@@ -18,6 +18,15 @@ def download_osm():
     ["ref"="309"]
     ["payment:troika"="yes"]
     (55.597747184319935,37.354888916015625,55.94458588614092,38.06350708007812);
+
+);
+out meta;
+>;
+out meta qt;''', "data.osm")
+
+
+
+'''
   relation
     ["ref"="346"]
     ["payment:troika"="yes"]
@@ -38,10 +47,8 @@ def download_osm():
     ["ref"="540"]
     ["payment:troika"="yes"]
     (55.597747184319935,37.354888916015625,55.94458588614092,38.06350708007812);
-);
-out meta;
->;
-out meta qt;''', "data.osm")
+'''
+
 
 def argparser_prepare():
 
@@ -99,7 +106,7 @@ def cleardb(host,dbname,user,password):
 
 def importdb(host,dbname,user,password):
 	os.system('''
-	osm2pgsql --create --slim --latlong --database '''+dbname+''' --username '''+user+'''  data.osm
+	osm2pgsql --create --slim -E 3857 --database '''+dbname+''' --username '''+user+'''  data.osm
 	''')
 
 def process(host,dbname,user,password):
@@ -109,10 +116,18 @@ def process(host,dbname,user,password):
         print cmd
         os.system(cmd)
 
+def postgis2geojson(host,dbname,user,password,table):
+	os.system('''
+ogr2ogr -f GeoJSON '''+table+'''.geojson \
+  "PG:host='''+host+''' dbname='''+dbname+''' user='''+user+''' password='''+password+'''" "'''+table+'''"
+	''')
+
 
 
 
 if __name__ == '__main__':
+
+
         host=config.host
         dbname=config.dbname
         user=config.user
@@ -126,7 +141,11 @@ if __name__ == '__main__':
             print "downloading"
             download_osm()
 
-        print 'go'
         cleardb(host,dbname,user,password)
         importdb(host,dbname,user,password)
         process(host,dbname,user,password) 
+        postgis2geojson(host,dbname,user,password,'terminals_export')
+        postgis2geojson(host,dbname,user,password,'routes_with_refs')
+        os.system('python update_ngw_from_geojson.py  --ngw_url '+config.ngw_url+' --ngw_resource_id 35 --ngw_login '+config.ngw_login+' --ngw_password '+config.ngw_password+' --check_field road_id --filename routes_with_refs.geojson')
+        os.system('python update_ngw_from_geojson.py  --ngw_url '+config.ngw_url+' --ngw_resource_id 36 --ngw_login '+config.ngw_login+' --ngw_password '+config.ngw_password+' --check_field road_id --filename terminals_export.geojson')
+    

@@ -30,7 +30,7 @@ import requests
 import pprint
 import json
 
-
+import argparse
 
 
 
@@ -318,6 +318,8 @@ class NGWSynchroniser:
                     print 'update feature #' + str(ngw_id)
                     payload = self.createPayload(wfs_result[ngw_id])
                     req = requests.put(self.ngw_url + str(self.resid) + '/feature/' + str(ngwFeatureId), data=json.dumps(payload), auth=self.ngw_creds)
+                    print self.ngw_url + str(self.resid) + '/feature/' + str(ngwFeatureId)
+                    pp.pprint (json.dumps(payload))
             else:
                 print 'delete feature ' + str(ngw_id) + ' ngw_feature_id='+str(ngwFeatureId)
                 req = requests.delete(self.ngw_url + str(self.resid) + '/feature/' + str(ngwFeatureId), auth=self.ngw_creds)
@@ -344,47 +346,45 @@ def argparser_prepare():
 
     parser = argparse.ArgumentParser(description='',
             formatter_class=PrettyFormatter)
-    parser.add_argument('-ngw_url', '--ngw_url', type=str, default='localhost',
-                        help='')
+    parser.add_argument('-url', '--ngw_url', type=str, default='localhost',
+                        help='URL of NextGIS Web instance')
     parser.add_argument('-ngw_resource_id', '--ngw_resource_id', type=str, default='0',
                         help='NextGIS Web resource_id')
-    parser.add_argument('-u', '--ngw_username', type=str, default='administrator',
+    parser.add_argument('-u', '--ngw_login', type=str, default='administrator',
                         help='NextGIS Web username')
     parser.add_argument('-p', '--ngw_password', type=str, default='admin',
                         help='NextGIS Web password')
     parser.add_argument('-cf', '--check_field', type=str, default='road_id',
                         help='Field for compare')
-    parser.add_argument('-cf', '--check_field', type=str, default='road_id',
-                        help='Field for compare')
+
     parser.add_argument('-fn', '--filename', type=str, default='road_id',
                         help='Filename')
 
     parser.epilog = \
         '''Samples:
-%(prog)s /home/someuser/moscow.csv
-%(prog)s -t 3 /home/someuser/all_uics/
-%(prog)s -t 5 -r RU-SPE /home/someuser/saint-pet.csv
+%(prog)s --ngw_url http://trolleway.nextgis.com --ngw_resource_id 35 --ngw_login administrator --ngw_password admin --check_field road_id --filename routes_with_refs.geojson
+
 ''' \
         % {'prog': parser.prog}
     return parser
 
+if __name__ == '__main__':
 
-parser = argparser_prepare()
-args = parser.parse_args()
-is_download = args.download
-     
-cfg=dict()
-cfg['ngw_url']=args.ngw_url
-cfg['ngw_resource_id']=args.ngw_resource_id
-cfg['ngw_login']=args.ngw_login
-cfg['ngw_password']=args.ngw_password
+    parser = argparser_prepare()
+    args = parser.parse_args()
+         
+    cfg=dict()
+    cfg['ngw_url']=args.ngw_url
+    cfg['ngw_resource_id']=args.ngw_resource_id
+    cfg['ngw_login']=args.ngw_login
+    cfg['ngw_password']=args.ngw_password
 
-processor=NGWSynchroniser(cfg=cfg)
-
+    processor=NGWSynchroniser(cfg=cfg)
 
 
-externalData=processor.openGeoJson(check_field = args.check_field,filename=args.filename)
-print 'fetch ngw data'
-ngwData=processor.GetNGWData('pa',check_field = args.check_field)
-print 'start sinchronisation'
-processor.synchronize(externalData,ngwData,check_field = args.check_field)
+    externalData=processor.openGeoJson(check_field = args.check_field,filename=args.filename)
+    print 'fetch ngw data'
+    ngwData=processor.GetNGWData('pa',check_field = args.check_field)
+    print 'start sinchronisation'
+    processor.synchronize(externalData,ngwData,check_field = args.check_field)
+
