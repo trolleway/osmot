@@ -15,7 +15,7 @@ def download_osm():
 ;
 (
   relation
-    ["ref"="309"]
+    ["ref"="540"]
     ["payment:troika"="yes"]
     (55.597747184319935,37.354888916015625,55.94458588614092,38.06350708007812);
 
@@ -27,6 +27,10 @@ out meta qt;''', "data.osm")
 
 
 '''
+  relation
+    ["ref"="309"]
+    ["payment:troika"="yes"]
+    (55.597747184319935,37.354888916015625,55.94458588614092,38.06350708007812);
   relation
     ["ref"="346"]
     ["payment:troika"="yes"]
@@ -146,6 +150,6 @@ if __name__ == '__main__':
         process(host,dbname,user,password) 
         postgis2geojson(host,dbname,user,password,'terminals_export')
         postgis2geojson(host,dbname,user,password,'routes_with_refs')
-        os.system('python update_ngw_from_geojson.py  --ngw_url '+config.ngw_url+' --ngw_resource_id 35 --ngw_login '+config.ngw_login+' --ngw_password '+config.ngw_password+' --check_field road_id --filename routes_with_refs.geojson')
-        os.system('python update_ngw_from_geojson.py  --ngw_url '+config.ngw_url+' --ngw_resource_id 36 --ngw_login '+config.ngw_login+' --ngw_password '+config.ngw_password+' --check_field road_id --filename terminals_export.geojson')
+        #os.system('python update_ngw_from_geojson.py  --ngw_url '+config.ngw_url+' --ngw_resource_id 35 --ngw_login '+config.ngw_login+' --ngw_password '+config.ngw_password+' --check_field road_id --filename routes_with_refs.geojson')
+        os.system('python update_ngw_from_geojson.py  --ngw_url '+config.ngw_url+' --ngw_resource_id 4 --ngw_login '+config.ngw_login+' --ngw_password '+config.ngw_password+' --check_field terminal_id --filename terminals_export.geojson')
     
