@@ -92,6 +92,8 @@ class NGWSynchroniser:
         return True
         
     def comparePoints(self,ngw_pt, wfs_pt):
+        print ngw_pt, wfs_pt
+
         return (abs(ngw_pt[0] - wfs_pt[0]) < self.delta) and (abs(ngw_pt[1] - wfs_pt[1]) < self.delta)
         
     def compareLines(self,ngw_line, wfs_line):
@@ -136,7 +138,7 @@ class NGWSynchroniser:
             return self.comparePolygons(ngw_geom, wfs_geom)  
         elif ngw_geom.GetGeometryType() is ogr.wkbMultiPoint:
             for i in range(ngw_geom.GetGeometryCount()):
-                if not self.comparePoint(ngw_geom.GetGeometryRef(i), wfs_geom.GetGeometryRef(i)):
+                if not self.comparePoints(ngw_geom.GetGeometryRef(i).GetPoint(0), wfs_geom.GetGeometryRef(i).GetPoint(0)):
                     return False
         elif ngw_geom.GetGeometryType() is ogr.wkbMultiLineString:
             for i in range(ngw_geom.GetGeometryCount()):
@@ -261,8 +263,7 @@ class NGWSynchroniser:
             layer_result_sorted[key]=wfs_result[key]
 
 
-        #print layer_result_sorted
-        #quit()
+
         return layer_result_sorted
 
     def GetNGWData(self,code,check_field):
@@ -332,43 +333,36 @@ class NGWSynchroniser:
         wfs_result = wfs_result_sorted
 
         for ngw_id in ngw_result:
-            ngwFeatureId=ngw_result[ngw_id]['fields'][check_field]
+            #ngwFeatureId=ngw_result[ngw_id]['fields'][check_field]
+            ngwFeatureId=ngw_result[ngw_id]['id']
 
             #if ngw_id in wfs_result:
-            if wfs_result.has_key(ngwFeatureId):
+            if wfs_result.has_key(ngw_result[ngw_id]['fields'][check_field]):
                 if not self.compareFeatures(ngw_result[ngw_id], wfs_result[ngw_id]):
                     # update ngw feature
-                    print 'update feature #' + str(ngw_id)
+                    
                     payload = self.createPayload(wfs_result[ngw_id])
                     req = requests.put(self.ngw_url + str(self.resid) + '/feature/' + str(ngwFeatureId), data=json.dumps(payload), auth=self.ngw_creds)
-                    print self.ngw_url + str(self.resid) + '/feature/' + str(ngwFeatureId)
-                    pp.pprint (json.dumps(payload))
+                    print 'update feature #' + str(ngw_id) + ' ' + str(req)
+                print 'same feature: '+str(ngw_id)
             else:
                 print 'delete feature ' + str(ngw_id) + ' ngw_feature_id='+str(ngwFeatureId)
                 req = requests.delete(self.ngw_url + str(self.resid) + '/feature/' + str(ngwFeatureId), auth=self.ngw_creds)
                 
         # add new
 
+
         for wfs_id in wfs_result:
-            wfsFeatureId=wfs_result[wfs_id]['fields'][check_field]
+            #wfsFeatureId=wfs_result[wfs_id]['fields'][check_field]
+
             if wfs_id not in ngw_result:
                 print 'add new feature #' + str(wfs_id)
                 payload = self.createPayload(wfs_result[wfs_id])
-                #print json.dumps(payload)
                 req = requests.post(self.ngw_url + str(self.resid) + '/feature/', data=json.dumps(payload), auth=self.ngw_creds)
 
     
 
     
-
-
-
-
-
-
-
-
-
 
 
 
@@ -389,11 +383,12 @@ if __name__ == '__main__':
     cfg['ngw_password']=args.ngw_password
 
     processor=NGWSynchroniser(cfg=cfg)
+    print 'Start synchronisation from '+args.filename+' to '+cfg['ngw_url'] + '/resource/'+cfg['ngw_resource_id']
 
 
     externalData=processor.openGeoJson(check_field = args.check_field,filename=args.filename)
-    print 'fetch ngw data'
-    ngwData=processor.GetNGWData('pa',check_field = args.check_field)
-    print 'start sinchronisation'
-    processor.synchronize(externalData,ngwData,check_field = args.check_field)
 
+    print 'Fetching whole ngw layer'
+    ngwData=processor.GetNGWData('pa',check_field = args.check_field)
+    print 'Compare features'
+    processor.synchronize(externalData,ngwData,check_field = args.check_field)
