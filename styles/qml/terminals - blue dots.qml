@@ -1,37 +1,40 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.14.2-Essen" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.14.0-Essen" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
   <edittypes>
+    <edittype widgetv2type="TextEdit" name="show_label">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
     <edittype widgetv2type="TextEdit" name="name">
       <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
     </edittype>
-    <edittype widgetv2type="TextEdit" name="routes">
+    <edittype widgetv2type="TextEdit" name="terminal_id">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="label_quanrant">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="label_align_v">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="label_align_h">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="always_show">
       <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
     </edittype>
     <edittype widgetv2type="TextEdit" name="long_text">
       <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
     </edittype>
-    <edittype widgetv2type="TextEdit" name="x">
+    <edittype widgetv2type="TextEdit" name="label_pos_y">
       <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
     </edittype>
-    <edittype widgetv2type="TextEdit" name="y">
+    <edittype widgetv2type="TextEdit" name="label_pos_x">
       <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
     </edittype>
-    <edittype widgetv2type="TextEdit" name="align_h">
+    <edittype widgetv2type="TextEdit" name="routes">
       <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
     </edittype>
-    <edittype widgetv2type="TextEdit" name="align_v">
-      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-    </edittype>
-    <edittype widgetv2type="TextEdit" name="quanrant">
-      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-    </edittype>
-    <edittype widgetv2type="TextEdit" name="angle">
-      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-    </edittype>
-    <edittype widgetv2type="TextEdit" name="show_label">
-      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-    </edittype>
-    <edittype widgetv2type="TextEdit" name="always_show">
+    <edittype widgetv2type="TextEdit" name="label_angle">
       <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
     </edittype>
   </edittypes>
@@ -40,19 +43,19 @@
       <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
         <layer pass="0" class="SimpleMarker" locked="0">
           <prop k="angle" v="0"/>
-          <prop k="color" v="44,51,160,255"/>
+          <prop k="color" v="255,255,255,255"/>
           <prop k="horizontal_anchor_point" v="1"/>
           <prop k="name" v="circle"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
           <prop k="offset_unit" v="MM"/>
-          <prop k="outline_color" v="0,0,0,255"/>
+          <prop k="outline_color" v="44,51,160,255"/>
           <prop k="outline_style" v="solid"/>
-          <prop k="outline_width" v="0"/>
+          <prop k="outline_width" v="0.4"/>
           <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
           <prop k="outline_width_unit" v="MM"/>
           <prop k="scale_method" v="area"/>
-          <prop k="size" v="2"/>
+          <prop k="size" v="1.4"/>
           <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
           <prop k="size_unit" v="MM"/>
           <prop k="vertical_anchor_point" v="1"/>
@@ -76,7 +79,7 @@
     <property key="labeling/bufferDraw" value="true"/>
     <property key="labeling/bufferJoinStyle" value="64"/>
     <property key="labeling/bufferNoFill" value="false"/>
-    <property key="labeling/bufferSize" value="1"/>
+    <property key="labeling/bufferSize" value="0.8"/>
     <property key="labeling/bufferSizeInMapUnits" value="false"/>
     <property key="labeling/bufferSizeMapUnitMaxScale" value="0"/>
     <property key="labeling/bufferSizeMapUnitMinScale" value="0"/>
@@ -86,7 +89,7 @@
     <property key="labeling/centroidWhole" value="false"/>
     <property key="labeling/decimals" value="3"/>
     <property key="labeling/displayAll" value="false"/>
-    <property key="labeling/dist" value="0"/>
+    <property key="labeling/dist" value="1.1"/>
     <property key="labeling/distInMapUnits" value="false"/>
     <property key="labeling/distMapUnitMaxScale" value="0"/>
     <property key="labeling/distMapUnitMinScale" value="0"/>
@@ -97,20 +100,20 @@
     <property key="labeling/fitInPolygonOnly" value="false"/>
     <property key="labeling/fontBold" value="true"/>
     <property key="labeling/fontCapitals" value="0"/>
-    <property key="labeling/fontFamily" value="Ubuntu"/>
+    <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
     <property key="labeling/fontItalic" value="false"/>
     <property key="labeling/fontLetterSpacing" value="0"/>
     <property key="labeling/fontLimitPixelSize" value="false"/>
     <property key="labeling/fontMaxPixelSize" value="10000"/>
     <property key="labeling/fontMinPixelSize" value="3"/>
-    <property key="labeling/fontSize" value="11"/>
+    <property key="labeling/fontSize" value="8.25"/>
     <property key="labeling/fontSizeInMapUnits" value="false"/>
     <property key="labeling/fontSizeMapUnitMaxScale" value="0"/>
     <property key="labeling/fontSizeMapUnitMinScale" value="0"/>
     <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
     <property key="labeling/fontStrikeout" value="false"/>
     <property key="labeling/fontUnderline" value="false"/>
-    <property key="labeling/fontWeight" value="63"/>
+    <property key="labeling/fontWeight" value="75"/>
     <property key="labeling/fontWordSpacing" value="0"/>
     <property key="labeling/formatNumbers" value="false"/>
     <property key="labeling/isExpression" value="false"/>
@@ -128,7 +131,7 @@
     <property key="labeling/minFeatureSize" value="0"/>
     <property key="labeling/multilineAlign" value="0"/>
     <property key="labeling/multilineHeight" value="1"/>
-    <property key="labeling/namedStyle" value="Medium"/>
+    <property key="labeling/namedStyle" value="Bold"/>
     <property key="labeling/obstacle" value="true"/>
     <property key="labeling/obstacleFactor" value="1"/>
     <property key="labeling/obstacleType" value="0"/>
@@ -149,9 +152,9 @@
     <property key="labeling/repeatDistanceUnit" value="1"/>
     <property key="labeling/reverseDirectionSymbol" value="false"/>
     <property key="labeling/rightDirectionSymbol" value=">"/>
-    <property key="labeling/scaleMax" value="10000000"/>
+    <property key="labeling/scaleMax" value="500000"/>
     <property key="labeling/scaleMin" value="1"/>
-    <property key="labeling/scaleVisibility" value="false"/>
+    <property key="labeling/scaleVisibility" value="true"/>
     <property key="labeling/shadowBlendMode" value="6"/>
     <property key="labeling/shadowColorB" value="0"/>
     <property key="labeling/shadowColorG" value="0"/>
@@ -253,7 +256,7 @@
   </labelattributes>
   <SingleCategoryDiagramRenderer diagramType="Pie">
     <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" sizeType="MM" minScaleDenominator="-4.65661e-10">
-      <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+      <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
   <DiagramLayerSettings yPosColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
