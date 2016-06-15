@@ -528,7 +528,7 @@ CREATE  table terminals_export AS
         '''
         CREATE OR REPLACE VIEW routes_with_refs AS 
         (SELECT
-        ROW_NUMBER() OVER() 	::varchar			AS road_id,
+        planet_osm_line.osm_id 	::varchar			AS road_id,
         degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
         ST_X(ST_Line_Interpolate_Point(way,0.5)) 	AS x,
         ST_Y(ST_Line_Interpolate_Point(way,0.5)) 	AS y,
