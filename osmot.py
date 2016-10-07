@@ -546,7 +546,7 @@ CREATE  table terminals_export AS
         FROM
             planet_osm_line JOIN route_line_labels
         ON (planet_osm_line.osm_id = route_line_labels.osm_id)
-        WHERE planet_osm_line.osm_id>0
+        WHERE planet_osm_line.osm_id>0 AND route_line_labels.route_ref <> ''
         )
         '''
 	#If view routes_with_refs failed while adding to QGIS with error "an invalid layer" - set while adding table to QGIS field "primary key" 
