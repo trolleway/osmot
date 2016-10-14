@@ -5,6 +5,7 @@
 import psycopg2
 import string
 import argparse
+import sys
 
 
 def deb(string):
