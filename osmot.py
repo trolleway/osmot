@@ -11,6 +11,17 @@ def deb(string):
     return 0
     print string
 
+def progress(count, total, status=''):
+    bar_len = 60
+    filled_len = int(round(bar_len * count / float(total)))
+
+    percents = round(100.0 * count / float(total), 1)
+    bar = '=' * filled_len + '-' * (bar_len - filled_len)
+
+    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
+    sys.stdout.flush()  # As suggested by Rom Ruben (see: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console/27871113#comment50529068_27871113)
+
+    
 
 def argparser_prepare():
 
@@ -233,12 +244,8 @@ def main():
         way_street_name = str(row[1])
 
         # deb('calculate refs for line '+str(way_id)+' '+way_street_name)
-
-        print '' + string.rjust(str(way_id), 10) + ' ' \
-            + string.rjust(str(way_street_name.strip()), 60) + ' ' \
-            + string.rjust(str(current_street_count) + '/'
-                           + str(ways_count_total), 7)
-
+	
+        progress(current_street_count, ways_count_total, status=string.rjust(str(way_id), 10) + ' ' + string.rjust(str(way_street_name.strip()), 60))
         # For each route, read each way
 
         sql2 = \
