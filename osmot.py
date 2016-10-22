@@ -126,11 +126,11 @@ def main():
     sql = '''
 DROP TABLE IF EXISTS unnesting_with_rn;
 CREATE TEMPORARY TABLE unnesting_with_rn AS 
-	SELECT id, unnest, row_number() OVER (PARTITION BY id ORDER BY rn)  FROM (
-	SELECT id, unnest, row_number() OVER () AS rn FROM 
+	SELECT id, tags, unnest, row_number() OVER (PARTITION BY id ORDER BY rn)  FROM (
+	SELECT id, tags, unnest, row_number() OVER () AS rn FROM 
 	(
 	SELECT 
-	id, 
+	id, tags,
 	unnest(members) 
 	FROM
 	planet_osm_rels
@@ -140,10 +140,10 @@ CREATE TEMPORARY TABLE unnesting_with_rn AS
 	
 
 
-DROP TABLE IF EXISTS relations_flat;
-CREATE TABLE relations_flat AS
+DROP TABLE IF EXISTS relations_optimized;
+CREATE TABLE relations_optimized AS
 SELECT 
-members.id as relation_id, 
+members.id as relation_id, members.tags,
 SUBSTRING(members.unnest from 1 for 1)::varchar(1) AS feature_type, 
 SUBSTRING(members.unnest from 2 for 12)::bigint AS member_id, 
 --members.unnest as member, 
@@ -152,6 +152,10 @@ roles.unnest as "role"
 --roles.row_number AS role_rn  
 FROM unnesting_with_rn AS members JOIN unnesting_with_rn AS roles 
 	ON roles.id=members.id AND roles.row_number=members.row_number+1 AND roles.row_number % 2 = 0 AND members.row_number % 2 <> 0;
+
+-- It is always great to put a primary key on the table
+ALTER table relations_optimized ADD Column uid serial PRIMARY KEY;
+
 '''
     cur.execute(sql)
     conn.commit()
@@ -304,6 +308,8 @@ FROM unnesting_with_rn AS members JOIN unnesting_with_rn AS roles
         WHERE members::VARCHAR LIKE '%''' \
             + str(way_id) + '''%'
         ORDER BY ref;
+
+
         '''
 
         cur.execute(sql2)
