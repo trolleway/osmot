@@ -151,7 +151,9 @@ roles.unnest as "role"
 --members.row_number AS memb_rn, 
 --roles.row_number AS role_rn  
 FROM unnesting_with_rn AS members JOIN unnesting_with_rn AS roles 
-	ON roles.id=members.id AND roles.row_number=members.row_number+1 AND roles.row_number % 2 = 0 AND members.row_number % 2 <> 0;
+	ON roles.id=members.id AND roles.row_number=members.row_number+1 AND roles.row_number % 2 = 0 AND members.row_number % 2 <> 0
+WHERE SUBSTRING(members.unnest from 1 for 1)::varchar(1)='w' AND roles.unnest NOT IN ('platform','stop')
+;
 
 -- It is always great to put a primary key on the table
 ALTER table relations_optimized ADD Column uid serial PRIMARY KEY;
@@ -303,13 +305,11 @@ ORDER BY name DESC;
             '''
                 SELECT
         id,
-        substring(tags::varchar from 'ref,(.*?)[,}]') AS ref,
-        substring(tags::varchar from 'name,(.*?)[,}]') AS name
+        substring(tags::varchar from 'ref,(.*?)[,}]') AS ref
         FROM relations_optimized
-        WHERE feature_type='w' AND member_id = ''' \
+        WHERE  member_id = ''' \
             + str(way_id) + '''
-        AND role NOT IN ('stop','platform')
-        ORDER BY ref;
+
         '''
         cur.execute(sql2)
         rows2 = cur.fetchall()
@@ -320,8 +320,7 @@ ORDER BY name DESC;
         this_way_refs_direction = {}
         for row2 in rows2:
             ref = str(row2[1])
-            deb('- relation ' + str(row2[0]) + ' ref=' + str(row2[1])
-                + ' name=' + str(row2[2]))
+            deb('- relation ' + str(row2[0]) + ' ref=' + str(row2[1])                )
             current_routemaster_ref = row2[1]
 
             sql3 = \
@@ -329,7 +328,7 @@ ORDER BY name DESC;
         SELECT
         member_id
         FROM relations_optimized               
-        WHERE  id = ''' + str(row2[0]) + ''' AND feature_type='w' AND role NOT IN ('platform','stop')
+        WHERE  id = ''' + str(row2[0]) + ''' 
         '''
 
             WaysInCurrentRel=[]
