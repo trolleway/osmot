@@ -277,10 +277,9 @@ def main():
                 '''
         SELECT
         *
-        FROM planet_osm_rels                
-        WHERE members::VARCHAR LIKE '%''' \
-                + str(way_id) + '''%'
-        AND id = ''' + str(row2[0]) \
+        FROM planet_osm_rels  
+        WHERE
+               id = ''' + str(row2[0]) \
                 + '''
                         '''
             cur.execute(sql3)
