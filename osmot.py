@@ -52,6 +52,16 @@ def argparser_prepare():
     return parser
 
 
+def vacuum(conn):
+    print 'running VACUUM'
+    old_isolation_level = conn.isolation_level
+    conn.set_isolation_level(0)
+    query = "VACUUM ANALYZE"
+    cur = conn.cursor()
+    cur.execute(query)
+    conn.set_isolation_level(old_isolation_level)
+    print 'VACUUM finished'
+
 def main():
 
     parser = argparser_prepare()
@@ -108,9 +118,44 @@ def main():
         
         )
         ;
-        '''
+
+'''
     cur.execute(sql)
     conn.commit()
+
+    sql = '''
+DROP TABLE IF EXISTS unnesting_with_rn;
+CREATE TEMPORARY TABLE unnesting_with_rn AS 
+	SELECT id, unnest, row_number() OVER (PARTITION BY id ORDER BY rn)  FROM (
+	SELECT id, unnest, row_number() OVER () AS rn FROM 
+	(
+	SELECT 
+	id, 
+	unnest(members) 
+	FROM
+	planet_osm_rels
+	) AS unnesting
+	) AS unnesting_rn2 
+	;
+	
+
+
+DROP TABLE IF EXISTS relations_flat;
+CREATE TABLE relations_flat AS
+SELECT 
+members.id as relation_id, 
+SUBSTRING(members.unnest from 1 for 1)::varchar(1) AS feature_type, 
+SUBSTRING(members.unnest from 2 for 12)::bigint AS member_id, 
+--members.unnest as member, 
+roles.unnest as "role" 
+--members.row_number AS memb_rn, 
+--roles.row_number AS role_rn  
+FROM unnesting_with_rn AS members JOIN unnesting_with_rn AS roles 
+	ON roles.id=members.id AND roles.row_number=members.row_number+1 AND roles.row_number % 2 = 0 AND members.row_number % 2 <> 0;
+'''
+    cur.execute(sql)
+    conn.commit()
+    vacuum(conn)
 
     # Calculate terminal points of routes
     # Selecting routes
