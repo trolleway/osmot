@@ -9,7 +9,7 @@ import sys
 
 
 def deb(string):
-    #return 0
+    return 0
     print string
 
 def progress(count, total, status=''):
@@ -278,7 +278,7 @@ ALTER table relations_optimized ADD Column uid serial PRIMARY KEY;
         ways_count_total = row[0]
 
     sql='''
-SELECT member_id AS osm_id, planet_osm_line.name 
+SELECT DISTINCT(member_id) AS osm_id, planet_osm_line.name 
 FROM relations_optimized JOIN planet_osm_line ON (member_id=osm_id)
 WHERE feature_type='w' AND role NOT IN ('stop','platform')
 ORDER BY name DESC;
@@ -323,32 +323,29 @@ ORDER BY name DESC;
             deb('- relation ' + str(row2[0]) + ' ref=' + str(row2[1])
                 + ' name=' + str(row2[2]))
             current_routemaster_ref = row2[1]
+
             sql3 = \
-                '''
+            '''
         SELECT
-        *
-        FROM planet_osm_rels                
-        WHERE members::VARCHAR LIKE '%''' \
-                + str(way_id) + '''%'
-        AND id = ''' + str(row2[0]) \
-                + '''
-                        '''
+        member_id
+        FROM relations_optimized               
+        WHERE  id = ''' + str(row2[0]) + ''' AND feature_type='w' AND role NOT IN ('platform','stop')
+        '''
+
+            WaysInCurrentRel=[]
+            current_rel_id = str(row2[0])
             cur.execute(sql3)
             rows3 = cur.fetchall()
             for row3 in rows3:
-                members_list = row3[4][::2]
-                current_rel_id = row[0]
+                WaysInCurrentRel.append(str(row3[0]))
 
-                WaysInCurrentRel = []
-                WaysInCurrentRel = [i for i in members_list
-                                    if not i.find('w')] # TODO w or n in query?
 
-                # l[1::2] for even elements
+           
 
-                for (idx, item) in enumerate(WaysInCurrentRel):
-                    if item.find('n'):
-                        item = item[1:]
-                        WaysInCurrentRel[idx] = item
+
+                #------------------------------
+
+ 
 
                 local_way_id_current = 0
                 local_way_id_next = 0
