@@ -9,7 +9,7 @@ import sys
 
 
 def deb(string):
-    return 0
+    #return 0
     print string
 
 def progress(count, total, status=''):
@@ -143,7 +143,7 @@ CREATE TEMPORARY TABLE unnesting_with_rn AS
 DROP TABLE IF EXISTS relations_optimized;
 CREATE TABLE relations_optimized AS
 SELECT 
-members.id as relation_id, members.tags,
+members.id as id, members.tags,
 SUBSTRING(members.unnest from 1 for 1)::varchar(1) AS feature_type, 
 SUBSTRING(members.unnest from 2 for 12)::bigint AS member_id, 
 --members.unnest as member, 
@@ -277,14 +277,13 @@ ALTER table relations_optimized ADD Column uid serial PRIMARY KEY;
     for row in rows:
         ways_count_total = row[0]
 
-    cur.execute('''
-        SELECT
-        osm_id, name
-        FROM planet_osm_line
-        WHERE osm_id > 0
-        ORDER BY name DESC
-                ''')
-
+    sql='''
+SELECT member_id AS osm_id, planet_osm_line.name 
+FROM relations_optimized JOIN planet_osm_line ON (member_id=osm_id)
+WHERE feature_type='w' AND role NOT IN ('stop','platform')
+ORDER BY name DESC;
+'''
+    cur.execute(sql)
     rows = cur.fetchall()
 
     current_street_count = 0
@@ -308,10 +307,20 @@ ALTER table relations_optimized ADD Column uid serial PRIMARY KEY;
         WHERE members::VARCHAR LIKE '%''' \
             + str(way_id) + '''%'
         ORDER BY ref;
-
-
         '''
 
+        sql2 = \
+            '''
+                SELECT
+        id,
+        substring(tags::varchar from 'ref,(.*?)[,}]') AS ref,
+        substring(tags::varchar from 'name,(.*?)[,}]') AS name
+        FROM relations_optimized
+        WHERE feature_type='w' AND member_id = ''' \
+            + str(way_id) + '''
+        AND role NOT IN ('stop','platform')
+        ORDER BY ref;
+        '''
         cur.execute(sql2)
         rows2 = cur.fetchall()
         reflist = []
