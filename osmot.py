@@ -297,17 +297,7 @@ ORDER BY name DESC;
         progress(current_street_count, ways_count_total, status=string.rjust(str(way_id), 10) + ' ' + string.ljust(str(way_street_name.strip()), 60))
         # For each route, read each way
 
-        sql2 = \
-            '''
-                SELECT
-        id,
-        substring(tags::varchar from 'ref,(.*?)[,}]') AS ref,
-        substring(tags::varchar from 'name,(.*?)[,}]') AS name
-        FROM planet_osm_rels
-        WHERE members::VARCHAR LIKE '%''' \
-            + str(way_id) + '''%'
-        ORDER BY ref;
-        '''
+
 
         sql2 = \
             '''
