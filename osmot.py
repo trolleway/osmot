@@ -51,6 +51,15 @@ def argparser_prepare():
         % {'prog': parser.prog}
     return parser
 
+def vacuum(conn,tablename):
+    print 'running VACUUM'
+    old_isolation_level = conn.isolation_level
+    conn.set_isolation_level(0)
+    query = "VACUUM ANALYZE "+tablename
+    cur = conn.cursor()
+    cur.execute(query)
+    conn.set_isolation_level(old_isolation_level)
+    print 'VACUUM finished'
 
 def main():
 
@@ -111,6 +120,17 @@ def main():
         '''
     cur.execute(sql)
     conn.commit()
+    sql = \
+        '''
+CREATE INDEX idx_planet_osm_rels_members
+on planet_osm_rels
+USING btree(members);
+        '''
+    cur.execute(sql)
+    conn.commit()
+    vacuum(conn,'planet_osm_rels')
+        
+
 
     # Calculate terminal points of routes
     # Selecting routes
