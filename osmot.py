@@ -158,6 +158,15 @@ WHERE SUBSTRING(members.unnest from 1 for 1)::varchar(1)='w' AND roles.unnest NO
 -- It is always great to put a primary key on the table
 ALTER table relations_optimized ADD Column uid serial PRIMARY KEY;
 
+-- Create the index
+CREATE INDEX idx_relations_optimized_id
+on relations_optimized
+USING btree(id);
+
+-- Create the index
+CREATE INDEX idx_relations_optimized_member_id
+on relations_optimized
+USING btree(member_id);
 '''
     cur.execute(sql)
     conn.commit()
