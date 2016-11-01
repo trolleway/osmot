@@ -120,15 +120,8 @@ def main():
         '''
     cur.execute(sql)
     conn.commit()
-    sql = \
-        '''
-CREATE INDEX idx_planet_osm_rels_members
-on planet_osm_rels
-USING btree(members);
-        '''
-    cur.execute(sql)
-    conn.commit()
-    vacuum(conn,'planet_osm_rels')
+	
+
         
 
 
