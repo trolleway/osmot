@@ -168,8 +168,8 @@ def main():
                 continue
 
         # Locate frist point of frist way in route
-        WayFrist = WaysInCurrentRel[len(WaysInCurrentRel) - 1]
-        WaySecond = WaysInCurrentRel[len(WaysInCurrentRel) - 2]
+        WayFrist = WaysInCurrentRel[0]
+        WaySecond = WaysInCurrentRel[1]
 
         sql = \
             '''SELECT ST_StartPoint(way), ST_EndPoint(way) from planet_osm_line WHERE osm_id=''' \
