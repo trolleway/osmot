@@ -164,7 +164,7 @@ def main():
                 item = item[1:]
                 WaysInCurrentRel[idx] = item
 
-        if len(WaysInCurrentRel)<1:
+        if len(WaysInCurrentRel)<2:
                 continue
 
         # Locate frist point of frist way in route
