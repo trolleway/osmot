@@ -164,12 +164,12 @@ def main():
                 item = item[1:]
                 WaysInCurrentRel[idx] = item
 
-        if len(WaysInCurrentRel)<1:
+        if len(WaysInCurrentRel)<2:
                 continue
 
         # Locate frist point of frist way in route
-        WayFrist = WaysInCurrentRel[len(WaysInCurrentRel) - 1]
-        WaySecond = WaysInCurrentRel[len(WaysInCurrentRel) - 2]
+        WayFrist = WaysInCurrentRel[0]
+        WaySecond = WaysInCurrentRel[1]
 
         sql = \
             '''SELECT ST_StartPoint(way), ST_EndPoint(way) from planet_osm_line WHERE osm_id=''' \
@@ -346,15 +346,15 @@ def main():
                                 l1 = row2[0]
                                 l2 = row2[1]
 
-                            current_direction = 'b'
+                            current_direction = 'f'
                             if f2 == l1 or f2 == l2:
-                                current_direction = 'f'
-                            if current_direction == 'b':
+                                current_direction = 'b'
+                            if current_direction == 'f':
                                 function = 'ST_EndPoint'
-                                this_way_refs_direction[ref, 'b'] = 1
+                                this_way_refs_direction[ref, 'f'] = 1
                             else:
                                 function = 'ST_StartPoint'
-                                this_way_refs_direction[ref, 'f'] = 1
+                                this_way_refs_direction[ref, 'b'] = 1
 
                             deb('--- direction=' + current_direction)
                         else:
@@ -387,15 +387,15 @@ def main():
                                 p1 = row2[0]
                                 p2 = row2[1]
 
-                            current_direction = 'b'
+                            current_direction = 'f'
                             if f1 == p2 or f1 == p1:
-                                current_direction = 'f'
-                            if current_direction == 'b':
+                                current_direction = 'b'
+                            if current_direction == 'f':
                                 function = 'ST_EndPoint'
-                                this_way_refs_direction[ref, 'b'] = 1
+                                this_way_refs_direction[ref, 'f'] = 1
                             else:
                                 function = 'ST_StartPoint'
-                                this_way_refs_direction[ref, 'f'] = 1
+                                this_way_refs_direction[ref, 'b'] = 1
 
                 # separately calculate direction for last way in route (TODO need refactoring)
 
