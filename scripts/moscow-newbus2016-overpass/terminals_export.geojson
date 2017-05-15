@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "terminal_id": "1", "name": null, "routes": "540", "long_text": " [540]", "label_pos_x": 4174954.4, "label_pos_y": 7482908.02, "label_align_h": "", "label_align_v": "", "label_quanrant": 2, "label_angle": 360, "show_label": 1, "always_show": "" }, "geometry": { "type": "Point", "coordinates": [ 4174954.4, 7482908.02 ] } }
+]
+}
