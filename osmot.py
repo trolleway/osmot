@@ -158,7 +158,8 @@ def main():
                 member_role=roles_list[i]
                 if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward')  or (member_role=='highway') )):
                         WaysInCurrentRel.append(member_code)
-                
+			
+        WaysInCurrentRel.reverse()        
         for (idx, item) in enumerate(WaysInCurrentRel):
             if item.find('n'):
                 item = item[1:]
@@ -299,6 +300,7 @@ def main():
             rows3 = cur.fetchall()
             for row3 in rows3:
                 members_list = row3[4][::2]
+		members_list.reverse()
                 current_rel_id = row[0]
 
                 WaysInCurrentRel = []
