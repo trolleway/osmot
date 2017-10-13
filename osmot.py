@@ -44,9 +44,7 @@ def argparser_prepare():
 
     parser.epilog = \
         '''Samples:
-%(prog)s /home/someuser/moscow.csv
-%(prog)s -t 3 /home/someuser/all_uics/
-%(prog)s -t 5 -r RU-SPE /home/someuser/saint-pet.csv
+%(prog)s
 ''' \
         % {'prog': parser.prog}
     return parser
@@ -79,11 +77,10 @@ def main():
         print 'I am unable to connect to the database'
         return 0
 
-    # Create some additional tables in database. My QGIS version does not work with views.....
+    # Create some additional tables in database. 
 
     cur = conn.cursor()
-    cur.execute('''DROP TABLE IF EXISTS terminals''')
-    conn.commit()
+
     sql = \
         '''
         DROP TABLE IF EXISTS terminals CASCADE;
@@ -97,16 +94,11 @@ def main():
     cur.execute(sql)
     conn.commit()
 
-    print '_______________________________________________'
     cur = conn.cursor()
 
-    sql = '''
-         DROP TABLE IF EXISTS route_line_labels CASCADE
-        ;'''
-    cur.execute(sql)
-    conn.commit()
     sql = \
-        '''
+        '''DROP TABLE IF EXISTS route_line_labels CASCADE;
+	
         CREATE TABLE route_line_labels
         (
          id serial,
