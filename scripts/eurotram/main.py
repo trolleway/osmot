@@ -129,6 +129,7 @@ if __name__ == '__main__':
     dbname=config.dbname
     user=config.user
     password=config.password
+    os.system('export PGPASS='+password)
         
     parser = argparser_prepare()
     args = parser.parse_args()
