@@ -107,6 +107,7 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
 
 
 def importdb(host,database,username,password,filename='routesFinal.osm.pbf'):
+    os.system('export PGPASS='+password)
     cmd = 'osm2pgsql --create --slim -E 3857 --cache-strategy sparse --cache 100 --host {host} --database {database} --username {username} {filename}'.format(host=host,
     database=database,username=username,password=password,filename=filename)
     print cmd
@@ -129,7 +130,7 @@ if __name__ == '__main__':
     dbname=config.dbname
     user=config.user
     password=config.password
-    os.system('export PGPASS='+password)
+
         
     parser = argparser_prepare()
     args = parser.parse_args()
@@ -138,6 +139,7 @@ if __name__ == '__main__':
     
     updateDump(update,poly_file='europe.poly')
     filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf')
+    
     
     importdb(host,dbname,user,password)
     process(host,dbname,user,password) 
