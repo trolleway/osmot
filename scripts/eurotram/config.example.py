@@ -3,7 +3,5 @@ user='trolleway'
 host='localhost'
 password='admin'
 
-ngw_url='http://trolleway.nextgis.com'
-ngw_resource_id=
-ngw_login = 'administrator'
-ngw_password = 'admin' 
+dump_url='http://download.geofabrik.de/europe/latvia-latest.osm.pbf'
+poly_url='http://download.geofabrik.de/europe/latvia.poly'
