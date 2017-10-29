@@ -78,41 +78,6 @@ def updateDump(update = None,
     
 
     
-def filter_osm_dump_osmosis(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
-        import json
-        import pprint
-        pp=pprint.PrettyPrinter(indent=2)
-
-        refs=[]
-
-        file_src = work_dump
-        file_temp_1 = 'routes_temp.osm.pbf'
-        file_result = 'routesFinal.osm.pbf'
-        
-        print 'Filter step 1'
-        cmd='''
-~/osmosis/bin/osmosis \
-  -q \
-  --read-pbf {file_src} \
-  --tf accept-relations route=tram \
-  --used-way --used-node \
-  --write-pbf {file_temp_1}
-'''.format(file_src=file_src,file_temp_1=file_temp_1)
-        os.system(cmd)
-
-        print 'Filter step 3'
-        cmd='''
-~/osmosis/bin/osmosis \
-  -q \
-  --read-pbf {file_temp_1} \
-  --tf accept-relations "type=route" \
-  --used-way --used-node \
-  --write-pbf {file_result}
-    '''
-        cmd = cmd.format(file_temp_1=file_temp_1,file_result=file_result)
-        os.system(cmd)
-        os.remove(file_temp_1)
-        
         
 def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
         import json
@@ -131,7 +96,7 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
         cmd='osmconvert {work_dump} -o={o5m}'.format(work_dump=work_dump,o5m=o5m)
         os.system(cmd)
         print 'Filter step 2' 
-        cmd='osmfilter {o5m} --keep="route=tram" --drop="railway=platform,public_transport=platform" >temp2.o5m'.format(o5m=o5m)
+        cmd='osmfilter {o5m} --keep="route=tram" --drop="railway=platform public_transport=platform" >temp2.o5m'.format(o5m=o5m)
         os.system(cmd)   
         print 'Filter step 3' 
         cmd='osmconvert temp2.o5m -o={file_result}'.format(file_result=file_result)
