@@ -33,10 +33,12 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
     
 
     
-    dump_url='http://download.geofabrik.de/europe-latest.osm.pbf'
-    downloaded_dump='europe-latest.osm.pbf'
+    dump_url='http://download.geofabrik.de/europe/estonia-latest.osm.pbf'
+    poly_url = 'http://download.geofabrik.de/europe/estonia.poly'
+    poly_file = poly_url.split('/')[-1]
+    downloaded_dump=dump_url.split('/')[-1]
     updated_dump='osm/just_updated_dump.osm.pbf'
-    poly_file='europe.poly'
+
     directory='osm'
     
     if not os.path.exists(directory):
@@ -46,6 +48,8 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
     if os.path.exists(work_dump) == False:
         os.system('wget ' + dump_url)
         os.rename(downloaded_dump, work_dump) 
+        
+    os.system('wget --timestamping '+poly_url)
 
     #if prevdump dump exists - run osmupdate, it updating it to last hour state with clipping, and save as currentdump
     cmd = 'osmupdate {work_dump}  {updated_dump} --{update}   -v -B={poly_file}'.format(
