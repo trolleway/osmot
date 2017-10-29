@@ -29,7 +29,7 @@ def argparser_prepare():
     return parser
 
 #if prevdump not exists - download CFO from geofabrik and crop to Europe
-def updateDump(update='day',work_dump='dump.osm.pbf'):
+def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
     
 
     
@@ -129,7 +129,7 @@ if __name__ == '__main__':
 
     update = args.update
     
-    updateDump(update)
+    updateDump(update,poly_file='europe.poly')
     filter_osm_dump()
     
     importdb(host,dbname,user,password)
