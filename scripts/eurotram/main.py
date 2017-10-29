@@ -18,7 +18,7 @@ def argparser_prepare():
 
     parser = argparse.ArgumentParser(description='',
             formatter_class=PrettyFormatter)
-    parser.add_argument('-u', '--update', type=str, choices=['day', 'hour', 'minute'], default='day',
+    parser.add_argument('-u', '--update', type=str, choices=['day', 'hour', 'minute'],
                         help='command for osmupdate')
 
     parser.epilog = \
@@ -29,13 +29,16 @@ def argparser_prepare():
     return parser
 
 #if prevdump not exists - download CFO from geofabrik and crop to Europe
-def updateDump(update = 'day',
+def updateDump(update = None,
                dump_url = 'http://download.geofabrik.de/europe/estonia-latest.osm.pbf',
                poly_url = 'http://download.geofabrik.de/europe/estonia.poly',
                work_dump = 'dump.osm.pbf',
                poly_file = 'bounds.poly'):
     
-
+    if update is None:
+        update_command = ''
+    else:
+        update_command = '--' + update
     
     poly_file = poly_url.split('/')[-1]
     downloaded_dump=dump_url.split('/')[-1]
@@ -53,10 +56,10 @@ def updateDump(update = 'day',
     os.system('wget  --timestamping '+poly_url)
 
     #if prevdump dump exists - run osmupdate, it updating it to last hour state with clipping, and save as currentdump
-    cmd = 'osmupdate {work_dump}  {updated_dump} --{update}   -v --keep-tempfiles -B={poly_file}'.format(
+    cmd = 'osmupdate {work_dump}  {updated_dump} --{update_command}   -v --keep-tempfiles -B={poly_file}'.format(
         work_dump=work_dump,
         updated_dump=updated_dump,
-        update=update,
+        update_command=update_command,
         poly_file=poly_file)
     print cmd
     os.system(cmd)
@@ -168,7 +171,11 @@ if __name__ == '__main__':
     parser = argparser_prepare()
     args = parser.parse_args()
 
-    update = args.update
+    
+    if args.update is none:
+        update = None
+    else:
+        update = args.update
     
     updateDump(update,poly_file='europe.poly',dump_url=config.dump_url,poly_url=config.poly_url)
     filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf')
