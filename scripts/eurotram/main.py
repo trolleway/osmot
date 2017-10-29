@@ -63,7 +63,7 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
         os.remove(work_dump)
         os.rename(updated_dump, work_dump)
     
-    os.rename(updated_dump, work_dump)
+
 
     return 0
     
