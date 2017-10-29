@@ -6,6 +6,7 @@
 
 
 import os
+import config
 
 def argparser_prepare():
 
@@ -27,12 +28,9 @@ def argparser_prepare():
     return parser
 
 #if prevdump not exists - download CFO from geofabrik and crop to Europe
-def updateDump():
+def updateDump(update='day'):
     
-    parser = argparser_prepare()
-    args = parser.parse_args()
 
-    update = args.update
     
     dump_url='http://download.geofabrik.de/europe-latest.osm.pbf'
     downloaded_dump='europe-latest.osm.pbf'
@@ -65,9 +63,7 @@ def updateDump():
 
     return 0
     
-def importdb(host,database,username,password):
-    os.system('osm2pgsql --create --slim -E 3857 --cache-strategy sparse --cache 100 --host {host} --database {database} --username {username} routesFinal.osm.pbf'.format(host=host,
-    database=database,username=username,password=password))
+
     
 def filter_osm_dump():
         import json
@@ -103,7 +99,9 @@ def filter_osm_dump():
         os.system(cmd)
 
 
-        
+def importdb(host,database,username,password,filename='routesFinal.osm.pbf'):
+    os.system('osm2pgsql --create --slim -E 3857 --cache-strategy sparse --cache 100 --host {host} --database {database} --username {username} {filename}'.format(host=host,
+    database=database,username=username,password=password,filename=filename))        
 
 def process(host,dbname,user,password):
     
@@ -118,5 +116,18 @@ def process(host,dbname,user,password):
         
         
 if __name__ == '__main__':
-        updateDump()
+    host=config.host
+    dbname=config.dbname
+    user=config.user
+    password=config.password
+        
+    parser = argparser_prepare()
+    args = parser.parse_args()
 
+    update = args.update
+    
+    updateDump(update)
+    filter_osm_dump()
+    
+    importdb(host,dbname,user,password)
+    process(host,dbname,user,password) 
