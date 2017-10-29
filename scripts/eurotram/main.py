@@ -104,13 +104,13 @@ def importdb(host,database,username,password,filename='routesFinal.osm.pbf'):
 
 def process(host,dbname,user,password):
     
-        cmd='''python osmot/osmot.py -hs {host} -d {dbname] -u {user} -p {password}
+        cmd='''python ../../osmot.py -hs {host} -d {dbname] -u {user} -p {password}
     '''.format(
             host=host,
             dbname=dbname,
             user=user,
             password=password)
-        print cmd
+
         os.system(cmd)
         
         
