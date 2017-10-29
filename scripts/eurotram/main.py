@@ -53,6 +53,7 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
         updated_dump=updated_dump,
         update=update,
         poly_file=poly_file)
+    print cmd
     os.system(cmd)
     
     #if osmupdate not find updates in internet - new file not created, will be used downloaded file
