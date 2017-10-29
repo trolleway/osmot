@@ -131,7 +131,7 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
         cmd='osmconvert {work_dump} -o={o5m}'.format(work_dump=work_dump,o5m=o5m)
         os.system(cmd)
         print 'Filter step 2' 
-        cmd='osmfilter {o5m} --keep="route=tram" >temp2.o5m'.format(o5m=o5m)
+        cmd='osmfilter {o5m} --keep="route=tram" --drop="railway=platform,public_transport=platform" >temp2.o5m'.format(o5m=o5m)
         os.system(cmd)   
         print 'Filter step 3' 
         cmd='osmconvert temp2.o5m -o={file_result}'.format(file_result=file_result)
@@ -139,7 +139,8 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
         
         os.remove(o5m)
         os.remove('temp2.o5m')
-        
+
+	
 def cleardb(host,dbname,user,password):
 	#drop with CASCADE
 	#not needed since osm2pgsql varsion 0.92.0
@@ -175,6 +176,9 @@ def importdb(host,database,username,password,filename='routesFinal.osm.pbf'):
     database=database,username=username,password=password,filename=filename)
     print cmd
     os.system(cmd)        
+
+
+
 
 def process(host,dbname,user,password):
     
