@@ -109,13 +109,13 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
 def cleardb(host,dbname,user,password):
 	#drop with CASCADE
 	#not needed since osm2pgsql varsion 0.92.0
-	ConnectionString="dbname=" + dbname + " user="+ user + " host=" + host + " password=" + password
+	ConnectionString = "host={host} dbname={dbname} user={user} password={password}".format(host=host,dbname=dbname,user=user,password=password)
 	try:
 		conn = psycopg2.connect(ConnectionString)
 	except:
 		print 'I am unable to connect to the database                  ' 
                 print ConnectionString
-		return 0
+		quit()
 	cur = conn.cursor()
 	sql ='''
 	DROP TABLE IF EXISTS planet_osm_buildings 	CASCADE;
