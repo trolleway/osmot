@@ -8,6 +8,7 @@
 import os
 import config
 import argparse
+import psycopg2
 
 def argparser_prepare():
 
