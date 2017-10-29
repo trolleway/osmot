@@ -95,13 +95,16 @@ def filter_osm_dump(work_dump='dump.osm.pbf'):
   --tf accept-relations "type=route" \
   --used-way --used-node \
   --write-pbf {file_result}
-    '''.format(file_temp_1=file_temp_1,file_result=file_result)
+    '''
+        cmd = cmd.format(file_temp_1=file_temp_1,file_result=file_result)
         os.system(cmd)
 
 
 def importdb(host,database,username,password,filename='routesFinal.osm.pbf'):
-    os.system('osm2pgsql --create --slim -E 3857 --cache-strategy sparse --cache 100 --host {host} --database {database} --username {username} {filename}'.format(host=host,
-    database=database,username=username,password=password,filename=filename))        
+    cmd = 'osm2pgsql --create --slim -E 3857 --cache-strategy sparse --cache 100 --host {host} --database {database} --username {username} {filename}'.format(host=host,
+    database=database,username=username,password=password,filename=filename)
+    print cmd
+    os.system(cmd)        
 
 def process(host,dbname,user,password):
     
