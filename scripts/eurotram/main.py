@@ -141,9 +141,9 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
         os.remove('temp2.o5m')
         
 def cleardb(host,dbname,user,password):
-    #drop with CASCADE
-    #not needed since osm2pgsql varsion 0.92.0
-    ConnectionString="dbname=" + dbname + " user="+ user + " host=" + host + " password=" + password
+	#drop with CASCADE
+	#not needed since osm2pgsql varsion 0.92.0
+	ConnectionString="dbname=" + dbname + " user="+ user + " host=" + host + " password=" + password
 	try:
 		conn = psycopg2.connect(ConnectionString)
 	except:
