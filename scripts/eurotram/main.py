@@ -56,10 +56,12 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
     print cmd
     os.system(cmd)
     
-    #if osmupdate not find updates in internet - new file not created, will be used downloaded file
-    if os.path.exists(work_dump) == True: 
+    #if osmupdate worked good, it create updated_dump file. Work dump will reblaced by it
+    #otherwise, osmupdate not found any newer changesets (e.g. second run in day with "day" option), work_dump not changed and still be used. 
+    if os.path.exists(updated_dump) == True: 
         #rename currentdump to prevdump
         os.remove(work_dump)
+        os.rename(updated_dump, work_dump)
     
     os.rename(updated_dump, work_dump)
 
