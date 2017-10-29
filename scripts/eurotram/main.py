@@ -112,8 +112,9 @@ def cleardb(host,dbname,user,password):
 	ConnectionString = "host={host} dbname={dbname} user={user} password={password}".format(host=host,dbname=dbname,user=user,password=password)
 	try:
 		conn = psycopg2.connect(ConnectionString)
-	except:
-		print 'I am unable to connect to the database                  ' 
+	except psycopg2.Error as e:
+		print 'I am unable to connect to the database' 
+		print e.pgerror
                 print ConnectionString
 		quit()
 	cur = conn.cursor()
