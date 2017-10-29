@@ -59,7 +59,8 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
     if os.path.exists(work_dump) == True: 
         #rename currentdump to prevdump
         os.remove(work_dump)
-        os.rename(updated_dump, work_dump)
+    
+    os.rename(updated_dump, work_dump)
 
     return 0
     
