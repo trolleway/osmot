@@ -34,7 +34,7 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
 
     
     dump_url='http://download.geofabrik.de/europe/estonia-latest.osm.pbf'
-    downloaded_dump='europe-latest.osm.pbf'
+    downloaded_dump='estonia-latest.osm.pbf'
     updated_dump='osm/just_updated_dump.osm.pbf'
     poly_file='europe.poly'
     directory='osm'
