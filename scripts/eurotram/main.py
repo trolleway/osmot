@@ -140,7 +140,34 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
         os.remove(o5m)
         os.remove('temp2.o5m')
         
-        
+def cleardb(host,dbname,user,password):
+    #drop with CASCADE
+    #not needed since osm2pgsql varsion 0.92.0
+    ConnectionString="dbname=" + dbname + " user="+ user + " host=" + host + " password=" + password
+	try:
+		conn = psycopg2.connect(ConnectionString)
+	except:
+		print 'I am unable to connect to the database                  ' 
+                print ConnectionString
+		return 0
+	cur = conn.cursor()
+	sql ='''
+	DROP TABLE IF EXISTS planet_osm_buildings 	CASCADE;
+	DROP TABLE IF EXISTS planet_osm_line 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_nodes 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_point 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_polygon 	CASCADE;
+	DROP TABLE IF EXISTS planet_osm_rels 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_roads 		CASCADE;
+	DROP TABLE IF EXISTS planet_osm_ways 		CASCADE;
+	DROP TABLE IF EXISTS route_line_labels 		CASCADE;
+	DROP TABLE IF EXISTS routes_with_refs 		CASCADE;
+	DROP TABLE IF EXISTS terminals 			CASCADE;
+	DROP TABLE IF EXISTS terminals_export 		CASCADE;
+	'''
+
+	cur.execute(sql)
+	conn.commit()        
 
 def importdb(host,database,username,password,filename='routesFinal.osm.pbf'):
     os.system('export PGPASS='+password)
@@ -180,6 +207,6 @@ if __name__ == '__main__':
     updateDump(update,poly_file='europe.poly',dump_url=config.dump_url,poly_url=config.poly_url)
     filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf')
     
-    
+    cleardb(host,dbname,user,password)
     importdb(host,dbname,user,password)
     process(host,dbname,user,password) 
