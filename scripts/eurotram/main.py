@@ -37,14 +37,11 @@ def updateDump(update = 'day',
     
 
     
-    dump_url='http://download.geofabrik.de/europe/estonia-latest.osm.pbf'
-    poly_url = 'http://download.geofabrik.de/europe/estonia.poly'
     poly_file = poly_url.split('/')[-1]
     downloaded_dump=dump_url.split('/')[-1]
     updated_dump='osm/just_updated_dump.osm.pbf'
 
-    directory='osm'
-    
+    directory='osm'   
     if not os.path.exists(directory):
         os.makedirs(directory)
 
@@ -72,7 +69,7 @@ def updateDump(update = 'day',
         #osmupdate found your file is already up-to-date
         pass
     
-
+    os.remove(directory)
 
     return 0
     
