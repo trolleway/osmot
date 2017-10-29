@@ -69,7 +69,41 @@ def importdb(host,database,username,password):
     os.system('osm2pgsql --create --slim -E 3857 --cache-strategy sparse --cache 100 --host {host} --database {database} --username {username} routesFinal.osm.pbf'.format(host=host,
     database=database,username=username,password=password))
     
-    
+def filter_osm_dump():
+        import json
+        import pprint
+        pp=pprint.PrettyPrinter(indent=2)
+
+        refs=[]
+
+        file_src = 'moscow_russia.osm.pbf'
+        file_temp_1 = 'routes.osm.pbf'
+        file_result = 'routesFinal.osm.pbf'
+        
+        print 'Filter step 1'
+        cmd='''
+~/osmosis/bin/osmosis \
+  -q \
+  --read-pbf {file_src} \
+  --tf accept-relations route=tram \
+  --used-way --used-node \
+  --write-pbf {file_temp_1}
+'''.format(file_src=file_src,file_temp_1=file_temp_1)
+        os.system(cmd)
+
+        print 'Filter step 3'
+        cmd='''
+~/osmosis/bin/osmosis \
+  -q \
+  --read-pbf {file_temp_1} \
+  --tf accept-relations "type=route" \
+  --used-way --used-node \
+  --write-pbf {file_result}
+    '''.format(file_temp_1=file_temp_1,file_result=file_result)
+        os.system(cmd)
+
+
+        
 
 def process(host,dbname,user,password):
     
