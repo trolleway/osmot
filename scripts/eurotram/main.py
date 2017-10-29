@@ -65,7 +65,24 @@ def updateDump():
 
     return 0
     
+def importdb(host,database,username,password):
+    os.system('osm2pgsql --create --slim -E 3857 --cache-strategy sparse --cache 100 --host {host} --database {database} --username {username} routesFinal.osm.pbf'.format(host=host,
+    database=database,username=username,password=password))
     
+    
+
+def process(host,dbname,user,password):
+    
+        cmd='''python osmot/osmot.py -hs {host} -d {dbname] -u {user} -p {password}
+    '''.format(
+            host=host,
+            dbname=dbname,
+            user=user,
+            password=password)
+        print cmd
+        os.system(cmd)
+        
+        
 if __name__ == '__main__':
         updateDump()
 
