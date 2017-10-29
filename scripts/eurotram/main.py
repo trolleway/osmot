@@ -33,8 +33,8 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
     
 
     
-    dump_url='http://download.geofabrik.de/europe/estonia-latest.osm.pbf'
-    downloaded_dump='estonia-latest.osm.pbf'
+    dump_url='http://download.geofabrik.de/europe-latest.osm.pbf'
+    downloaded_dump='europe-latest.osm.pbf'
     updated_dump='osm/just_updated_dump.osm.pbf'
     poly_file='europe.poly'
     directory='osm'
@@ -115,14 +115,14 @@ def importdb(host,database,username,password,filename='routesFinal.osm.pbf'):
 
 def process(host,dbname,user,password):
     
-        cmd='''python ../../osmot.py -hs {host} -d {dbname] -u {user} -p {password}'''
-        cmd = cmd.format(
+    cmd = 'python ../../osmot.py -hs {host} -d {dbname} -u {user} -p {password}'
+    cmd = cmd.format(
             host=host,
             dbname=dbname,
             user=user,
             password=password)
 
-        os.system(cmd)
+    os.system(cmd)
         
         
 if __name__ == '__main__':
