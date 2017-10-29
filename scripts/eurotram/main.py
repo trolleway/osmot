@@ -41,16 +41,16 @@ def updateDump(update = 'day',
     downloaded_dump=dump_url.split('/')[-1]
     updated_dump='osm/just_updated_dump.osm.pbf'
 
-    directory='osm'   
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    tempdirectory='osm'   
+    if not os.path.exists(tempdirectory):
+        os.makedirs(tempdirectory)
 
     #frist run of program
     if os.path.exists(work_dump) == False:
-        os.system('wget ' + dump_url)
+        os.system('wget --no-verbose ' + dump_url)
         os.rename(downloaded_dump, work_dump) 
         
-    os.system('wget --timestamping '+poly_url)
+    os.system('wget --quiet --timestamping '+poly_url)
 
     #if prevdump dump exists - run osmupdate, it updating it to last hour state with clipping, and save as currentdump
     cmd = 'osmupdate {work_dump}  {updated_dump} --{update}   -v -B={poly_file}'.format(
@@ -69,7 +69,7 @@ def updateDump(update = 'day',
         #osmupdate found your file is already up-to-date
         pass
     
-    os.remove(directory)
+    os.rmdir(tempdirectory)
 
     return 0
     
