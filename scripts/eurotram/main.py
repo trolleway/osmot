@@ -78,7 +78,7 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
         refs=[]
 
         file_src = work_dump
-        file_temp_1 = 'routes.osm.pbf'
+        file_temp_1 = 'routes_temp.osm.pbf'
         file_result = 'routesFinal.osm.pbf'
         
         print 'Filter step 1'
@@ -103,6 +103,7 @@ def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
     '''
         cmd = cmd.format(file_temp_1=file_temp_1,file_result=file_result)
         os.system(cmd)
+        os.remove(file_temp_1)
 
 
 def importdb(host,database,username,password,filename='routesFinal.osm.pbf'):
