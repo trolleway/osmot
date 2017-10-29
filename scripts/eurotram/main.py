@@ -53,7 +53,7 @@ def updateDump(update = 'day',
     os.system('wget  --timestamping '+poly_url)
 
     #if prevdump dump exists - run osmupdate, it updating it to last hour state with clipping, and save as currentdump
-    cmd = 'osmupdate {work_dump}  {updated_dump} --{update}   -v -B={poly_file}'.format(
+    cmd = 'osmupdate {work_dump}  {updated_dump} --{update}   -v --keep-tempfiles -B={poly_file}'.format(
         work_dump=work_dump,
         updated_dump=updated_dump,
         update=update,
