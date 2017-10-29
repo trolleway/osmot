@@ -17,7 +17,7 @@ def argparser_prepare():
 
     parser = argparse.ArgumentParser(description='',
             formatter_class=PrettyFormatter)
-    parser.add_argument('-u', '--update', type=str, choices=['day', 'hour', 'minute'] default='day',
+    parser.add_argument('-u', '--update', type=str, choices=['day', 'hour', 'minute'], default='day',
                         help='command for osmupdate')
 
     parser.epilog = \
