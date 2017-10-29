@@ -28,13 +28,12 @@ def argparser_prepare():
     return parser
 
 #if prevdump not exists - download CFO from geofabrik and crop to Europe
-def updateDump(update='day'):
+def updateDump(update='day',work_dump='dump.osm.pbf'):
     
 
     
     dump_url='http://download.geofabrik.de/europe-latest.osm.pbf'
     downloaded_dump='europe-latest.osm.pbf'
-    work_dump='europe-latest-working.osm.pbf'
     updated_dump='osm/just_updated_dump.osm.pbf'
     poly_file='europe.poly'
     directory='osm'
@@ -65,14 +64,14 @@ def updateDump(update='day'):
     
 
     
-def filter_osm_dump():
+def filter_osm_dump(work_dump='dump.osm.pbf'):
         import json
         import pprint
         pp=pprint.PrettyPrinter(indent=2)
 
         refs=[]
 
-        file_src = 'moscow_russia.osm.pbf'
+        file_src = work_dump
         file_temp_1 = 'routes.osm.pbf'
         file_result = 'routesFinal.osm.pbf'
         
