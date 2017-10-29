@@ -172,7 +172,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     
-    if args.update is none:
+    if args.update is None:
         update = None
     else:
         update = args.update
