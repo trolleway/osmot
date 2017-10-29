@@ -67,7 +67,7 @@ def updateDump(update='day',work_dump='dump.osm.pbf',poly_file='bounds.poly'):
     
 
     
-def filter_osm_dump(work_dump='dump.osm.pbf'):
+def filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf'):
         import json
         import pprint
         pp=pprint.PrettyPrinter(indent=2)
@@ -132,7 +132,7 @@ if __name__ == '__main__':
     update = args.update
     
     updateDump(update,poly_file='europe.poly')
-    filter_osm_dump()
+    filter_osm_dump(work_dump='dump.osm.pbf',file_result='routesFinal.osm.pbf')
     
     importdb(host,dbname,user,password)
     process(host,dbname,user,password) 
