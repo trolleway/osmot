@@ -212,7 +212,7 @@ def main():
         (SELECT substring(tags::varchar from 'from,(.*?)[,}]') FROM planet_osm_rels WHERE id=''' \
             + str(current_route_id) \
             + ''' LIMIT 1),
-        (SELECT substring(tags::varchar from 'ref,(.*?)[,}]') FROM planet_osm_rels WHERE id=''' \
+        (SELECT substring(tags::varchar from '[^:]ref,(.*?)[,}]') FROM planet_osm_rels WHERE id=''' \
             + str(current_route_id) + ''' )
         )
         ;'''
@@ -259,7 +259,7 @@ def main():
             '''
                 SELECT
         id,
-        substring(tags::varchar from 'ref,(.*?)[,}]') AS ref,
+        substring(tags::varchar from '[^:]ref,(.*?)[,}]') AS ref,
         substring(tags::varchar from 'name,(.*?)[,}]') AS name
         FROM planet_osm_rels
         WHERE members::VARCHAR LIKE '%''' \
@@ -399,7 +399,7 @@ def main():
             '''
                 SELECT
 
-        DISTINCT substring(tags::varchar from 'ref,(.*?)[,}]') AS ref
+        DISTINCT substring(tags::varchar from '[^:]ref,(.*?)[,}]') AS ref
         
         FROM planet_osm_rels
         WHERE members::VARCHAR LIKE '%w''' \
