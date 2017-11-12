@@ -194,7 +194,7 @@ def main():
 	try:
   	    f2
 	except NameError:
-	    raise ValueError('Not found frist point of line {WaySecond}'.format(WaySecond=WaySecond)) 
+	    raise ValueError('Not found frist point of line {WaySecond}. Prorably pbf file is wrong.'.format(WaySecond=WaySecond)) 
 	
         current_direction = 'b'
         if f2 == l1 or f2 == l2:
