@@ -190,6 +190,12 @@ def main():
             l1 = row2[0]
             l2 = row2[1]
 
+	#compare end nodes of lines by geometry
+	try:
+  	    f2
+	except NameError:
+	    raise ValueError('Not found frist point of line {WaySecond}'.format(WaySecond=WaySecond)) 
+	
         current_direction = 'b'
         if f2 == l1 or f2 == l2:
             current_direction = 'f'
