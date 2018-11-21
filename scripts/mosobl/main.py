@@ -9,6 +9,7 @@ import os
 import config
 import argparse
 import psycopg2
+import shutil
 
 def argparser_prepare():
 
@@ -49,10 +50,8 @@ def updateDump(update = None,
     if not os.path.exists(tempdirectory):
         os.makedirs(tempdirectory)
 
-    #frist run of program
-    if os.path.exists(work_dump) == False:
-        os.system('wget  ' + dump_url)
-        os.rename(downloaded_dump, work_dump) 
+    os.system('wget --timestamping ' + dump_url)
+    shutil.copy2(downloaded_dump, work_dump) 
         
     os.system('wget  --timestamping '+poly_url)
 
