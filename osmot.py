@@ -499,7 +499,7 @@ def main():
     print 'Create terminals table'
 
     sql='''
---SELECT UpdateGeometrySRID('terminals','wkb_geometry',3857);
+
 DROP TABLE if exists terminals_export cascade;
 CREATE  table terminals_export AS
         (
@@ -514,21 +514,13 @@ CREATE  table terminals_export AS
                 '[',
                 string_agg(routes,',' ORDER BY routes),
                 ']')
-                            AS long_text,
-        ST_X(wkb_geometry) 	AS label_pos_x,
-        ST_Y(wkb_geometry) 	AS label_pos_y,
-        '' 			        AS label_align_h,
-        '' 			        AS label_align_v,
-        2			        AS label_quanrant,
-        360			        AS label_angle,
-        1                   AS show_label,
-        ''                  AS always_show
+                            AS long_text
         FROM terminals
         GROUP BY wkb_geometry, name
         )
         ;
         ALTER TABLE terminals_export ADD PRIMARY KEY (terminal_id);
-        --SELECT UpdateGeometrySRID('terminals_export','wkb_geometry',3857);
+
 
 
 '''
