@@ -512,7 +512,7 @@ CREATE  table terminals_export AS
                 trim(both '"' from REPLACE(name, '\\\', '')),
 		' ',
                 '[',
-                string_agg(routes,',' ORDER BY routes),
+                string_agg(routes,',' ORDER BY NULLIF(regexp_replace(routes, '\D', '', 'g'), '')::int),
                 ']')
                             AS long_text
         FROM terminals
