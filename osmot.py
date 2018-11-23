@@ -40,7 +40,10 @@ def argparser_prepare():
     parser.add_argument('--username', type=str, default='gis',
                         help='Postgresql username')
     parser.add_argument('--password', type=str, default='',
-                        help='Postgresql password')
+                        help='Postgresql password')    
+    parser.add_argument('--reverse', action='store_true',
+                        help='reverse routes')
+                        
 
     parser.epilog = \
         '''Samples:
@@ -68,6 +71,7 @@ def main():
     username = args.username
     host = args.host
     password = args.password
+    reverse = args.reverse
 
     try:
         conn = psycopg2.connect("dbname='" + dbname + "' user='"
@@ -145,7 +149,8 @@ def main():
                 if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward')  or (member_role=='highway') )):
                         WaysInCurrentRel.append(member_code)
 			
-        WaysInCurrentRel.reverse()        
+        if reverse:
+            WaysInCurrentRel.reverse()        
         for (idx, item) in enumerate(WaysInCurrentRel):
             if item.find('n'):
                 item = item[1:]
@@ -292,7 +297,8 @@ def main():
             rows3 = cur.fetchall()
             for row3 in rows3:
                 members_list = row3[4][::2]
-		members_list.reverse()
+                if reverse:
+		            members_list.reverse()
                 current_rel_id = row[0]
 
                 WaysInCurrentRel = []
