@@ -1,3 +1,33 @@
+
+## Usage
+
+0. Create PostGIS database
+
+1. Prepare osm or pbf file with only needed routes. 
+
+Example query for http://overpass-query.eu
+```
+[out:xml][timeout:25];
+(
+  relation["route"="bus"]["ref"!="991"]["ref"!="804"]["ref"!="833"]["ref"!="349"]["ref"!="601"](55.5396,37.6666,55.5608,37.7576);
+);
+out body;
+>;
+out meta qt;
+```
+
+2.
+```
+osm2pgsql --create --slim --latlon --database gis  --style d:\GIS\GIS\soft\default.style c:\Users\trolleway\Downloads\export.osm
+```
+3.
+```
+python osmot.py --user trolleway
+```
+
+4. Connect to PostGIS database in QGIS, add to map new tables: routes_with_refs and terminals_export
+5. Load qml styles from /styles/qml
+
 =====
 ### Скрипт для создания карт маршрутов общественного транспорта по данным Openstreetmap.
 ![sample map cropped](http://img-fotki.yandex.ru/get/9480/2107165.62/0_95e88_130b928c_orig)

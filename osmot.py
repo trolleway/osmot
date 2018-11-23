@@ -33,13 +33,13 @@ def argparser_prepare():
 
     parser = argparse.ArgumentParser(description='',
             formatter_class=PrettyFormatter)
-    parser.add_argument('-hs', '--host', type=str, default='localhost',
+    parser.add_argument( '--host', type=str, default='localhost',
                         help='Postgresql host')
-    parser.add_argument('-d', '--database', type=str, default='osmot',
+    parser.add_argument('--database', type=str, default='gis',
                         help='Postgresql database')
-    parser.add_argument('-u', '--username', type=str, default='user',
+    parser.add_argument('--username', type=str, default='gis',
                         help='Postgresql username')
-    parser.add_argument('-p', '--password', type=str, default='user',
+    parser.add_argument('--password', type=str, default='',
                         help='Postgresql password')
 
     parser.epilog = \
@@ -97,25 +97,19 @@ def main():
     cur = conn.cursor()
 
     sql = \
-        '''DROP TABLE IF EXISTS route_line_labels CASCADE;
-	
+        '''DROP TABLE IF EXISTS route_line_labels CASCADE;	
         CREATE TABLE route_line_labels
         (
          id serial,
          osm_id bigint,
          route_ref text,
          route_ref_reverse text,
-	show_label smallint DEFAULT 1
-        
+	show_label smallint DEFAULT 1        
         )
         ;
         '''
     cur.execute(sql)
     conn.commit()
-	
-
-        
-
 
     # Calculate terminal points of routes
     # Selecting routes
@@ -194,7 +188,7 @@ def main():
 	try:
   	    f2
 	except NameError:
-	    raise ValueError('Not found frist point of line {WaySecond}. Prorably pbf file is wrong.'.format(WaySecond=WaySecond)) 
+	    raise ValueError('Not found frist point of line {WaySecond}. Prorably pbf file is invalid. All members of route relations should be in pbf file.'.format(WaySecond=WaySecond)) 
 	
         current_direction = 'b'
         if f2 == l1 or f2 == l2:
@@ -496,16 +490,16 @@ def main():
     cur.execute(sql)
     conn.commit()
 
-    print 'Create terminals table (TODO replace to view)'
+    print 'Create terminals table'
 
     sql='''
-SELECT UpdateGeometrySRID('terminals','wkb_geometry',3857);
+--SELECT UpdateGeometrySRID('terminals','wkb_geometry',3857);
 DROP TABLE if exists terminals_export cascade;
 CREATE  table terminals_export AS
         (
         SELECT
         DISTINCT ST_GeomFromWKB(wkb_geometry) AS wkb_geometry,
-        ROW_NUMBER() OVER() ::varchar				AS terminal_id ,
+        ROW_NUMBER() OVER() ::varchar AS terminal_id,
         name,
         string_agg(routes,',' ORDER BY routes) AS routes,
         concat(
@@ -528,7 +522,7 @@ CREATE  table terminals_export AS
         )
         ;
         ALTER TABLE terminals_export ADD PRIMARY KEY (terminal_id);
-        SELECT UpdateGeometrySRID('terminals_export','wkb_geometry',3857);
+        --SELECT UpdateGeometrySRID('terminals_export','wkb_geometry',3857);
 
 
 '''
@@ -538,17 +532,18 @@ CREATE  table terminals_export AS
 
     print 'Terminals created'
 
-    sql = '''
-        DROP TABLE IF EXISTS routes_with_refs
-        '''
-    cur.execute(sql)
-    conn.commit()
+    #sql = '''
+    #    DROP TABLE IF EXISTS routes_with_refs CASCADE;
+    #    '''
+    #cur.execute(sql)
+    #conn.commit()
 
     sql = \
         '''
-        CREATE OR REPLACE VIEW routes_with_refs AS 
+        DROP TABLE IF EXISTS routes_with_refs CASCADE;
+        CREATE  TABLE routes_with_refs AS 
         (SELECT
-        distinct planet_osm_line.osm_id 	::varchar			AS road_id,
+        distinct planet_osm_line.osm_id 	::varchar	AS road_id,
         degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
         ST_X(ST_Line_Interpolate_Point(way,0.5)) 	AS x,
         ST_Y(ST_Line_Interpolate_Point(way,0.5)) 	AS y,
@@ -557,19 +552,22 @@ CREATE  table terminals_export AS
 		THEN route_line_labels.route_ref_reverse
         	ELSE route_line_labels.route_ref
         END					        
-            AS routes_ref,
-        ''  AS rotation,
-        ''  AS alignment,
-        1   AS show_label,
-        ''  AS always_show
+            AS routes_ref
+        --,
+        --''  AS rotation,
+        --''  AS alignment,
+        --1   AS show_label,
+        --''  AS always_show
 
         FROM
             planet_osm_line JOIN route_line_labels
         ON (planet_osm_line.osm_id = route_line_labels.osm_id)
         WHERE planet_osm_line.osm_id>0 AND route_line_labels.route_ref <> ''
-        )
+        );
+        ALTER TABLE routes_with_refs ADD PRIMARY KEY (road_id);
         '''
-	#If view routes_with_refs failed while adding to QGIS with error "an invalid layer" - set while adding table to QGIS field "primary key" 
+    #routes_with_refs is a table, not view, to use primary key for qgis. Views cannot have primary keys
+	#If routes_with_refs failed while adding to QGIS with error "an invalid layer" - set while adding table to QGIS field "primary key" 
 
     cur.execute(sql)
     conn.commit()
