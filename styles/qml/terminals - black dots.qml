@@ -1,5 +1,19 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.18.2" simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.18.25-Las Palmas" simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+  <edittypes>
+    <edittype widgetv2type="TextEdit" name="terminal_id">
+      <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="name">
+      <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="routes">
+      <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="long_text">
+      <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+    </edittype>
+  </edittypes>
   <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
     <symbols>
       <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
@@ -60,7 +74,7 @@
     <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
     <property key="labeling/drawLabels" value="true"/>
     <property key="labeling/enabled" value="true"/>
-    <property key="labeling/fieldName" value="long_text"/>
+    <property key="labeling/fieldName" value="wordwrap(long_text,25)"/>
     <property key="labeling/fitInPolygonOnly" value="false"/>
     <property key="labeling/fontCapitals" value="0"/>
     <property key="labeling/fontFamily" value="Ubuntu"/>
@@ -79,7 +93,7 @@
     <property key="labeling/fontWeight" value="50"/>
     <property key="labeling/fontWordSpacing" value="0"/>
     <property key="labeling/formatNumbers" value="false"/>
-    <property key="labeling/isExpression" value="false"/>
+    <property key="labeling/isExpression" value="true"/>
     <property key="labeling/labelOffsetInMapUnits" value="true"/>
     <property key="labeling/labelOffsetMapUnitMaxScale" value="0"/>
     <property key="labeling/labelOffsetMapUnitMinScale" value="0"/>
@@ -94,7 +108,7 @@
     <property key="labeling/minFeatureSize" value="0"/>
     <property key="labeling/multilineAlign" value="0"/>
     <property key="labeling/multilineHeight" value="1"/>
-    <property key="labeling/namedStyle" value="Medium Italic"/>
+    <property key="labeling/namedStyle" value="Italic"/>
     <property key="labeling/obstacle" value="true"/>
     <property key="labeling/obstacleFactor" value="1"/>
     <property key="labeling/obstacleType" value="0"/>
@@ -221,7 +235,7 @@
   </labelattributes>
   <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
     <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
-      <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+      <fontProperties description="Noto Sans,10,-1,0,50,0,0,0,0,0" style=""/>
     </DiagramCategory>
     <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
       <layer pass="0" class="SimpleMarker" locked="0">
@@ -253,14 +267,6 @@
     <alias field="name" index="1" name=""/>
     <alias field="routes" index="2" name=""/>
     <alias field="long_text" index="3" name=""/>
-    <alias field="label_pos_x" index="4" name=""/>
-    <alias field="label_pos_y" index="5" name=""/>
-    <alias field="label_align_h" index="6" name=""/>
-    <alias field="label_align_v" index="7" name=""/>
-    <alias field="label_quanrant" index="8" name=""/>
-    <alias field="label_angle" index="9" name=""/>
-    <alias field="show_label" index="10" name=""/>
-    <alias field="always_show" index="11" name=""/>
   </aliases>
   <excludeAttributesWMS/>
   <excludeAttributesWFS/>
@@ -271,14 +277,6 @@
       <column width="-1" hidden="0" type="field" name="name"/>
       <column width="-1" hidden="0" type="field" name="routes"/>
       <column width="-1" hidden="0" type="field" name="long_text"/>
-      <column width="-1" hidden="0" type="field" name="label_pos_x"/>
-      <column width="-1" hidden="0" type="field" name="label_pos_y"/>
-      <column width="-1" hidden="0" type="field" name="label_align_h"/>
-      <column width="-1" hidden="0" type="field" name="label_align_v"/>
-      <column width="-1" hidden="0" type="field" name="label_quanrant"/>
-      <column width="-1" hidden="0" type="field" name="label_angle"/>
-      <column width="-1" hidden="0" type="field" name="show_label"/>
-      <column width="-1" hidden="0" type="field" name="always_show"/>
       <column width="-1" hidden="1" type="actions"/>
     </columns>
   </attributetableconfig>
@@ -308,5 +306,12 @@ def my_form_open(dialog, layer, feature):
     <rowstyles/>
     <fieldstyles/>
   </conditionalstyles>
+  <defaults>
+    <default field="terminal_id" expression=""/>
+    <default field="name" expression=""/>
+    <default field="routes" expression=""/>
+    <default field="long_text" expression=""/>
+  </defaults>
+  <previewExpression></previewExpression>
   <layerGeometryType>0</layerGeometryType>
 </qgis>
