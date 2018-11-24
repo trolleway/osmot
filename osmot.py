@@ -43,7 +43,8 @@ def argparser_prepare():
                         help='Postgresql password')    
     parser.add_argument('--reverse', action='store_true',
                         help='reverse routes')
-                        
+    parser.add_argument('--skip-generalization', action='store_true',
+                        help='skip clustering terminal points')                        
 
     parser.epilog = \
         '''Samples:
@@ -72,6 +73,7 @@ def main():
     host = args.host
     password = args.password
     reverse = args.reverse
+    skip_generalization = args.skip_generalization
 
     try:
         conn = psycopg2.connect("dbname='" + dbname + "' user='"
@@ -498,7 +500,8 @@ def main():
 
     print 'Create terminals table'
 
-    sql='''
+    if skip_generalization:
+        sql='''
 
 DROP TABLE if exists terminals_export cascade;
 CREATE  table terminals_export AS
@@ -524,19 +527,17 @@ CREATE  table terminals_export AS
 
 
 '''
-
-
-    cur.execute(sql)
-    conn.commit()
-
-    '''
+    else:
+        sql='''
 DROP TABLE IF EXISTS terminals_clustered;
+
+--cluster distance set here
 CREATE TEMPORARY TABLE terminals_clustered AS 
 SELECT unnest(ST_ClusterWithin(wkb_geometry, 0.001)) AS geometrycollection
   FROM terminals;
 
-DROP TABLE IF EXISTS temp2;
-CREATE TABLE temp2 AS
+DROP TABLE IF EXISTS terminals_export CASCADE;
+CREATE TABLE terminals_export AS
 SELECT
  ST_Centroid(geometrycollection) AS wkb_geometry,
  row_number() over () AS terminal_id,
@@ -552,9 +553,20 @@ concat(
                             AS long_text
 FROM terminals_clustered 
   JOIN terminals  
-  ON ST_Intersects(ST_Buffer(ST_MinimumBoundingCircle(geometrycollection),0.002),terminals.wkb_geometry)
+  ON ST_Intersects(ST_Buffer(ST_MinimumBoundingCircle(geometrycollection),0.001),terminals.wkb_geometry)
+--this returns data from all single terminal points in cluster 
 
 GROUP BY geometrycollection;
+
+DROP TABLE terminals_clustered;
+        '''
+
+
+    cur.execute(sql)
+    conn.commit()
+
+    '''
+
     '''
     print 'Terminals created'
 
