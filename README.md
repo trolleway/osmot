@@ -78,3 +78,13 @@ optional arguments:
 4. Connect to PostGIS database in QGIS, add to map new tables: routes_with_refs and terminals_export
 5. Load qml styles from /styles/qml
 
+
+## Terminals generalisation
+
+![before](docs/terminals_generalize_multiname_1.png)
+
+![after](docs/terminals_generalize_multiname_2.png)
+
+![before](docs/terminals_generalize_multiposition_1.png)
+
+![after](docs/terminals_generalize_multiposition_2.png)
