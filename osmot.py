@@ -525,9 +525,37 @@ CREATE  table terminals_export AS
 
 '''
 
+
     cur.execute(sql)
     conn.commit()
 
+    '''
+DROP TABLE IF EXISTS terminals_clustered;
+CREATE TEMPORARY TABLE terminals_clustered AS 
+SELECT unnest(ST_ClusterWithin(wkb_geometry, 0.001)) AS geometrycollection
+  FROM terminals;
+
+DROP TABLE IF EXISTS temp2;
+CREATE TABLE temp2 AS
+SELECT
+ ST_Centroid(geometrycollection) AS wkb_geometry,
+ row_number() over () AS terminal_id,
+  --ST_MinimumBoundingCircle(geometrycollection) AS circle,
+  (array_agg(terminals.name))[1] AS name,
+string_agg(terminals.routes,',' ORDER BY routes) AS routes,
+concat(
+                trim(both '"' from REPLACE((array_agg(terminals.name))[1], '\\\', '')),
+		' ',
+                '[',
+                string_agg(routes,',' ORDER BY NULLIF(regexp_replace(routes, '\D', '', 'g'), '')::int),
+                ']')
+                            AS long_text
+FROM terminals_clustered 
+  JOIN terminals  
+  ON ST_Intersects(ST_Buffer(ST_MinimumBoundingCircle(geometrycollection),0.002),terminals.wkb_geometry)
+
+GROUP BY geometrycollection;
+    '''
     print 'Terminals created'
 
     #sql = '''
