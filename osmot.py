@@ -265,7 +265,7 @@ def main():
 
         # deb('calculate refs for line '+str(way_id)+' '+way_street_name)
 
-        progress(current_street_count, ways_count_total, status=string.rjust(str(way_id), 10) + ' ' + way_street_name.strip())
+        progress(current_street_count, ways_count_total, status=str.rjust(str(way_id), 10) + ' ' + way_street_name.strip())
         # For each route, read each way
 
         sql2 = \
