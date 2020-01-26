@@ -6,11 +6,17 @@ import psycopg2
 import string
 import argparse
 import sys
+import logging
 
+
+logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(levelname)-8s %(message)s',datefmt='%Y-%m-%d %H:%M:%S')
+logger = logging.getLogger(__name__)
+
+logger.info('Start')
 
 def deb(string):
-    return 0
-    print string
+    logger.debug(string)
+	
 
 def progress(count, total, status=''):
     bar_len = 60
@@ -54,14 +60,14 @@ def argparser_prepare():
     return parser
 
 def vacuum(conn,tablename):
-    print 'running VACUUM'
+    logger.debug('running VACUUM')
     old_isolation_level = conn.isolation_level
     conn.set_isolation_level(0)
     query = "VACUUM ANALYZE "+tablename
     cur = conn.cursor()
     cur.execute(query)
     conn.set_isolation_level(old_isolation_level)
-    print 'VACUUM finished'
+    logger.debug('VACUUM finished')
 
 def main():
 
@@ -80,7 +86,7 @@ def main():
                                 + username + "' host='" + host
                                 + "' password='" + password + "'")
     except:
-        print 'I am unable to connect to the database'
+        logger.error('I am unable to connect to the database')
         return 0
 
     # Create some additional tables in database. 
