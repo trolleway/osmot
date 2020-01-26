@@ -177,7 +177,7 @@ def main():
         try:
             cur.execute(sql)
         except:
-            print "I can't SELECT "
+            logger.error("I can't SELECT ")
         rows2 = cur.fetchall()
         for row2 in rows2:
 
@@ -190,7 +190,7 @@ def main():
         try:
             cur.execute(sql)
         except:
-            print "I can't SELECT "
+            logger.error("I can't SELECT ")
         rows2 = cur.fetchall()
         for row2 in rows2:
 
