@@ -16,7 +16,7 @@ logger.info('Start')
 
 def deb(string):
     logger.debug(string)
-	
+
 
 def progress(count, total, status=''):
     bar_len = 60
@@ -28,7 +28,7 @@ def progress(count, total, status=''):
     sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
     sys.stdout.flush()  # As suggested by Rom Ruben (see: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console/27871113#comment50529068_27871113)
 
-    
+
 
 def argparser_prepare():
 
@@ -46,11 +46,11 @@ def argparser_prepare():
     parser.add_argument('--username', type=str, default='gis',
                         help='Postgresql username')
     parser.add_argument('--password', type=str, default='',
-                        help='Postgresql password')    
+                        help='Postgresql password')
     parser.add_argument('--reverse', action='store_true',
                         help='reverse routes')
     parser.add_argument('--skip-generalization', action='store_true',
-                        help='skip clustering terminal points')                        
+                        help='skip clustering terminal points')
 
     parser.epilog = \
         '''Samples:
@@ -89,7 +89,7 @@ def main():
         logger.error('I am unable to connect to the database')
         return 0
 
-    # Create some additional tables in database. 
+    # Create some additional tables in database.
 
     cur = conn.cursor()
 
@@ -109,14 +109,14 @@ def main():
     cur = conn.cursor()
 
     sql = \
-        '''DROP TABLE IF EXISTS route_line_labels CASCADE;	
+        '''DROP TABLE IF EXISTS route_line_labels CASCADE;
         CREATE TABLE route_line_labels
         (
          id serial,
          osm_id bigint,
          route_ref text,
          route_ref_reverse text,
-	show_label smallint DEFAULT 1        
+	show_label smallint DEFAULT 1
         )
         ;
         '''
@@ -147,18 +147,18 @@ def main():
 
         current_route_id = row[0]
         deb('Parce relation' + str(current_route_id))
-        
+
         WaysInCurrentRel=[]
-        
+
         #Put in WaysInCurrentRel id's of ways with empty roles
         for i in range(0,len(members_list)):
                 member_code=members_list[i]
                 member_role=roles_list[i]
                 if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward')  or (member_role=='highway') )):
                         WaysInCurrentRel.append(member_code)
-			
+
         if reverse:
-            WaysInCurrentRel.reverse()        
+            WaysInCurrentRel.reverse()
         for (idx, item) in enumerate(WaysInCurrentRel):
             if item.find('n'):
                 item = item[1:]
@@ -199,10 +199,10 @@ def main():
 
 	#compare end nodes of lines by geometry
         try:
-                f2
-	except NameError:
-	    raise ValueError('Not found frist point of line {WaySecond}. Prorably pbf file is invalid. All members of route relations should be in pbf file.'.format(WaySecond=WaySecond)) 
-	
+            f2
+        except NameError:
+            raise ValueError('Not found frist point of line {WaySecond}. Prorably pbf file is invalid. All members of route relations should be in pbf file.'.format(WaySecond=WaySecond))
+
         current_direction = 'b'
         if f2 == l1 or f2 == l2:
             current_direction = 'f'
@@ -234,7 +234,7 @@ def main():
 
     # Calculate route labels
 
-    print 'Create route labels'
+    logger.info('Create route labels')
     this_way_refs_direction = {}
 
     cur.execute('''
@@ -264,7 +264,7 @@ def main():
         way_street_name = str(row[1])
 
         # deb('calculate refs for line '+str(way_id)+' '+way_street_name)
-	
+
         progress(current_street_count, ways_count_total, status=string.rjust(str(way_id), 10) + ' ' + way_street_name.strip())
         # For each route, read each way
 
@@ -296,7 +296,7 @@ def main():
                 '''
         SELECT
         *
-        FROM planet_osm_rels  
+        FROM planet_osm_rels
         WHERE
                id = ''' + str(row2[0]) \
                 + '''
@@ -306,7 +306,7 @@ def main():
             for row3 in rows3:
                 members_list = row3[4][::2]
                 if reverse:
-		            members_list.reverse()
+                    members_list.reverse()
                 current_rel_id = row[0]
 
                 WaysInCurrentRel = []
@@ -414,7 +414,7 @@ def main():
                 SELECT
 
         DISTINCT substring(tags::varchar from '[^:]ref,(.*?)[,}]') AS ref
-        
+
         FROM planet_osm_rels
         WHERE members::VARCHAR LIKE '%w''' \
             + str(way_id) + '''%'
@@ -478,7 +478,7 @@ def main():
             if set_direction == 'error':
 
                 exit()
-        
+
         export_ref=export_ref.rstrip('. ')
         export_ref_reverse=export_ref_reverse.rstrip('. ')
         sql = \
@@ -504,7 +504,7 @@ def main():
     cur.execute(sql)
     conn.commit()
 
-    print 'Create terminals table'
+    logger.info('Create terminals table')
 
     if skip_generalization:
         sql='''
@@ -538,7 +538,7 @@ CREATE  table terminals_export AS
 DROP TABLE IF EXISTS terminals_clustered;
 
 --cluster distance set here
-CREATE TEMPORARY TABLE terminals_clustered AS 
+CREATE TEMPORARY TABLE terminals_clustered AS
 SELECT unnest(ST_ClusterWithin(wkb_geometry, 0.001)) AS geometrycollection
   FROM terminals;
 
@@ -557,10 +557,10 @@ concat(
                 string_agg(routes,',' ORDER BY NULLIF(regexp_replace(routes, '\D', '', 'g'), '')::int),
                 ']')
                             AS long_text
-FROM terminals_clustered 
-  JOIN terminals  
+FROM terminals_clustered
+  JOIN terminals
   ON ST_Intersects(ST_Buffer(ST_MinimumBoundingCircle(geometrycollection),0.001),terminals.wkb_geometry)
---this returns data from all single terminal points in cluster 
+--this returns data from all single terminal points in cluster
 
 GROUP BY geometrycollection;
 
@@ -574,7 +574,7 @@ DROP TABLE terminals_clustered;
     '''
 
     '''
-    print 'Terminals created'
+    logger.info('Terminals created')
 
     #sql = '''
     #    DROP TABLE IF EXISTS routes_with_refs CASCADE;
@@ -585,17 +585,17 @@ DROP TABLE terminals_clustered;
     sql = \
         '''
         DROP TABLE IF EXISTS routes_with_refs CASCADE;
-        CREATE  TABLE routes_with_refs AS 
+        CREATE  TABLE routes_with_refs AS
         (SELECT
         distinct planet_osm_line.osm_id 	::varchar	AS road_id,
         degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
         ST_X(ST_Line_Interpolate_Point(way,0.5)) 	AS x,
         ST_Y(ST_Line_Interpolate_Point(way,0.5)) 	AS y,
         way AS wkb_geometry,
-        CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90) 
+        CASE WHEN (degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 > 90 OR degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))-90 >90)
 		THEN route_line_labels.route_ref_reverse
         	ELSE route_line_labels.route_ref
-        END					        
+        END
             AS routes_ref
         --,
         --''  AS rotation,
@@ -611,7 +611,7 @@ DROP TABLE terminals_clustered;
         ALTER TABLE routes_with_refs ADD PRIMARY KEY (road_id);
         '''
     #routes_with_refs is a table, not view, to use primary key for qgis. Views cannot have primary keys
-	#If routes_with_refs failed while adding to QGIS with error "an invalid layer" - set while adding table to QGIS field "primary key" 
+	#If routes_with_refs failed while adding to QGIS with error "an invalid layer" - set while adding table to QGIS field "primary key"
 
     cur.execute(sql)
     conn.commit()
