@@ -198,8 +198,8 @@ def main():
             l2 = row2[1]
 
 	#compare end nodes of lines by geometry
-	try:
-  	    f2
+        try:
+                f2
 	except NameError:
 	    raise ValueError('Not found frist point of line {WaySecond}. Prorably pbf file is invalid. All members of route relations should be in pbf file.'.format(WaySecond=WaySecond)) 
 	
