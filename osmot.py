@@ -571,6 +571,10 @@ DROP TABLE terminals_clustered;
     cur.execute(sql)
     conn.commit()
 
+    sql = 'DROP TABLE terminals; ALTER TABLE terminals_export RENAME TO terminals;'
+    cur.execute(sql)
+    conn.commit()
+
     '''
 
     '''
@@ -584,8 +588,8 @@ DROP TABLE terminals_clustered;
 
     sql = \
         '''
-        DROP TABLE IF EXISTS routes_with_refs CASCADE;
-        CREATE  TABLE routes_with_refs AS
+        DROP TABLE IF EXISTS routes CASCADE;
+        CREATE  TABLE routes AS
         (SELECT
         distinct planet_osm_line.osm_id 	::varchar	AS road_id,
         degrees(ST_azimuth(ST_Line_Interpolate_Point(way,0.5),ST_Line_Interpolate_Point(way,0.501)))+0 AS angle,
