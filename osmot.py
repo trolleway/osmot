@@ -612,10 +612,10 @@ DROP TABLE terminals_clustered;
         ON (planet_osm_line.osm_id = route_line_labels.osm_id)
         WHERE planet_osm_line.osm_id>0 AND route_line_labels.route_ref <> ''
         );
-        ALTER TABLE routes_with_refs ADD PRIMARY KEY (road_id);
+        ALTER TABLE routes ADD PRIMARY KEY (road_id);
         '''
-    #routes_with_refs is a table, not view, to use primary key for qgis. Views cannot have primary keys
-	#If routes_with_refs failed while adding to QGIS with error "an invalid layer" - set while adding table to QGIS field "primary key"
+    #routes is a table, not view, to use primary key for qgis. Views cannot have primary keys
+	#If routes failed while adding to QGIS with error "an invalid layer" - set while adding table to QGIS field "primary key"
 
     cur.execute(sql)
     conn.commit()
