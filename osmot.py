@@ -146,10 +146,7 @@ def main():
         *
         FROM planet_osm_rels
         WHERE
-        tags::VARCHAR LIKE '%route,trolleybus%'
-        OR tags::VARCHAR LIKE '%route,tram%'
-        OR tags::VARCHAR LIKE '%route,bus%'
-        OR tags::VARCHAR LIKE '%route,share_taxi%'
+        tags::VARCHAR LIKE '%route,%'
                 ''')
     except:
         return 0
@@ -183,9 +180,7 @@ def main():
         #remove from WaysInCurrentRel not downloaded ways and platforms
         
         WaysInCurrentRel = remove_wrong_ways(ways = WaysInCurrentRel, pgconn=conn, pgcur = cur)
-        #optimisation here was not needed yet
-        
-
+    
         # Locate frist point of frist way in route
         WayFrist = WaysInCurrentRel[0]
         WaySecond = WaysInCurrentRel[1]
