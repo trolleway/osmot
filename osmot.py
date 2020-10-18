@@ -7,6 +7,7 @@ import string
 import argparse
 import sys
 import logging
+from tqdm import tqdm
 
 
 logging.basicConfig(level=logging.INFO,format='%(asctime)s %(levelname)-8s %(message)s',datefmt='%Y-%m-%d %H:%M:%S')
@@ -16,19 +17,6 @@ logger.info('Start')
 
 def deb(string):
     logger.debug(string)
-
-
-def progress(count, total, status=''):
-    bar_len = 60
-    filled_len = int(round(bar_len * count / float(total)))
-
-    percents = round(100.0 * count / float(total), 1)
-    bar = '=' * filled_len + '-' * (bar_len - filled_len)
-
-    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
-    sys.stdout.flush()  # As suggested by Rom Ruben (see: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console/27871113#comment50529068_27871113)
-
-
 
 def argparser_prepare():
 
@@ -273,6 +261,7 @@ def main():
     rows = cur.fetchall()
 
     current_street_count = 0
+    pbar = tqdm(total=ways_count_total)
     for row in rows:
         current_street_count = current_street_count + 1
         way_id = row[0]
@@ -280,7 +269,8 @@ def main():
 
         # deb('calculate refs for line '+str(way_id)+' '+way_street_name)
 
-        progress(current_street_count, ways_count_total, status=str.rjust(str(way_id), 10) + ' ' + way_street_name.strip())
+        pbar.update(1)
+        pbar.set_description(str.rjust(str(way_id), 10) + ' ' + way_street_name.strip())
         # For each route, read each way
 
         sql2 = \
@@ -515,7 +505,8 @@ def main():
         cur.execute(sql)
         conn.commit()
 
-
+    pbar.close()
+    
     cur.execute(sql)
     conn.commit()
 
