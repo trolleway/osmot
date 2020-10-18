@@ -69,6 +69,20 @@ def vacuum(conn,tablename):
     conn.set_isolation_level(old_isolation_level)
     logger.debug('VACUUM finished')
 
+def remove_wrong_ways(ways, pgconn, pgcur):
+    #remove from list of ways_ids not downloaded ways and platforms
+    
+    #optimisation here was not needed yet
+    filtered_ways = []
+    for way in ways:
+        sql = ''' SELECT COUNT(*) AS cnt FROM planet_osm_line WHERE osm_id = {way}; '''
+        sql = sql.format(way=way)
+        
+        pgcur.execute(sql)
+        rows = pgcur.fetchall()
+        if rows[0][0] > 0: filtered_ways.append(way)
+    return filtered_ways
+
 def main():
 
     parser = argparser_prepare()
@@ -152,10 +166,10 @@ def main():
 
         #Put in WaysInCurrentRel id's of ways with empty roles
         for i in range(0,len(members_list)):
-                member_code=members_list[i]
-                member_role=roles_list[i]
-                if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward')  or (member_role=='highway') )):
-                        WaysInCurrentRel.append(member_code)
+            member_code=members_list[i]
+            member_role=roles_list[i]
+            if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward')  or (member_role=='highway') )):
+                    WaysInCurrentRel.append(member_code)
 
         if reverse:
             WaysInCurrentRel.reverse()
@@ -166,6 +180,11 @@ def main():
 
         if len(WaysInCurrentRel)<2:
                 continue
+        #remove from WaysInCurrentRel not downloaded ways and platforms
+        
+        WaysInCurrentRel = remove_wrong_ways(ways = WaysInCurrentRel, pgconn=conn, pgcur = cur)
+        #optimisation here was not needed yet
+        
 
         # Locate frist point of frist way in route
         WayFrist = WaysInCurrentRel[0]
@@ -183,6 +202,7 @@ def main():
 
             f1 = row2[0]
             f2 = row2[1]
+        assert 'f2' in vars() or 'f2' in globals(), 'Not found frist point of line {WayFrist}. Prorably pbf file is invalid. All members of route relations should be in pbf file.'.format(WayFrist=WayFrist)
 
         sql = \
             '''SELECT ST_StartPoint(way), ST_EndPoint(way) from planet_osm_line WHERE osm_id=''' \
@@ -197,12 +217,12 @@ def main():
             l1 = row2[0]
             l2 = row2[1]
 
-	#compare end nodes of lines by geometry
+        #compare end nodes of lines by geometry
         #try:
         #    f2
         #except NameError:
         #    raise ValueError('Not found frist point of line {WaySecond}. Prorably pbf file is invalid. All members of route relations should be in pbf file.'.format(WaySecond=WaySecond))
-
+        
         current_direction = 'b'
         if f2 == l1 or f2 == l2:
             current_direction = 'f'
