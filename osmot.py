@@ -348,7 +348,6 @@ def main():
                     if ((member_code.find('w')>=0) and (member_role in ('','forward','backward','highway') )):
                             WaysInCurrentRel.append(member_code)
                 
-                print(WaysInCurrentRel)
                 for (idx, item) in enumerate(WaysInCurrentRel):
                     if item.find('n'):
                         item = item[1:] # items start through the rest of the array
