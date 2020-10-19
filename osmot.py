@@ -82,6 +82,11 @@ def remove_wrong_ways(ways, pgconn, pgcur):
         if rows[0][0] > 0: filtered_ways.append(way)
     return filtered_ways
 
+def parse_rels_row(row):
+    members_list = row[4][::2]
+    roles_list = row[4][1::2]    
+    return members_list, roles_list
+    
 def main():
 
     parser = argparser_prepare()
@@ -151,10 +156,12 @@ def main():
     except:
         return 0
 
+    
     rows = cur.fetchall()
     for row in rows:
-        members_list = row[4][::2]
-        roles_list = row[4][1::2]
+        members_list,roles_list = parse_rels_row(row)
+        #members_list = row[4][::2]
+        #roles_list = row[4][1::2]
 
         current_route_id = row[0]
         logger.debug('Parce relation' + str(current_route_id))
@@ -165,7 +172,8 @@ def main():
         for i in range(0,len(members_list)):
             member_code=members_list[i]
             member_role=roles_list[i]
-            if ((member_code.find('w')>=0) and ((member_role=='') or (member_role=='forward') or (member_role=='backward')  or (member_role=='highway') )):
+            # if member is way, and role in list
+            if ((member_code.find('w')>=0) and (member_role in ('','forward','backward','highway') )):
                     WaysInCurrentRel.append(member_code)
 
         if reverse:
@@ -321,21 +329,29 @@ def main():
             cur.execute(sql3)
             rows3 = cur.fetchall()
             for row3 in rows3:
-                members_list = row3[4][::2]
-                roles_list = row3[4][1::2]
+                members_list,roles_list = parse_rels_row(row3)
+                
                 if reverse:
                     members_list.reverse()
                 current_rel_id = row[0]
                 
                 WaysInCurrentRel = []
-                WaysInCurrentRel = [i for i in members_list
-                                    if not i.find('w')] # TODO w or n in query?
+                #WaysInCurrentRel = [i for i in members_list
+                #                    if not i.find('w')] # TODO w or n in query?
 
                 # l[1::2] for even elements
-
+                
+                for i in range(0,len(members_list)):
+                    member_code=members_list[i]
+                    member_role=roles_list[i]
+                    # if member is way, and role in list
+                    if ((member_code.find('w')>=0) and (member_role in ('','forward','backward','highway') )):
+                            WaysInCurrentRel.append(member_code)
+                
+                print(WaysInCurrentRel)
                 for (idx, item) in enumerate(WaysInCurrentRel):
                     if item.find('n'):
-                        item = item[1:]
+                        item = item[1:] # items start through the rest of the array
                         WaysInCurrentRel[idx] = item
 
                 local_way_id_current = 0
@@ -492,16 +508,17 @@ def main():
                     & this_way_refs_direction.get((ref, 'b'), 0) == 0:
 
                     set_direction = 'error'
-                    direction_symbol = '-ERROR'
+                    direction_symbol = ''
+                    direction_symbol_reverse = ''
 
-            export_ref = export_ref + ref + direction_symbol + '. '
-            export_ref_reverse = export_ref_reverse + ref \
-                + direction_symbol_reverse + '. '
-            deb('-- ' + ref + ' ' + to + ' direction=' + set_direction)
+            if set_direction != 'error':
+                export_ref = export_ref + ref + direction_symbol + '. '
+                export_ref_reverse = export_ref_reverse + ref \
+                    + direction_symbol_reverse + '. '
+                deb('-- ' + ref + ' ' + to + ' direction=' + set_direction)
 
-            if set_direction == 'error':
+            #assert set_direction != 'error'
 
-                exit()
 
         export_ref=export_ref.rstrip('. ')
         export_ref_reverse=export_ref_reverse.rstrip('. ')
