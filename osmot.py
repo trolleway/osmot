@@ -10,7 +10,7 @@ import logging
 from tqdm import tqdm
 
 
-logging.basicConfig(level=logging.INFO,format='%(asctime)s %(levelname)-8s %(message)s',datefmt='%Y-%m-%d %H:%M:%S')
+#logging.basicConfig(level=logging.WARNING,format='%(asctime)s %(levelname)-8s %(message)s',datefmt='%Y-%m-%d %H:%M:%S')
 logger = logging.getLogger(__name__)
 
 logger.info('Start')
@@ -39,7 +39,18 @@ def argparser_prepare():
                         help='reverse routes')
     parser.add_argument('--skip-generalization', action='store_true',
                         help='skip clustering terminal points. Clustering works only for EPSG:3857 tables')
-
+    parser.add_argument(
+        '-d', '--debug',
+        help="Print lots of debugging statements",
+        action="store_const", dest="loglevel", const=logging.DEBUG,
+        default=logging.WARNING,
+    )
+    parser.add_argument(
+        '-v', '--verbose',
+        help="Be verbose",
+        action="store_const", dest="loglevel", const=logging.INFO,
+    )
+    
     parser.epilog = \
         '''Samples:
 %(prog)s
@@ -75,6 +86,7 @@ def main():
 
     parser = argparser_prepare()
     args = parser.parse_args()
+    logging.basicConfig(level=args.loglevel)
 
     dbname = args.database
     username = args.username
