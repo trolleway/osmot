@@ -145,7 +145,7 @@ def main():
         roles_list = row[4][1::2]
 
         current_route_id = row[0]
-        deb('Parce relation' + str(current_route_id))
+        logger.debug('Parce relation' + str(current_route_id))
 
         WaysInCurrentRel=[]
 
@@ -267,7 +267,7 @@ def main():
         way_id = row[0]
         way_street_name = str(row[1])
 
-        # deb('calculate refs for line '+str(way_id)+' '+way_street_name)
+        # logger.debug('calculate refs for line '+str(way_id)+' '+way_street_name)
 
         pbar.update(1)
         pbar.set_description(str.rjust(str(way_id), 10) + ' ' + way_street_name.strip())
@@ -294,7 +294,7 @@ def main():
         this_way_refs_direction = {}
         for row2 in rows2:
             ref = str(row2[1])
-            deb('- relation ' + str(row2[0]) + ' ref=' + str(row2[1])
+            logger.debug('- relation ' + str(row2[0]) + ' ref=' + str(row2[1])
                 + ' name=' + str(row2[2]))
             current_routemaster_ref = row2[1]
             sql3 = \
@@ -310,10 +310,11 @@ def main():
             rows3 = cur.fetchall()
             for row3 in rows3:
                 members_list = row3[4][::2]
+                roles_list = row3[4][1::2]
                 if reverse:
                     members_list.reverse()
                 current_rel_id = row[0]
-
+                
                 WaysInCurrentRel = []
                 WaysInCurrentRel = [i for i in members_list
                                     if not i.find('w')] # TODO w or n in query?
@@ -332,10 +333,10 @@ def main():
                     local_way_id_next = local_way_id_current
                     local_way_id_current = local_way_id
 
-                    # deb('-- '+local_way_id)
+
 
                     if str(local_way_id) == str(way_id):
-                        deb('--- current_way='
+                        logger.debug('--- current_way='
                             + str(local_way_id_current) + ' next='
                             + str(local_way_id_next))
 
@@ -369,7 +370,7 @@ def main():
                                 function = 'ST_StartPoint'
                                 this_way_refs_direction[ref, 'b'] = 1
 
-                            deb('--- direction=' + current_direction)
+                            logger.debug('--- direction=' + current_direction)
                         else:
 
                             # separately calculate direction for last way in route (TODO need refactoring)
@@ -379,8 +380,9 @@ def main():
                                 local_way_id_prev = WaysInCurrentRel[1]
                             else:
                                 local_way_id_prev = local_way_id_current
-                            deb('-- current=' + local_way_id_current
+                            logger.debug('-- current=' + local_way_id_current
                                 + ' prev=' + local_way_id_prev)
+
 
                             sql = \
                                 '''SELECT ST_StartPoint(way), ST_EndPoint(way) from planet_osm_line WHERE osm_id=''' \
@@ -396,20 +398,25 @@ def main():
                                 + local_way_id_prev
                             cur.execute(sql)
                             rows2 = cur.fetchall()
+                            p1 = None
+                            p2 = None
                             for row2 in rows2:
                                 p1 = row2[0]
                                 p2 = row2[1]
 
                             current_direction = 'f'
-                            if f1 == p2 or f1 == p1:
-                                current_direction = 'b'
+                            if p1 is not None:  #if this is refrence to not download way - let it be forward                              
+                                if f1 == p2 or f1 == p1:
+                                    current_direction = 'b'
                             if current_direction == 'f':
                                 function = 'ST_EndPoint'
                                 this_way_refs_direction[ref, 'f'] = 1
                             else:
                                 function = 'ST_StartPoint'
                                 this_way_refs_direction[ref, 'b'] = 1
-
+                            
+                            del p1
+                            del p2
                 # separately calculate direction for last way in route (TODO need refactoring)
 
                 local_way_id_current = 0
