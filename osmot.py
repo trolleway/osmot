@@ -50,7 +50,7 @@ def argparser_prepare():
         help="Be verbose",
         action="store_const", dest="loglevel", const=logging.INFO,
     )
-    
+
     parser.epilog = \
         '''Samples:
 %(prog)s
@@ -70,13 +70,13 @@ def vacuum(conn,tablename):
 
 def remove_wrong_ways(ways, pgconn, pgcur):
     #remove from list of ways_ids not downloaded ways and platforms
-    
+
     #optimisation here was not needed yet
     filtered_ways = []
     for way in ways:
         sql = ''' SELECT COUNT(*) AS cnt FROM planet_osm_line WHERE osm_id = {way}; '''
         sql = sql.format(way=way)
-        
+
         pgcur.execute(sql)
         rows = pgcur.fetchall()
         if rows[0][0] > 0: filtered_ways.append(way)
@@ -84,9 +84,9 @@ def remove_wrong_ways(ways, pgconn, pgcur):
 
 def parse_rels_row(row):
     members_list = row[4][::2]
-    roles_list = row[4][1::2]    
+    roles_list = row[4][1::2]
     return members_list, roles_list
-    
+
 def main():
 
     parser = argparser_prepare()
@@ -156,7 +156,7 @@ def main():
     except:
         return 0
 
-    
+
     rows = cur.fetchall()
     for row in rows:
         members_list,roles_list = parse_rels_row(row)
@@ -186,12 +186,19 @@ def main():
         if len(WaysInCurrentRel)<2:
                 continue
         #remove from WaysInCurrentRel not downloaded ways and platforms
-        
+
         WaysInCurrentRel = remove_wrong_ways(ways = WaysInCurrentRel, pgconn=conn, pgcur = cur)
-    
+        if len(WaysInCurrentRel)<2:
+                continue
+        #remove from WaysInCurrentRel not downloaded ways and platforms
         # Locate frist point of frist way in route
-        WayFrist = WaysInCurrentRel[0]
-        WaySecond = WaysInCurrentRel[1]
+        try:
+            WayFrist = WaysInCurrentRel[0]
+            WaySecond = WaysInCurrentRel[1]
+        except:
+            print('error in process relation '+str(row) )
+            print('partially download relation, skipped')
+            continue
 
         sql = \
             '''SELECT ST_StartPoint(way), ST_EndPoint(way) from planet_osm_line WHERE osm_id=''' \
@@ -225,7 +232,7 @@ def main():
         #    f2
         #except NameError:
         #    raise ValueError('Not found frist point of line {WaySecond}. Prorably pbf file is invalid. All members of route relations should be in pbf file.'.format(WaySecond=WaySecond))
-        
+
         current_direction = 'b'
         if f2 == l1 or f2 == l2:
             current_direction = 'f'
@@ -330,24 +337,24 @@ def main():
             rows3 = cur.fetchall()
             for row3 in rows3:
                 members_list,roles_list = parse_rels_row(row3)
-                
+
                 if reverse:
                     members_list.reverse()
                 current_rel_id = row[0]
-                
+
                 WaysInCurrentRel = []
                 #WaysInCurrentRel = [i for i in members_list
                 #                    if not i.find('w')] # TODO w or n in query?
 
                 # l[1::2] for even elements
-                
+
                 for i in range(0,len(members_list)):
                     member_code=members_list[i]
                     member_role=roles_list[i]
                     # if member is way, and role in list
                     if ((member_code.find('w')>=0) and (member_role in ('','forward','backward','highway') )):
                             WaysInCurrentRel.append(member_code)
-                
+
                 for (idx, item) in enumerate(WaysInCurrentRel):
                     if item.find('n'):
                         item = item[1:] # items start through the rest of the array
@@ -432,7 +439,7 @@ def main():
                                 p2 = row2[1]
 
                             current_direction = 'f'
-                            if p1 is not None:  #if this is refrence to not download way - let it be forward                              
+                            if p1 is not None:  #if this is refrence to not download way - let it be forward
                                 if f1 == p2 or f1 == p1:
                                     current_direction = 'b'
                             if current_direction == 'f':
@@ -441,7 +448,7 @@ def main():
                             else:
                                 function = 'ST_StartPoint'
                                 this_way_refs_direction[ref, 'b'] = 1
-                            
+
                             del p1
                             del p2
                 # separately calculate direction for last way in route (TODO need refactoring)
@@ -541,7 +548,7 @@ def main():
         conn.commit()
 
     pbar.close()
-    
+
     cur.execute(sql)
     conn.commit()
 
