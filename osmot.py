@@ -587,7 +587,7 @@ DROP TABLE IF EXISTS terminals_clustered;
 
 --cluster distance set here
 CREATE TEMPORARY TABLE terminals_clustered AS
-SELECT unnest(ST_ClusterWithin(wkb_geometry, 300)) AS geometrycollection
+SELECT unnest(ST_ClusterWithin(wkb_geometry, 350)) AS geometrycollection
   FROM terminals;
 
 DROP TABLE IF EXISTS terminals_export CASCADE;
@@ -607,7 +607,7 @@ concat(
                             AS long_text
 FROM terminals_clustered
   JOIN terminals
-  ON ST_Intersects(ST_Buffer(ST_MinimumBoundingCircle(geometrycollection),300),terminals.wkb_geometry)
+  ON ST_Intersects(ST_Buffer(ST_MinimumBoundingCircle(geometrycollection),350),terminals.wkb_geometry)
 --this returns data from all single terminal points in cluster
 
 GROUP BY geometrycollection;
